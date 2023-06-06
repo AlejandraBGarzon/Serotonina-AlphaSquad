@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); /*navbar */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');/*icono*/
+@import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap'); /* footer: font-family: 'Text Me One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');/* title body: font-family: 'Mochiy Pop P One', sans-serif;*/
+
+
+/* font titulo:     font-family: 'Bowlby One', cursive;*/
+body {
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+/* separador descripcion */
+
+nav ul { /*Etiqueta de las letras nav*/
+	display: block;
+	justify-content: center;
+	align-items: center;
+	font-weight:bolder;
+	width: 100%;
+	letter-spacing: 5px;
+	padding-bottom: 20px;
+	padding-top: 5px;
+
+	}
+nav li { /*Box del nav */
+	display: flex;
+	justify-content: space-evenly;
+	margin-left: 1.7rem;
+	margin-right: 1.7rem;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	text-shadow: 2px 2px 3px #f65555 ;
+}
+
+.nav-item a{ /*Fuente letra navbar*/
+	display: contents;
+    font-family: 'Montserrat', sans-serif;
+}
+#navbarin{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.container-fluid{
+	background-color: #e3bebb;
+	width: 100%;
+	padding: 0px;
+}
+/*img nav*/
+#gif1{
+	align-items: center;
+	display: block;
+	margin: auto;
+	width: 100%;
+}
+/*Descripcion*/
+#description1{ /*Texto de descripcion*/
+	text-align: center;
+	margin-left: 400px;
+	margin-right: 400px;
+	margin-bottom: 3px;
+	text-shadow: 3px 3px 2px #e3bebb ;
+}
+#imgdescription{
+	display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+	width: 700px;
+	margin: auto;
+
+}
+  /*Descripcion*/
+  #titledescription{
+	text-align: center;
+	color:#f26465;
+	font-size: 50px;
+	font-family: 'Mochiy Pop P One', sans-serif;
+}
+/*Equipo de trabajo*/
+#textacord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+	font-size: 30px;
+	background: #f5f4f4;
+	width: 100%;
+	padding-left: 350px;
+	padding-right: 350px;
+
+}
+/*Titulo del acordeon*/
+#titleacord1, #titleacord2, #titleacord3 {/*pendiente fuente*/
+    font-size: 26px;
+	display: flex;
+    justify-content: center;
+    text-align: center;
+	width: 100%;
+	font-weight: bolder;
+	letter-spacing: 5px;
+	color: #7b8494;
+
+}
+.accordion-header {
+    display: flex;
+    justify-content: center;
+	text-align: center;
+}
+#accordeon{ /*Fondo color del bloque titulo*/
+    background-color: #e3bebb; 
+    color: inherit;
+	border: 0.5px solid #843f11;
+	border-radius: 60px 60px 60px 60px;
+}
+/*Footer*/
+.footer {
+	background-color: #e3bebb;
+	width: 100%;
+	text-align: left;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 50px;
+	margin-top: 20px;
+	border-radius: 40px 40px 0px 0px;
+  }
+  
+  .footer .footer-left, .footer .footer-center, .footer .footer-right {
+	display: inline-block;
+	vertical-align: top;
+  }
+  /* footer izq*/
+  .footer .footer-left {
+	width: 33%;
+	padding-right: 25px;
+  }
+  
+  .footer .about {
+	line-height: 20px;
+	color: #843f11;
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0;
+	font-weight: 700;
+	font-family: 'Text Me One', sans-serif;
+	text-align: center;
+	padding-right: 25px;
+  }
+  
+  .footer .about span {/*titulo acerca */
+	display: block;
+	color: #843f11;
+	font-size: 30px;
+	margin-bottom: 20px;
+	text-align: center;
+  }
+  .menu a{
+	display: flex;
+	align-items: center;
+  }
+  
+  .footer .icons {
+	margin-top: 25px;
+	display: flex;
+	justify-content: center;
+
+  }
+  
+  .footer .icons a { /* iconos redes */
+	display: inline-block;
+	width: 45px;
+	height: 40px;
+	cursor: pointer;
+	background-color: #843f11;
+	border-radius: 2px;
+	font-size: 25px;
+	color: #c68b80;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+  }
+  
+  .footer .footer-center {
+	width: 30%;
+	padding-left: 50px;
+
+  }
+  
+  .footer .footer-center i { /* iconos direccion, ubicacion */
+	background-color: #843f11;
+	color: #c68b80;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+  }
+
+  #logoimgfo{
+	width: 15px;
+  }
+  
+  .footer .footer-center i.fa-envelope {
+	font-size: 17px;
+	line-height: 38px;
+  }
+  
+  .footer .footer-center p {/*direccion numero*/
+	display: inline-block;
+	color: #843f11;
+	vertical-align: middle;
+	margin: 0;
+	font-family: 'Text Me One', sans-serif;
+	letter-spacing: 2	px;
+  }
+  
+  .footer .footer-center p span {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+  }
+  
+  .footer .footer-center p a { /*contacto*/
+	color: #843f11;
+	text-decoration: none;
+  }
+  
+  /* footer der*/
+   .footer .footer-right {
+	width: 35%;
+  }  
+  .footer h2 {
+	color: #843f11;
+	font-size: 36px;
+	font-weight: bolder;
+	margin: 0;
+	font-family: 'Bowlby One', cursive;
+	text-align: center;
+  }  
+  .footer h2 span {
+	color: #c68b80;
+  }  
+  .footer .menu {/* nombre logo footer*/
+	color: #843f11;
+	margin: 20px 0 12px;
+	padding: 0;
+	font-family: 'Text Me One', sans-serif;
+	font-size: 25px;
+	text-align: center;
+  }  
+  .footer .menu a {
+	display: inline-block;
+	line-height: 1.;
+	text-decoration: none;
+	color: inherit;
+  }  
+  .footer .menu a:hover {
+	color: #c68b80;
+  }  
+
+
+  /*Logo y titulo*/
+#logoimg{
+	display: block;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+	margin-bottom: -35px;
+	width: 100%;
+	background: #e3bebb;
+	padding-top: 10px;
+	text-shadow: 2px 2px 3px #f65555 ;
+
+}
+#titlelogo{
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+	font-family: 'Bowlby One', cursive;
+	font-weight:bold;
+	letter-spacing: 3px;
+	font-size: 50px;
+	color: #843f11;
+	width: 100%;
+	display: flex;
+	border-radius: 5px solid #e3bebb;
+	background: #e3bebb;
+	text-shadow: 2px 2px 3px #f65555 ;	
+}
+
+
+/* Figura curva sobre descripcion */
+.curved {
+	position: relative;
+	background: #e3bebb;
+	height: 13vh;
+	border-bottom-left-radius: 50% 40%;
+	border-bottom-right-radius: 50% 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+  } 
+  .centered {
+	text-align: center;
+  }
+
+
+
+  /* mision vision*/
+
+#containermivi{
+	margin-top: 20px;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);
+	border-radius: 49px 49px 49px 49px;
+	
+}
+
+#imgmivi{
+	height: auto;
+	width: auto;
+	padding: 10px;
+	border-radius: 49px;
+	object-fit: contain;
+	max-width: 600px;
+	max-height: 370px;
+}
+.titlemivi{
+	text-align: center;
+	font-weight: 900;
+	text-shadow: 3px 4px 3px #e3bebb ;
+	font-size: 30px;	
+}
+.textmivi{
+	text-align: center;
+	font-size: 20px;
+	padding: 0px 20px 0px 10px;
+	text-shadow: 3px 3px 3px #e3bebb ;	
+}
