@@ -1,0 +1,18 @@
+ul{
+    list-style: none;
+    margin-left: -40px;
+}
+ul.social-media{
+    display: flex;
+    list-style: none;
+}
+.containerDerecha{
+    background-color: ghostwhite;
+    padding: auto;
+    margin-top: 20px;
+    margin-block-end: 20px;
+}
+.grande{
+    display: flex;
+    flex-direction: row;
+}
