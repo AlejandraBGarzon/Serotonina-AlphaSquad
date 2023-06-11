@@ -3,16 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap'); /* footer: font-family: 'Text Me One', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');/* title body: font-family: 'Mochiy Pop P One', sans-serif;*/
 
+:root{
+	--1-color: #f65555;
+	--2-color: #e3bebb;
+	--3-color: #efefef;
+	--font-navbar: 'Montserrat', sans-serif;
+	--font-logo: 'Bowlby One', cursive;
+	
+}
 
 /* font titulo:     font-family: 'Bowlby One', cursive;*/
 body {
 	font-family: 'Raleway', sans-serif;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 /* separador descripcion */
-
 nav ul { /*Etiqueta de las letras nav*/
 	display: block;
 	justify-content: center;
@@ -33,19 +41,19 @@ nav li { /*Box del nav */
 	text-align: center;
 	width: 100%;
 	font-size: 30px;
-	text-shadow: 2px 2px 3px #f65555 ;
+	text-shadow: 2px 2px 3px var(--1-color) ;
 }
 
 .nav-item a{ /*Fuente letra navbar*/
 	display: contents;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-navbar);
 }
 #navbarin{
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
 .container-fluid{
-	background-color: #e3bebb;
+	background-color: var(--2-color);
 	width: 100%;
 	padding: 0px;
 }
@@ -62,7 +70,7 @@ nav li { /*Box del nav */
 	margin-left: 400px;
 	margin-right: 400px;
 	margin-bottom: 1px;
-	text-shadow: 3px 3px 2px #e3bebb ;
+	text-shadow: 3px 3px 2px var(--2-color) ;
 	border-radius: 38px 38px 38px 38px;
 	background: #efefef;
 	padding: 10px;
@@ -106,7 +114,7 @@ nav li { /*Box del nav */
     align-items: center;
     text-align: center;
     flex-direction: column;
-	font-family: 'Bowlby One', cursive;
+	font-family: var(--font-logo);
 	font-weight:bold;
 	letter-spacing: 3px;
 	font-size: 50px;
@@ -177,17 +185,22 @@ nav li { /*Box del nav */
 
 /*-------equipo de trabajo----------*/
 
-  #textteam{
+#divworkteam{
+	width: 100%;
+	
+}
+
+#textteam{
 	background: #e5e5e5 ;
 	border-radius: 38px 38px 38px 38px;
-	padding: 20px 20px 0px 20px;
+	padding: 50px;
 	text-align: justify ;
 	text-shadow: 1px 1px 1px #ff7b7b ;	
 	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);
-	margin-right: 150px;
-	margin-left: 150px;
+	font-size: 1.5rem;
+	
 }
-.service_block {
+.workteam{
 	text-align: center; 
 	margin-top: 25px;
 	padding-top: 30px;
@@ -257,9 +270,9 @@ nav li { /*Box del nav */
 	color: #843f11;
 	font-size: 24px;
 	font-weight: 700;
-	margin: 0;
+	margin: auto;
 	font-family: 'Text Me One', sans-serif;
-	text-align: center;
+	text-align: justify;
 	padding-right: 25px;
   }
   
