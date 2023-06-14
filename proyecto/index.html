@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="app.js" async></script>
+  <title>Carrito</title>
+</head>
+
+<body>
+  <!--NavBar-->
+  <a class="logoimg" id="logoimg" href="#"><img src="img/logo.png" alt="logo" width="140px" height="100px"></a><br />
+  <p10 id="titlelogo">SEROTONINA</p10>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbarin">
+      <div class="container-fluid" id="container-fluid">
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+</body>
+
+<!--Inicio de la sección de encabezado de la página.-->
+<div class="welcome">
+  <!--Título principal de la página que dice "Tienda de Relojes".-->
+  <h1 class="titulo">Bienvenido a nuestra sección de
+    <br> servicios y productos
+  </h1>
+</div>
+<!--Inicio de una sección con la clase "contenedor".-->
+<section class="contenedor">
+  <!-- Contenedor de elementos -->
+  <div class="contenedor-items">
+    <!-- Inicio de un elemento en el contenedor.-->
+    <div class="item">
+      <!--span es un elemento de marcado utilizado para aplicar estilos o agrupar contenido en línea dentro de un documento HTML.-->
+      <!--Un elemento de texto con la clase "titulo-item" que muestra el título "Box Engasse".-->
+      <span class="titulo-item">Terapia individual</span>
+      <!--Una imagen con la ruta de origen "img/boxengasse.png", un atributo alternativo vacío y la clase "img-item".-->
+      <img src="img/individual.jpg" alt="" class="img-item">
+      <!--Un párrafo para la descripción del item-->
+      <p class="descripcion">Sesiones con un profesional de la salud mental para abordar problemas
+        personales y emocionales.</p>
+      <!--Un elemento de texto con la clase "precio-item" que muestra el precio "$15.000".-->
+      <span class="precio-item">$80.000/sesión</span>
+      <!-- Un botón con la clase "boton-item" que muestra el texto "Agregar al Carrito".-->
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Terapia de pareja</span>
+      <img src="img/couple.jpg" alt="" class="img-item">
+      <p class="descripcion">Sesiones diseñadas para ayudar a las parejas a mejorar su comunicación,
+        resolver conflictos y fortalecer su relación.</p>
+      <span class="precio-item">$120.000/sesión</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Terapia familiar</span>
+      <img src="img/family.jpg" alt="" class="img-item">
+      <p class="descripcion">Sesiones enfocadas en abordar los desafíos y dinámicas familiares, y
+        promover la comunicación y el apoyo mutuo.</p>
+      <span class="precio-item">$150.000/sesión</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Paquete Programa de manejo del estrés</span>
+      <img src="img/stress.jpg" alt="" class="img-item">
+      <p class="descripcion">Programa diseñado para enseñar técnicas y estrategias efectivas para gestionar y
+        reducir el estrés en la vida diaria.</p>
+      <span class="precio-item">$300.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Asesoramiento para la salud mental en el trabajo</span>
+      <img src="img/work.jpg" alt="" class="img-item">
+      <p class="descripcion">Servicio de apoyo y orientación en el entorno laboral para abordar el estrés
+        laboral, el agotamiento y mejorar el bienestar emocional.</p>
+      <span class="precio-item">$100.000/sesión</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Taller de autocuidado</span>
+      <img src="img/selfcare.jpg" alt="" class="img-item">
+      <p class="descripcion">Sesiones grupales que enseñan habilidades prácticas de autocuidado y bienestar,
+        como técnicas de relajación, meditación y ejercicios de respiración.</p>
+      <span class="precio-item">$70.000/taller</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Paquete programa de habilidades sociales</span>
+      <img src="img/social.jpg" alt="" class="img-item">
+      <p class="descripcion">Entrenamientos diseñados para ayudar a las personas a desarrollar y mejorar sus
+        habilidades sociales, la comunicación efectiva y las relaciones interpersonales.</p>
+      <span class="precio-item">$250.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Programa de terapia en grupo</span>
+      <img src="img/group.jpg" alt="" class="img-item">
+      <p class="descripcion">Espacios para conectarse con otras personas que están pasando por situaciones
+        similares y recibir apoyo mutuo bajo la guía de un profesional de la salud mental.</p>
+      <span class="precio-item">$60.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+
+    <!-- Elementos de libros y guías -->
+    <div class="item">
+      <span class="titulo-item">Libro: "El poder del ahora"</span>
+      <img src="img/l1.jpg" alt="" class="img-item">
+      <p class="descripcion">Eckhart Tolle explora la importancia de vivir en el presente y liberarse de las
+        preocupaciones del pasado y el futuro. </p>
+      <span class="precio-item">$35.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Libro: "Man's Search for Meaning"</span>
+      <img src="img/l2.jpg" alt="" class="img-item">
+      <p class="descripcion">Frankl explora el sentido de la vida y la importancia de encontrar un propósito para
+        superar las adversidades.</p>
+      <span class="precio-item">$25.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Libro: "El arte de amar"</span>
+      <img src="img/l3.jpg" alt="" class="img-item">
+      <p class="descripcion">Erich Fromm examina el amor en todas sus formas: amor fraternal, amor erótico, amor materno
+        y amor por uno mismo.</p>
+      <span class="precio-item">$20.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Libro: "La mente nueva del emperador"</span>
+      <img src="img/l4.jpg" alt="" class="img-item">
+      <p class="descripcion">Penrose cuestiona la idea de que la mente pueda ser completamente replicada por una
+        computadora y plantea reflexiones sobre la conciencia y la creatividad.</p>
+      <span class="precio-item">$30.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Guía de salud mental para el bienestar diario</span>
+      <img src="img/g1.png" alt="" class="img-item">
+      <p class="descripcion">Incluye técnicas de relajación, manejo del estrés y fomento de pensamientos positivos.</p>
+      <span class="precio-item">$15.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Guía de mindfulness: Cómo cultivar la atención plena</span>
+      <img src="img/g2.jpg" alt="" class="img-item">
+      <p class="descripcion">Introducción al mundo del mindfulness, enseñándote técnicas de atención plena para reducir
+        el estrés, mejorar la concentración y encontrar equilibrio emocional.</p>
+      <span class="precio-item">$18.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Guía práctica de meditación para principiantes</span>
+      <img src="img/g3.png" alt="" class="img-item">
+      <p class="descripcion">Si estás interesado en comenzar una práctica de meditación, esta guía te brinda
+        instrucciones paso a paso para principiantes.</p>
+      <span class="precio-item">$12.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+    <div class="item">
+      <span class="titulo-item">Guía de autocuidado emocional</span>
+      <img src="img/g4.jpg" alt="" class="img-item">
+      <p class="descripcion">Proporciona herramientas para manejar el estrés, establecer límites saludables y cultivar
+        una relación positiva contigo mismo.</p>
+      <span class="precio-item">$22.000</span>
+      <button class="boton-item">Agregar al Carrito</button>
+    </div>
+
+  </div>
+  </div>
+  <!--Carrito de Compras
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>-->
+</section>
+
+<!----- In footer ----->
+<footer class="footer">
+  <div class="footer-left col-md-4 col-sm-6">
+    <p class="about">
+      <span><b>Acerca</b></span> Nuestra plataforma de psicología ofrece apoyo emocional y mental con profesionales
+      capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30 días,
+      promoviendo tu bienestar sin compromiso financiero.
+    </p>
+    <div class="icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+  <div class="footer-center col-md-4 col-sm-6">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p>Bogota, Colombia</p>
+    </div>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p> (+57) 0000 000 000</p>
+    </div>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="#">contacto&#64;serotonina.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right col-md-4 col-sm-6">
+    <h2> Serotonina<span> <a class="logoimgfoo" id="logoimgfoo" href="#"><img src="img/logo.png" alt="logofooter"
+            width="90px" height="70px"></a></span></h2>
+    <p class="menu">
+      <a href="index.html"> Inicio</a> |
+      <a href="#"> Servicios</a> |
+      <a href="nosotros.html"> Nosotros</a> |
+      <a href="#"> Contacto</a>
+    </p>
+  </div>
+</footer>
+<!-- Fn footer -->
+
+</body>
+
+</html>

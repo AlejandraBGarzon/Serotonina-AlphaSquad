@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+/*navbar */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+/*icono*/
+@import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap');
+/* footer: font-family: 'Text Me One', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+/* title body: font-family: 'Mochiy Pop P One', sans-serif;*/
+
+:root {
+  --1-color: #f65555;
+  --2-color: #e3bebb;
+  --3-color: #efefef;
+  --4-color: #843f11;
+  --font-navbar: 'Montserrat', sans-serif;
+  --font-logo: 'Bowlby One', cursive;
+
+}
+
+/* font titulo:     font-family: 'Bowlby One', cursive;*/
+body {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  margin-bottom: 120px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* separador descripcion */
+nav ul {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  width: 90%;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+nav li {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 1.7rem;
+  margin-right: 1.7rem;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  width: 100%;
+  font-size: 30px;
+  text-shadow: 2px 2px 3px var(--1-color);
+}
+
+.nav-item a {
+  display: contents;
+  font-family: var(--font-navbar);
+}
+
+#navbarin {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.container-fluid {
+  background-color: var(--2-color);
+  width: 100%;
+  padding: 0px;
+}
+
+/*--------Logo y titulo---------*/
+#logoimg {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: -35px;
+  width: 100%;
+  background: #e3bebb;
+  padding-top: 10px;
+  text-shadow: 2px 2px 3px #f65555;
+
+}
+
+#titlelogo {
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-family: var(--font-logo);
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 50px;
+  color: #843f11;
+  width: 100%;
+  display: flex;
+  border: 5px solid #e3bebb;
+  border-radius: 5px;
+  background: #e3bebb;
+  text-shadow: 2px 2px 3px #f65555;
+}
+
+.titulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #843f11;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 35px;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.contenedor {
+  max-width: 1200px;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* oculto lo que queda fuera del .contenedor */
+  contain: paint;
+}
+
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.item {
+  width: 220px;
+  /* Ancho fijo para cada caja */
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  text-align: center;
+}
+
+.item .titulo-item {
+  font-weight: bold;
+  /* Texto en negrita */
+  color: var(--1-color);
+  margin-bottom: 10px;
+  /* Espacio inferior */
+}
+
+.item .precio-item {
+  margin-bottom: 10px;
+  font-weight: bold;
+  /* Texto en negrita */
+}
+
+.item p {
+  font-size: 16px;
+  color: #888;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item .imagen {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.boton-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--1-color);
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.boton-item:hover {
+  background-color: var(--2-color);
+}
+
+/*FOOTER*/
+footer {
+  width: 100%;
+  background-color: var(--2-color);
+  color: #000000;
+  font-family: 'Text Me One', sans-serif;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+/* Media queries para ajustar el diseño en diferentes tamaños de pantalla */
+
+/* Para computadoras */
+@media (min-width: 1024px) {
+  .item {
+    width: 15%;
+    /* Ancho del 33.33% para mostrar tres elementos por fila */
+  }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .item {
+    width: 50%;
+    /* Ancho del 50% para mostrar dos elementos por fila */
+  }
+}
+
+/* Para teléfonos móviles */
+@media (max-width: 767px) {
+  .item {
+    width: 100%;
+    /* Ancho completo */
+  }
+}
