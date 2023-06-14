@@ -1,2 +1,2 @@
 # Serotonina-AlphaSquad
-Repositorio definitivo de nuestro proyecto
+Proyecto de sitio web enfocado en servicios de salud mental
