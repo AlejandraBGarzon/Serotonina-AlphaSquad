@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicaciones</title>
+  <link rel="icon" href="img/Logotipo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/hdr-ftr.css">
+  <link rel="stylesheet" href="css/publicaciones.css">
+</head>
+
+<body>
+
+  <!-- ---------------- Contenedor navegación ------------------ -->
+  <div class="bg-opacity">
+    <header class="navbar">
+      <h2 class="logo">
+        <span class="logo-text">Serotonina</span>
+        <a class="logo-img" id="logoimgfoo" href="#">
+          <img src="img/Logotipo.png" alt="logofooter" width="90px" height="70px">
+        </a>
+      </h2>
+      <!-- ----------------- Barra de navegación ----------------------- -->
+      <ul class="nav">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li><a href="#">Contáctanos</a></li>
+        <div id="menuIcon"><i class="fa-solid fa-bars"></i></div>
+    </header>
+  </div>
+  <!-- ------------------------------------------------------------------------------------------- -->
+
+  <!-- ----------------------------------- Contenido Principal ----------------------------------- -->
+  <main id="main-container">
+    <div class="container mt-5">
+      <h1>Bienvenido a la sección de publicaciones</h1>
+      <p>En este espacio podrás explorar y publicar nuevos elementos</p>
+
+      <button id="add-item-button" class="btn btn-outline-primary">Publicar Elemento</button>
+
+      <div id="add-item-form-container" style="display: none;">
+        <form id="item-form">
+          <div class="mb-3">
+            <label for="name-input" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="name-input" required>
+          </div>
+          <div class="mb-3">
+            <label for="img-type-select" class="form-label">Tipo de imagen:</label>
+            <select class="form-select" id="img-type-select" required>
+              <option value="">Selecciona una opción</option>
+              <option value="url">URL</option>
+              <option value="file">Archivo</option>
+            </select>
+          </div>
+          <div id="url-input-container" class="mb-3" style="display: none;">
+            <label for="url-input" class="form-label">URL de la imagen:</label>
+            <input type="url" class="form-control" id="url-input">
+          </div>
+          <div id="file-input-container" class="mb-3" style="display: none;">
+            <label for="file-input" class="form-label">Cargar archivo de imagen:</label>
+            <input type="file" class="form-control" id="file-input">
+          </div>
+          <div class="mb-3">
+            <label for="description-input" class="form-label">Descripción:</label>
+            <textarea id="description-input" class="form-control"></textarea>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary">Agregar y Publicar</button>
+        </form>
+      </div>
+
+
+      <button id="explore-button" class="btn btn-outline-primary">Explorar Publicaciones</button>
+
+      <div id="explore-container" style="display: none;">
+        <div id="publications-section" class="mt-5">
+          <h2>Explorar Publicaciones</h2>
+          <ul id="explore-list"></ul>
+        </div>
+
+        <div id="delete-menu" style="display: none;">
+          <button id="confirm-button">Confirmar</button>
+        </div>
+      </div>
+  </main>
+  <!-- ------------------------------------------------------------------------------------------- -->
+
+  <!----- footer ----->
+  <footer class="footer">
+    <div class="footer-left col-md-3 col-sm-6">
+      <p class="about">
+        <span><b>Acerca</b></span> Nuestra plataforma de psicología ofrece apoyo emocional y mental con profesionales
+        capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30 días,
+        promoviendo tu bienestar sin compromiso financiero.
+      </p>
+      <div class="icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-center col-md-3 col-sm-6">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>Bogota, Colombia</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p> (+57) 0000 000 000</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="#">contacto&#64;serotonina.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right col-md-3 col-sm-6">
+      <h2 class="">
+        <span class="logo-text">Serotonina</span>
+        <a class="logo-img" id="logoimgfoo" href="#">
+          <img src="img/Logotipo.png" alt="logofooter" width="90px" height="70px">
+        </a>
+      </h2>
+      <p class="menu">
+        <a href="index.html"> Inicio</a> |
+        <a href="#"> Servicios</a> |
+        <a href="nosotros.html"> Nosotros</a> |
+        <a href="#"> Contacto</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Fn footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.tiny.cloud/1/g76c937fv62znnm8hlv1i1vep848k0ox46iwc5ysgtyd5onb/tinymce/6/tinymce.min.js"
+    referrerpolicy="origin"></script>
+  <script src="js/publicaciones.js"></script>
+  <script src="js/mostrar.js"></script>
+</body>
+
+</html>
