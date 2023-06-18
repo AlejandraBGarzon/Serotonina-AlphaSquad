@@ -1,71 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
-*{
-    margin: 0;
-    padding:0;
-    font-family: 'Open Sans';
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
 
-    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-    --color-0: #049baed9; /*0%*/
-    --color-1: #1e7898; /*20%*/
-    --color-2: #165a72; /*40%*/
-    --color-3: #0f3c4c; /*60%*/
-    --color-4: #d3eaf2; /*80%*/
-    --color-5: #ffffff; /*100%*/
-  }
-.bg-opacity{  /* capa que está sobre el fondo*/
-	position: fixed;
-  height: 100px;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 1;
-	background: rgba(4, 155, 174, 0.633);
-}
-header{
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 30px 9%;
-}
-.logo{
-	 font-family: var(--font);
-	font-size: 30px;
-	font-weight: 700;
-	color: var(--color-5);
-}
-.nav{
-	display: flex;
-}
-.nav a{ /*Esto es inicio, servios, nosotros y contacto*/
-	color: var(--color-5);
-	margin-left: 60px;
-	padding-bottom: 5px;
-	border-bottom: 2px solid transparent;
-	font-weight: 700;
-	transition: all .50s ease;
-	font-family: var(--font);
-}
-.nav a:hover{ /*Efecto de raya bajo y sombreado por encima*/
-	border-bottom: 2px solid var(--color-5);
-}
-#menuIcon{
-	color: var(--color-2);
-	font-size: 30px;
-	z-index: 10;
-	cursor: pointer;
-	display: none;
-}
 .welcome{
     text-align: center;
     font-family: var(--font);
@@ -74,6 +12,8 @@ header{
     padding: 30px 0;
 }
 main{
+    flex: 1;
+    padding-bottom: 25px;
   margin-top: 100px;
   background-color: var(--color-4);
 }
@@ -271,33 +211,3 @@ main{
 .carrito-total .btn-pagar:hover{
     scale: 1.05;
 }
-
-/* SECCION RESPONSIVE */
-@media screen and (max-width: 850px) {
-    .contenedor {
-      display: block;
-    }
-    .contenedor-items{
-        width: 100% !important;
-    }
-    .carrito{
-        width: 100%;
-    }
-  }
-/* Estilos para el icono del carrito en la versión móvil */
-#cartIcon {
-  /* Estilos regulares del botón */
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-@media only screen and (max-width: 768px) {
-  /* Estilos específicos para la versión móvil */
-  #cartIcon {
-    display: block;
-  }
-}
-
