@@ -9,18 +9,95 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/6ae7eff8aa.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+    ">
 </head>
 <body>
 	<div class="bg-opacity"></div>
 	<header>
-		<a href="#" class="logo">Serotonina</a>
-		<ul class="nav"> <!--Barra de navegación-->
-			<li><a href="#">Inicio</a></li>
-			<li><a href="#">Servicios</a></li>
-			<li><a href="#">Nosotros</a></li>
-			<li><a href="#">Contáctanos</a></li>
-			<div id="menuIcon"><i class="fa-solid fa-bars"></i></div>
-	</header>
+
+        <div class="container-fluid">
+
+            <div class="navb-logo">
+                <img src="img/Logotipo.png" alt="Logo">
+            </div>
+
+            <div class="navb-items d-none d-xl-flex">
+
+                <div class="item">
+                    <a href="/">Home</a>
+                </div>
+
+                <div class="item">
+                    <a href="#nosotros">Nosotros</a>
+                </div>
+
+                <div class="item">
+                    <a href="#carro">Compras</a>
+                </div>
+
+                <div class="item">
+                    <a href="#Cuentanos">Cuentanos</a>
+                </div>
+
+                <div class="item-button">
+                    <a href="#Contacto" type="button">Contactanos</a>
+                </div>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="mobile-toggler d-lg-none">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#navbModal">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="navbModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <img src="img/Logotipo.png" alt="Logo">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+
+                        <div class="modal-body">
+                            
+                            <div class="modal-line">
+                                <i class="fa-solid fa-house"></i><a href="/">Home</a>
+                            </div>
+
+                            <div class="modal-line">
+                                <i class="fa-solid fa-bell-concierge"></i><a href="/services">Services</a>
+                            </div>
+
+                            <div class="modal-line">
+                                <i class="fa-solid fa-file-lines"></i> <a href="/cases">Cases</a>
+                            </div>
+
+                            <div class="modal-line">
+                                <i class="fa-solid fa-circle-info"></i><a href="/about">About</a>
+                            </div>
+
+                            <a href="/contact" class="navb-button" type="button">Let's talk</a>
+                        </div>
+
+                        <div class="mobile-modal-footer">
+                            
+                            <a target="_blank" href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a target="_blank" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a target="_blank" href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a target="_blank" href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
 	<section class="hero"> <!--Texto del encabezado-->
 		<div class="hero-text"></div>
 		<h1>Atiende el <br> universo</h1>
