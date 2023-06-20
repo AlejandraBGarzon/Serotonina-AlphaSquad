@@ -1,39 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+/*navbar */
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); /*navbar */
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');/*icono*/
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	list-style: none;
+/*icono*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
-body{
-	position: relative;
-	background: url(https://www.ricoh.es/media/BusinessSustainability_tcm77-9252_w504.jpg)no-repeat;
-	background-size: cover;
+
+body {
+    position: relative;
+    background: url(https://www.ricoh.es/media/BusinessSustainability_tcm77-9252_w504.jpg)no-repeat;
+    background-size: cover;
 }
-.bg-opacity{  /* capa que está sobre el fondo*/
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: -1;
-	background: rgba(4, 155, 174, 0.633);
+
+.bg-opacity {
+    /* capa que está sobre el fondo*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(4, 155, 174, 0.633);
 }
-a{
+
+a {
 
     text-decoration: none;
     color: currentColor;
 }
 
-a:hover{
+a:hover {
 
     color: currentColor;
 }
 
-header{
+header {
 
     width: 100vw;
     height: 100px;
@@ -43,7 +49,7 @@ header{
     align-items: center;
 }
 
-header .container-fluid{
+header .container-fluid {
 
     width: 100%;
     padding: 0 60px;
@@ -52,21 +58,21 @@ header .container-fluid{
     justify-content: space-between;
 }
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
-    header .container-fluid{
+    header .container-fluid {
 
         padding: 0 5%;
     }
 }
 
-header .navb-logo img{
+header .navb-logo img {
 
     width: 140px;
     height: 66px;
 }
 
-header .navb-items{
+header .navb-items {
 
     display: flex;
     align-items: center;
@@ -74,7 +80,7 @@ header .navb-items{
     letter-spacing: 3px;
 }
 
-header .item{
+header .item {
 
     text-align: center;
     margin-inline: 15%;
@@ -88,13 +94,13 @@ header .item{
     cursor: pointer;
 }
 
-header .item:hover{
+header .item:hover {
 
     border-bottom: 3px solid #64d6f4;
     border-top: 3px solid #64d6f4;
 }
 
-header .item-button a{
+header .item-button a {
 
     background-color: #274d8a;
     width: 150px;
@@ -108,33 +114,33 @@ header .item-button a{
     transition: all .5s ease;
 }
 
-header .item-button a:hover{
+header .item-button a:hover {
 
     background-color: #64d6f4;
 }
 
-header .mobile-toggler{
+header .mobile-toggler {
 
     font-size: 30px;
 }
 
 /* modal */
 
-.modal-dialog{
+.modal-dialog {
 
     margin: 0;
     width: 430px;
 }
 
-@media(max-width: 450px){
+@media(max-width: 450px) {
 
-    .modal-dialog{
+    .modal-dialog {
 
         width: 82%;
     }
 }
 
-.modal-content{
+.modal-content {
 
     border-radius: 0;
     height: 100vh;
@@ -142,7 +148,7 @@ header .mobile-toggler{
     background-color: #102447;
 }
 
-.modal-header{
+.modal-header {
 
     display: flex;
     justify-content: space-between;
@@ -153,26 +159,26 @@ header .mobile-toggler{
     border-bottom: 2px solid #fefefe;
 }
 
-.modal-header img{
+.modal-header img {
 
     width: 140px;
     height: 66px;
     margin-top: 17.5px;
 }
 
-.modal-header .btn-close{
+.modal-header .btn-close {
 
     background: transparent;
     opacity: 1;
 }
 
-.modal-header i{
+.modal-header i {
 
     color: #fefefe;
     font-size: 30px;
 }
 
-.modal-body{
+.modal-body {
 
     width: 88%;
     margin: 0 auto;
@@ -180,7 +186,7 @@ header .mobile-toggler{
     flex: unset;
 }
 
-.modal-body .modal-line{
+.modal-body .modal-line {
 
     width: 100%;
     display: flex;
@@ -194,13 +200,13 @@ header .mobile-toggler{
     border-bottom: 1px solid #274d8a;
 }
 
-.modal-body .modal-line:hover{
+.modal-body .modal-line:hover {
 
     color: #fefefe;
     border-bottom: 1px solid #fefefe;
 }
 
-.modal-line a{
+.modal-line a {
 
     font-size: 17px;
     font-weight: 500;
@@ -208,7 +214,7 @@ header .mobile-toggler{
     color: #fefefe;
 }
 
-.modal-line i{
+.modal-line i {
 
     color: currentColor;
     font-size: 30px;
@@ -217,7 +223,7 @@ header .mobile-toggler{
     padding: 0 0 3px 3px;
 }
 
-.navb-button{
+.navb-button {
 
     width: 100%;
     height: 47px;
@@ -232,13 +238,13 @@ header .mobile-toggler{
     transition: all .5s ease;
 }
 
-.navb-button:hover{
+.navb-button:hover {
 
     background-color: #274d8a;
     color: #fefefe;
 }
 
-.mobile-modal-footer{
+.mobile-modal-footer {
 
     width: 87%;
     margin: 0 auto;
@@ -250,89 +256,103 @@ header .mobile-toggler{
     color: #274d8a;
 }
 
-.mobile-modal-footer i:hover{
+.mobile-modal-footer i:hover {
 
     color: #fefefe;
 }
 
 
-#menuIcon{
-	color: aliceblue;
-	font-size: 30px;
-	z-index: 10;
-	cursor: pointer;
-	display: none;
+#menuIcon {
+    color: aliceblue;
+    font-size: 30px;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
 }
-.hero{
-	z-index: 2;
-	height: 100%;
-	width: 100%;
-	position: relative;
-	display: grid;
-	grid-template-columns: repeat(2, ifr);
-	align-items: center;
-	gap: 2rem;
+
+.hero {
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, ifr);
+    align-items: center;
+    gap: 2rem;
 }
-section{
-	padding: 0 20%;
+
+section {
+    padding: 0 20%;
 }
-.hero h1{                        /*Atiende*/
-	font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 100px;
-	line-height: 1em;
-	color: white;
-	margin: 0 0 10px;
-	margin-top: 12vh;
+
+.hero h1 {
+    /*Atiende*/
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 100px;
+    line-height: 1em;
+    color: white;
+    margin: 0 0 10px;
+    margin-top: 12vh;
 }
-.hero h3{                       /*Que llevas...*/
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 53px;
-	font-weight: 500;
-	color: white;
-	margin-bottom: 3px;
+
+.hero h3 {
+    /*Que llevas...*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 53px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 3px;
 }
-.hero p{                        /*Toda persona...*/
-	font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-	color: rgb(254, 253, 255);
-	font-size: 18px;
-	line-height: 1.9;
-	margin-bottom: 6px;
+
+.hero p {
+    /*Toda persona...*/
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(254, 253, 255);
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 6px;
 }
-.hero a{                          /*botón*/
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-	color: rgb(0, 0, 0);
-	background: rgb(33, 244, 255);
-	border: 2px solid transparent;
-	padding: 12px 30px;
-	line-height: 1;
-	font-size: 13px;
-	border-radius: 42px;
-	font-weight: 800;
-	transition: all 0.50 ease;
-	width: 160px;
-	display: inline-block;
-	margin-bottom: 50px;
+
+.hero a {
+    /*botón*/
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 0, 0);
+    background: rgb(33, 244, 255);
+    border: 2px solid transparent;
+    padding: 12px 30px;
+    line-height: 1;
+    font-size: 13px;
+    border-radius: 42px;
+    font-weight: 800;
+    transition: all 0.50 ease;
+    width: 160px;
+    display: inline-block;
+    margin-bottom: 50px;
 }
-.hero a:hover{
-	background: transparent;
-	border: 2px solid;
-	transform: translate(8px);
+
+.hero a:hover {
+    background: transparent;
+    border: 2px solid;
+    transform: translate(8px);
 }
-.icons{
-	z-index: 2;
-	position: absolute;
-	top: 50%;
-	padding: 0 10%;
-	transform: translateY(-40%);
+
+.icons {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    padding: 0 10%;
+    transform: translateY(-40%);
 }
-.icons i{ 
-	display: block;
-	margin: 26px 0;
-	font-size: 28px;
-	color: white;
-	transition: all 0.50s ease;
+
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 28px;
+    color: white;
+    transition: all 0.50s ease;
 }
-.icons i:hover{
-	color: rgb(0, 0, 0);
-	transform: translateY(-5px);
+
+.icons i:hover {
+    color: rgb(0, 0, 0);
+    transform: translateY(-5px);
 }
