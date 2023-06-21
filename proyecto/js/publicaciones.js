@@ -131,6 +131,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Ordenar los elementos por fecha de forma descendente (más reciente primero)
     const sortedItems = items.sort((a, b) => new Date(b.date) - new Date(a.date));
   
+// Invertir el orden de los elementos
+sortedItems.reverse();
+
     for (let i = 0; i < sortedItems.length; i++) {
       const item = sortedItems[i];
   
