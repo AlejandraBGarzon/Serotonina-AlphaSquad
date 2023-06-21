@@ -43,7 +43,11 @@ function ready(){
 }
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked(){
-    alert("Gracias por la compra");
+    Swal.fire({
+        title: "Gracias por la compra",
+        icon: "success",
+        confirmButtonText: "Aceptar"
+    });
     //Elimino todos los elmentos del carrito
     let carritoItems = document.getElementsByClassName('carrito-items')[0];
     while (carritoItems.hasChildNodes()){
@@ -87,7 +91,11 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     let nombresItemsCarrito = itemsCarrito.getElementsByClassName('carrito-item-titulo');
     for(var i=0;i < nombresItemsCarrito.length;i++){
         if(nombresItemsCarrito[i].innerText==titulo){
-            alert("El item ya se encuentra en el carrito");
+            Swal.fire({
+                title: "El item ya se encuentra en el carrito",
+                icon: "warning",
+                confirmButtonText: "Aceptar"
+            });
             return;
         }
     }
