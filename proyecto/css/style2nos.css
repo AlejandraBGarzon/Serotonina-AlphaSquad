@@ -12,11 +12,8 @@
 	
 }
 
-/* font titulo:     font-family: 'Bowlby One', cursive;*/
-body {
-	font-family: 'Raleway', sans-serif;
-	margin: 0;
-	padding: 0;
+/* font titulo: font-family: 'Bowlby One', cursive;*/
+#body {
 	width: 100%;
 }
 
