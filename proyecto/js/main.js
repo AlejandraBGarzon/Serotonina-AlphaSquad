@@ -6,9 +6,11 @@
 
 /* -------------------------- Validar que las dos contraseñas coincidan ------------------------- */
 // Obtener referencias a los elementos del formulario
+const form = document.getElementById('register-form');
 const passwordInput = document.getElementById('pass');
 const rePasswordInput = document.getElementById('re_pass');
-const form = document.getElementById('register-form');
+const passwordError = document.getElementById('password-error');
+
 
 // Función para validar las contraseñas al enviar el formulario
 function validatePasswords(event) {
@@ -16,18 +18,28 @@ function validatePasswords(event) {
 
     if (passwordInput.value !== rePasswordInput.value) {
         passwordError.textContent = 'Las contraseñas no coinciden';
+        // Mostrar el mensaje de error
+        passwordError.style.display = 'block';
         // Cancela el envío del formulario
-        event.preventDefault(); 
+        event.preventDefault();
     } else {
         passwordError.textContent = '';
+        passwordError.style.display = 'none';
     }
 }
 
+// Evento input del campo de contraseña
+passwordInput.addEventListener('input', validatePasswords);
+// Evento input del campo de confirmación de contraseña
+rePasswordInput.addEventListener('input', validatePasswords);
+
+
 /* -------- Si las contraseñas coinciden se envía alerta exitosa con los datos ingresados ------- */
 // Evento submit del formulario
+
 form.addEventListener('submit', function (event) {
     // Cancela el envío del formulario para manejarlo mediante JavaScript
-    event.preventDefault(); 
+    event.preventDefault();
 
     if (passwordInput.checkValidity() && rePasswordInput.checkValidity() && passwordInput.value === rePasswordInput.value) {
         // Objeto JSON con los campos del usuario
