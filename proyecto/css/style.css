@@ -30,29 +30,32 @@ h2 {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: #222;
+  color: #fef3f3;
   font-family: var(--font);
   font-size: 36px;
   text-align: center; }
 
 .main {
-  background: var(--5to-color);
-  padding: 150px 0; 
+  padding: 0 0;
+  margin: 0; 
   font-size: 15px;
 font-family: var(--font);}
 
 
 body {
+  margin: 0;
+  background: url(/proyecto/images/IMGP2.png) no-repeat fixed;
+  background-size: 100%;
   font-size: 13px;
   line-height: 1.8;
   color: #222;
-  background: black;
-  font-weight: 400;
+  font-weight: 400px;
   font-family: var(--font); }
 
 .container {
   width: 900px;
   margin: 0 auto;
+  margin-bottom: 20px;
   box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.5);
   border-radius: 20px; }
 
@@ -61,7 +64,8 @@ body {
   margin-bottom: 150px; }
 
 .signup-content {
-  padding: 75px 0;
+  margin-top: 15px;
+  padding: 50px 0;
   background-color: rgba(15, 152, 156, 0.6);
   border-radius: 20px;
 }
@@ -72,7 +76,8 @@ body {
 
 .signup-image {
   margin: 0 55px;
-  margin-top: 45px }
+  margin-top: 45px;
+}
 
 .form-title {
   margin-bottom: 33px; }
@@ -122,6 +127,7 @@ body {
   margin-bottom: 25px;
   overflow: hidden;
   text-align: center;
+  border-radius: 20px;
 }
  /***/
 
@@ -136,8 +142,8 @@ input { /*Diseno de los inputs*/
   border-radius: 10px; }
       
 #remember-me{ /*box recordar*/
-  width: 5%;
-  padding: 6px 30px;
+  width: 10%;
+  padding: 8px 10px;
   font-size: 30px;
 }
 
@@ -202,5 +208,5 @@ option {
 
   .form-title {
     text-align: center; }
-
-    /* Fin MediaQuery  */
+    
+     /* Fin MediaQuery*/
