@@ -44,8 +44,8 @@ font-family: var(--font);}
 
 body {
   margin: 0;
-  background: url(https://marcohildebrandt.com/images/DesignohneTitel.png) no-repeat fixed;
-  background-size: 100%;
+  background: url(https://i.ibb.co/FD8pDWV/IMGP2.png) no-repeat fixed;
+  background-size: cover;
   font-size: 13px;
   line-height: 1.8;
   color: #222;
@@ -61,12 +61,13 @@ body {
 
   /*Registro*/
 .signup {
-  margin-bottom: 150px; }
+  margin-bottom: 150px;
+}
 
 .signup-content {
   margin-top: 15px;
   padding: 50px 0;
-  background-color: rgba(15, 152, 156, 0.6);
+  background-color: rgba(15, 152, 156, 0.8);
   border-radius: 20px;
 }
 
@@ -208,5 +209,5 @@ option {
 
   .form-title {
     text-align: center; }
-    
+  }
      /* Fin MediaQuery*/
