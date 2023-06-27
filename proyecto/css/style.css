@@ -144,20 +144,27 @@ menuIcon{
 
 @media screen and (max-width:900px){
     .navbar{
-        padding: 0;
+        padding-right: 0;
+        margin: 0;
     }
     .navbar .logo{
         position:fixed;
         left: 30px;
+        margin-top: 40px;
+
     }
     .navbar .menu-hamburger{
+        margin-top: 40px;
         display: block;
+        z-index: 12;
+
         
      }
     .nav-links {
         top:0;
+        z-index: 10;
         left: 0;
-       position: absolute;
+        position: absolute;
        background-color: rgba(16, 18, 18, 0.227);
        backdrop-filter: blur(10px);
        width: 100%;
@@ -204,7 +211,5 @@ menuIcon{
     width: fit-content;
     
 }
-.icons{
-    margin-bottom: 130Zpx;
-}
+
 }
