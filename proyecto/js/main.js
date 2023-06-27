@@ -1,82 +1,126 @@
 /* ---------------------------------------------------------------------------------------------- */
-/*                                    FUNCIONALIDAD DE REGISTRO                                   */
-/* ---------------------- LA VALIDACIÓN DE OTROS DATOS SE HACEN EN EL HTML ---------------------- */
+/*                            VALIDACIÓN Y FUNCIONALIDAD DE FORMULARIOS                           */
+/* ---------------------------------------------------------------------------------------------- */
+
+// Obtener referencias a los formularios de registro e ingreso
+const registerForm = document.getElementById('register-form');
+const loginForm = document.getElementById('login-form');
+
+/* ------------------------------------------ REGISTRO ------------------------------------------ */
+
+// Manejar el evento de envío del formulario de registro
+registerForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Obtener referencias a los campos del formulario de registro
+    const nameInput = registerForm.querySelector('#name');
+    const numInput = registerForm.querySelector('#num');
+    const emailInput = registerForm.querySelector('#email');
+    const passInput = registerForm.querySelector('#pass');
+    const rePassInput = registerForm.querySelector('#re_pass');
+    const passwordError = registerForm.querySelector('#password-error');
+
+    // Obtener los valores de los campos del formulario
+    const name = nameInput.value;
+    const num = numInput.value;
+    const email = emailInput.value;
+    const pass = passInput.value;
+    const rePass = rePassInput.value;
+
+    // Almacenar los valores en el almacenamiento local
+    localStorage.setItem('Name', name);
+    localStorage.setItem('Num', num);
+    localStorage.setItem('Email', email);
+    localStorage.setItem('Pass', pass);
+    localStorage.setItem('RePass', rePass);
+
+    // Validar si algún campo está vacío
+    if (name === '' || num === '' || email === '' || pass === '' || rePass === '') {
+        Swal.fire(
+            'Opps..!',
+            '¡Los campos están vacíos!',
+            'error'
+        );
+    } else {
+        // Validar la longitud de la contraseña y si coincide con la confirmación
+        if (pass.length >= 8 && pass === rePass) {
+            Swal.fire({
+                title: '¡Buen trabajo!',
+                text: `¡Registro exitoso!\n\nNombre: ${name}\nNúmero: ${num}\nEmail: ${email}`,
+                icon: 'success'
+            });
+            setTimeout(() => {
+                // Redirigir al formulario de inicio de sesión
+                location.href = '#signin';
+            }, 1000);
+        } else {
+            // Mostrar un mensaje de error si las contraseñas no coinciden o no cumplen los requisitos
+            passwordError.textContent = 'Las contraseñas no coinciden o no cumplen los requisitos';
+            passwordError.style.display = 'block';
+        }
+    }
+});
 /* ---------------------------------------------------------------------------------------------- */
 
 
-/* -------------------------- Validar que las dos contraseñas coincidan ------------------------- */
-// Obtener referencias a los elementos del formulario
-const form = document.getElementById('register-form');
-const passwordInput = document.getElementById('pass');
-const rePasswordInput = document.getElementById('re_pass');
-const passwordError = document.getElementById('password-error');
+/* ------------------------------------------- INGRESO ------------------------------------------- */
 
-
-// Función para validar las contraseñas al enviar el formulario
-function validatePasswords(event) {
-    const passwordError = document.getElementById('password-error');
-
-    if (passwordInput.value !== rePasswordInput.value) {
-        passwordError.textContent = 'Las contraseñas no coinciden';
-        // Mostrar el mensaje de error
-        passwordError.style.display = 'block';
-        // Cancela el envío del formulario
-        event.preventDefault();
-    } else {
-        passwordError.textContent = '';
-        passwordError.style.display = 'none';
-    }
-}
-
-// Evento input del campo de contraseña
-passwordInput.addEventListener('input', validatePasswords);
-// Evento input del campo de confirmación de contraseña
-rePasswordInput.addEventListener('input', validatePasswords);
-
-
-/* -------- Si las contraseñas coinciden se envía alerta exitosa con los datos ingresados ------- */
-// Evento submit del formulario
-
-form.addEventListener('submit', function (event) {
-    // Cancela el envío del formulario para manejarlo mediante JavaScript
+// Manejar el evento de envío del formulario de ingreso
+loginForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    if (passwordInput.checkValidity() && rePasswordInput.checkValidity() && passwordInput.value === rePasswordInput.value) {
-        // Objeto JSON con los campos del usuario
-        const usuario = {
-            nombre: document.getElementById('name').value,
-            genero: document.getElementById('genero').value,
-            celular: document.getElementById('num').value,
-            correo: document.getElementById('email').value
-        };
+    // Obtener referencias a los campos del formulario de ingreso
+    const emailInput = loginForm.querySelector('#your_email');
+    const passInput = loginForm.querySelector('#your_pass');
 
-        // Alerta de envío exitoso después de 1 segundo
-        setTimeout(function () {
-            // Mostrar alerta de envío exitoso
+    // Obtener los valores de los campos del formulario
+    const email = emailInput.value;
+    const pass = passInput.value;
+
+    // Obtener los valores almacenados en el almacenamiento local
+    const storedEmail = localStorage.getItem('Email');
+    const storedPass = localStorage.getItem('Pass');
+
+    // Validar si algún campo está vacío
+    if (email === '' || pass === '') {
+        Swal.fire(
+            'Opps..!',
+            '¡Los campos están vacíos!',
+            'error'
+        );
+    } else {
+        // Validar si el correo electrónico y la contraseña coinciden con los valores almacenados
+        if (email === storedEmail && pass === storedPass) {
             Swal.fire({
-                icon: 'success',
-                title: 'Envío exitoso',
-                text: 'El formulario se ha enviado correctamente',
-                html: `<pre>${JSON.stringify(usuario, null, 2)}</pre>`
-            }).then((result) => {
-                // Cuando el usuario haga click en "Ok", lo redirije al Ingreso
-                if (result.isConfirmed) {
-                    const signInSection = document.querySelector('#signin');
-                    // Animación de desplazamiento suave
-                    signInSection.scrollIntoView({ behavior: 'smooth' });
-                }
+                title: '¡Bien hecho!',
+                text: `¡Inicio de sesión exitoso!\n\nEmail: ${email}`,
+                icon: 'success'
             });
-        }, 1000);
+            setTimeout(() => {
+                // Redirigir a la página deseada después del inicio de sesión exitoso después de  un segundo
+                location.href = 'bienvenida.html';
+            }, 1000);
+        } else {
+            // Validar si el correo electrónico y la contraseña coinciden con los valores almacenados
+            Swal.fire(
+                'Opps..!',
+                '¡El correo electrónico o la contraseña son incorrectos!',
+                'error'
+            );
+        }
     }
 });
 
-/* ------------- Animación desplazamiento cuando das click en "Ya tengo una cuenta" ------------- */
-// Agregar evento click al enlace "Ya tengo una cuenta"
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------ DESPLAZAMIENTO ------------------------------------ */
+
+// Manejar el evento de clic en el enlace "Ya tengo una cuenta"
 const signupImageLink = document.querySelector('.signup-image-link');
 signupImageLink.addEventListener('click', function (event) {
     event.preventDefault();
-    const signInSection = document.querySelector('#signin');
-    // Animación suave hacia Ingreso
+    const signInSection = document.querySelector('.sign-in');
     signInSection.scrollIntoView({ behavior: 'smooth' });
 });
 
+/* --------------------------------------------- FIN -------------------------------------------- */
