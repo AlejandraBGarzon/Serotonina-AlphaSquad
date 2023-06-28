@@ -1,3 +1,7 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                                 ESTILOS DEL CONTENIDO PRINCIPAL                                */
+/* ---------------------------------------------------------------------------------------------- */
+
 /* ---------------------- Colores y Fuentes -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 :root {
@@ -9,7 +13,6 @@
   --color-4: #d3eaf2; /*80%*/
   --color-5: #ffffff; /*100%*/
 }
-
 
 html, body {
   height: 80vh; 
@@ -70,6 +73,7 @@ main {
   background-color: var(--color-1);
 }
 
+/* ---------------------------- ESTILOS DEL FORMULARIO PARA PUBLICAR ---------------------------- */
 #add-item-form-container {
   display: none;
 }
@@ -169,7 +173,7 @@ main {
   background-color: var(--color-1);
 }
 
-/* ------------------------------- ESTILOS DEL CONTENIDO PUBLICADO ------------------------------ */
+/* ------------------------------- ESTILOS DEL ELEMENTO PUBLICADO ------------------------------ */
 .item {
   margin: 20px auto;
   max-width: 600px;

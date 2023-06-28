@@ -7,8 +7,8 @@
   <title>Publicaciones</title>
   <link rel="icon" href="img/Logotipo.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/hdr-ftr.css">
   <link rel="stylesheet" href="css/publicaciones.css">
@@ -21,35 +21,45 @@
     <header class="navbar">
       <h2 class="logo">
         <span class="logo-text">Serotonina</span>
-        <a class="logo-img" id="logoimgfoo" href="#">
+        <a class="logo-img" id="logoimgfoo" href="index.html">
           <img src="img/Logotipo.png" alt="logofooter" width="90px" height="70px">
         </a>
       </h2>
       <!-- ----------------- Barra de navegación ----------------------- -->
       <ul class="nav">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contáctanos</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
         <div id="menuIcon"><i class="fa-solid fa-bars"></i></div>
     </header>
   </div>
   <!-- ------------------------------------------------------------------------------------------- -->
 
-  <!-- ----------------------------------- Contenido Principal ----------------------------------- -->
+
+  <!-- ------------------------------------------------------------------------------------------- -->
+  <!--                                     Contenido Principal                                     -->
+  <!-- ------------------------------------------------------------------------------------------- -->
+
   <main id="main-container">
     <div class="container mt-5">
       <h1>Bienvenido a la sección de publicaciones</h1>
       <p>En este espacio podrás explorar y publicar nuevos elementos</p>
 
+      <!-- ------------------------------------ Nueva publicación ------------------------------------- -->
+
+      <!-- Este botón despliega la sección de formulario para publicar -->
       <button id="add-item-button" class="btn btn-outline-primary">Publicar Elemento</button>
 
+      <!-- Estará oculto hasta hacer click -->
       <div id="add-item-form-container" style="display: none;">
+        <!-- Los items tendrán un nombre, imagen y descripción -->
         <form id="item-form">
           <div class="mb-3">
             <label for="name-input" class="form-label">Nombre:</label>
             <input type="text" class="form-control" id="name-input" required>
           </div>
+          <!-- El usuario podrá elegir si quiere adjuntar una URL o archivo de imagen -->
           <div class="mb-3">
             <label for="img-type-select" class="form-label">Tipo de imagen:</label>
             <select class="form-select" id="img-type-select" required>
@@ -71,26 +81,29 @@
             <textarea id="description-input" class="form-control"></textarea>
           </div>
 
-
+          <!-- Los items se agregarán a la sección de publicaiones -->
           <button type="submit" class="btn btn-primary">Agregar y Publicar</button>
         </form>
       </div>
 
-
+      <!-- -------------------------------------- Publicaciones -------------------------------------- -->
+      <!-- Este botón desplega la sección de publicaciones -->
       <button id="explore-button" class="btn btn-outline-primary">Explorar Publicaciones</button>
 
+      <!-- Está oculta hasta hacer click -->
       <div id="explore-container" style="display: none;">
         <div id="publications-section" class="mt-5">
           <h2>Explorar Publicaciones</h2>
           <ul id="explore-list"></ul>
         </div>
-
+        <!-- Cada publicación agregada tendrá la opción para eliminar -->
         <div id="delete-menu" style="display: none;">
           <button id="confirm-button">Confirmar</button>
         </div>
       </div>
   </main>
-  <!-- ------------------------------------------------------------------------------------------- -->
+  <!-- ---------------------------------------- Fin main ----------------------------------------- -->
+
 
   <!----- footer ----->
   <footer class="footer" id="footer">
@@ -129,18 +142,20 @@
       </h2>
       <p class="menu">
         <a href="index.html"> Inicio</a> |
-        <a href="#"> Servicios</a> |
+        <a href="servicios.html"> Servicios</a> |
         <a href="nosotros.html"> Nosotros</a> |
-        <a href="#"> Contacto</a>
+        <a href="contacto.html"> Contacto</a>
       </p>
     </div>
   </footer>
   <!-- Fn footer -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Biblioteca para el formato en campo de descripción-->
   <script src="https://cdn.tiny.cloud/1/g76c937fv62znnm8hlv1i1vep848k0ox46iwc5ysgtyd5onb/tinymce/6/tinymce.min.js"
     referrerpolicy="origin"></script>
   <script src="js/publicaciones.js"></script>
+
 </body>
 
 </html>
