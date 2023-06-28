@@ -3,19 +3,36 @@
 /* ---------------------------------------------------------------------------------------------- */
 
 /* ---------------------- Colores y Fuentes -------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 :root {
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-  --color-0: #049baed9; /*0%*/
-  --color-1: #1e7898; /*20%*/
-  --color-2: #165a72; /*40%*/
-  --color-3: #0f3c4c; /*60%*/
-  --color-4: #d3eaf2; /*80%*/
-  --color-5: #ffffff; /*100%*/
+  --color-0: #049baed9;
+  /*0%*/
+  --color-1: #1e7898;
+  /*20%*/
+  --color-2: #165a72;
+  /*40%*/
+  --color-3: #0f3c4c;
+  /*60%*/
+  --color-4: #d3eaf2;
+  /*80%*/
+  --color-5: #ffffff;
+  /*100%*/
 }
 
-html, body {
-  height: 80vh; 
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  background-image: url(https://www.universityofcalifornia.edu/sites/default/files/styles/article_default_banner/public/brain-blue-yellow.jpeg?h=2bacc77b&itok=9jL4XBGT);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 80vh;
   margin: 0;
   padding: 0;
 }
@@ -25,19 +42,19 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10%;
 }
 
 #main-container {
-  background-color: var(--color-4);
+  background: rgba(4, 155, 174, 0.633);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
 
 .container {
-  display:inline-flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -48,13 +65,14 @@ main {
 .container h1 {
   font-size: 30px;
   font-weight: 700;
-  color: var(--color-3);
+  color: var(--color-4);
   margin-bottom: 10px;
 }
 
 .container p {
   font-size: 16px;
-  color: var(--color-3);
+  font-weight: 500;
+  color: var(--color-5);
 }
 
 .container button {
@@ -202,6 +220,3 @@ main {
   font-style: italic;
   color: #888;
 }
-
-
-

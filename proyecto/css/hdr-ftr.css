@@ -1,103 +1,218 @@
-/* ------------------- Estilos de Navbar y Footer ----------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+/*                           ESTILOS PARA NAVBAR Y FOOTER CON RESPONSIVE                          */
+/* ---------------------------------------------------------------------------------------------- */
 
-/* ---------------------- Colores y Fuentes -------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
 :root {
-  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
-  --color-0: #049baed9; /*0%*/
-  --color-1: #1e7898; /*20%*/
-  --color-2: #165a72; /*40%*/
-  --color-3: #0f3c4c; /*60%*/
-  --color-4: #d3eaf2; /*80%*/
-  --color-5: #ffffff; /*100%*/
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    --color-0: #049baed9;
+    --color-1: #1e7898;
+    --color-2: #165a72;
+    --color-3: #0f3c4c;
+    --color-4: #d3eaf2;
+    --color-5: #ffffff;
 }
 
-/* -------------- Estilos para todo el html ---------------------- */
 * {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font);
-  box-sizing: border-box;
-  list-style: none;
-}
-/* ---------------------- Fondo Semi-transparente ------------------- */
-.bg-opacity {
-  position: fixed;
-  height: 100px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  background: rgba(4, 155, 174, 0.633);
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px 9%;
+    font-family: var(--font);
+    height: 100px;
+    width: 100px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.navbar {
+    position: absolute;
+    padding-right: 20px;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.logo-text {
-  font-size: 30px;
-  font-weight: 700;
-  color: var(--color-5);
-  line-height: 70px;
+.navbar a {
+    color: var(--color-5);
+    font-size: medium;
+    font-weight: bold;
 }
 
-.logo-img {
-  margin-left: 10px;
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
+.navbar .nav-links ul {
+    display: flex;
 }
 
-.nav a {
-  color: var(--color-5);
-  margin-left: 60px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-  text-decoration: none;
-  font-weight: 700;
-  transition: all .50s ease;
-  font-family: var(--font);
+.navbar .nav-links ul li {
+    margin: 0 25px;
 }
 
-.nav a:hover {
-  border-bottom: 2px solid var(--color-5);
-}
-/* --------------- Icono menú para dispositivos móviles ------------ */
-#menuIcon {
-  color: var(--color-2);
-  font-size: 30px;
-  z-index: 10;
-  cursor: pointer;
-  display: none;
+.nav-links ul li .carro {
+    width: auto !important;
+    height: auto !important;
+    margin: 7 35px;
+    text-decoration: none;
+    list-style: none;
 }
 
+.navbar .nav-links ul li .active a {
+    color: var(--color-3);
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    right: 30px;
+    width: 35px;
+}
+
+.navbar a:hover {
+    color: var(--color-0);
+}
+
+menuIcon {
+    display: none;
+}
+
+/* ------------------------------------ Estilos Pie de Página ----------------------------------- */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--color-0);
-  color: var(--color-3);
-  padding: 15px 9%;
-  margin: auto;
-  height: 225px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-0);
+    color: var(--color-3);
+    margin-top: 10%;
+    padding: 15px 9%;
+    height: auto;
 }
 
+.footer-left {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
+.footer-center {
+    flex-basis: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-5);
+    line-height: 40px;
+    margin: 0;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer .about {
+    margin-bottom: 10px;
+}
+
+.footer .icons {
+    margin-top: 20px;
+}
+
+.footer .icons a {
+    color: var(--color-3);
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                          Media Queries                                         */
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------- Para Navbar ---------------------------------------- */
+
+@media screen and (max-width:900px) {
+    .navbar {
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .navbar .logo {
+        left: 30px;
+        margin-top: 40px;
+    }
+
+    .navbar .menu-hamburger {
+        margin-top: 40px;
+        display: block;
+        z-index: 12;
+    }
+
+    .nav-links {
+        top: 0;
+        z-index: 10;
+        left: 0;
+        position: absolute;
+        background-color: rgba(36, 50, 50, 0.472);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        height: 100vh;
+        display: flexbox;
+        justify-content: center;
+        align-items: center;
+        margin-left: 100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em;
+    }
+
+    /* ----------------------------------------- Para Footer ---------------------------------------- */
+
+    @media screen and (max-width: 768px) {
+        .footer {
+            padding: 15px 5%;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        .footer h2 {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+}
