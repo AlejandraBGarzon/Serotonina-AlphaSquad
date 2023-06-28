@@ -1,16 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-/*navbar */
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
-/*icono*/
 :root {
-    --1er-color: #05161A;
-    --2do-color: #072E33;
-    --3er-color: #0C7075;
+    --1er-color: #05161a;
+    --2do-color: #072e33;
+    --3er-color: #0c7075;
     --4to-color: #0f989c;
     --5to-color: #6da5c0;
-    --6to-color: #294D61;
-    --font: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    --6to-color: #294d61;
+    --font: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell;
+}
+
+body {
+    background-color: #aaf4ff;
+
 }
 
 * {
@@ -22,17 +25,19 @@
     flex-direction: column;
 }
 
-
 .subtitlecard {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 350px;
-    margin-right: 350px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 103px 103px 10px 10px;
+    padding: 0px 50px 0px 50px;
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 /**** Banner ***/
-.bannerservices{
+.bannerservices {
     background-image: url(../img/servicios/banner.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -40,16 +45,18 @@
     justify-content: center;
     align-items: center;
     height: 600px;
-  }
-  
-  .bannerservices h1 {
-    text-align: center;
-    background-color: rgba(128, 128, 128, 0.3);
-    border-radius: 20px;
-    width: 280px;
-  }
-/********/
+    background-color: rgba(170, 244, 255, 0.5);
+    background-blend-mode: multiply;
+}
 
+.bannerservices h1 {
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 0px 94px 0px 93px;
+    width: 350px;
+}
+
+/********/
 
 /*button tipos terapia*/
 .buttonservices {
@@ -65,11 +72,9 @@
     transform: translateY(0);
     cursor: pointer;
     margin: 5px 0px 20px 0px;
-
 }
 
 .buttonservices:hover {
-
     transition: 800ms;
     padding: 10px 50px;
     transform: translateY(-0px);
@@ -77,14 +82,13 @@
     color: white;
     border: solid 2px #0066cc;
     font-weight: bolder;
+
 }
 
 /*************/
 
-    
-
 /*Evaluacion Psicologica*/
-.containerevalpsi{
+.containerevalpsi {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,11 +96,13 @@
     margin: auto;
     margin-top: 40px;
 }
+
 .containertexteval {
     display: flex;
     flex-direction: row;
     font-weight: 600;
-    width: 100%;}
+    width: 100%;
+}
 
 .titleevalpsi {
     width: 100%;
@@ -109,7 +115,6 @@
     width: 28%;
     text-align: center;
     border-radius: 30px 0px 0px 30px;
-
 }
 
 .imgevalpsi img {
@@ -121,17 +126,17 @@
     width: 30%;
     display: flex;
     align-items: center;
-    background-color: #4287A1;
+    background-color: #4287a1;
     padding: 0px 50px 0px 50px;
     text-align: justify;
     font-size: 18px;
     border-radius: 30px 0px 0px 30px;
-
 }
-.textevalpsi:hover{
-    transform: scaleX(1.05);
-      }
 
+.textevalpsi:hover {
+    transform: scaleX(1.05);
+    transform-origin: center;
+}
 
 .caractevalpsi {
     width: 40%;
@@ -140,14 +145,13 @@
     background-color: #5e97ba;
     text-align: justify;
     padding: 10px 40px 0px 40px;
-    border-radius:  0px 30px 30px 0px;
+    border-radius: 0px 30px 30px 0px;
     font-size: 18.5px;
 }
 
 .caractevalpsi:hover {
     transform: scaleX(1.05);
 }
-
 
 /*****************/
 /*Terapia Individual*/
@@ -156,14 +160,13 @@
     margin-right: 100px;
     margin-top: 100px;
     margin-bottom: 20px;
-
 }
 
 .cardtepi {
     display: flex;
     margin-bottom: 20px;
     margin-top: 10px;
-    width: calc(100% / 5)
+    width: calc(100% / 5);
 }
 
 .onecardtepi {
@@ -176,14 +179,12 @@
     justify-content: center;
     border-radius: 20px;
     text-align: justify;
-
 }
 
 .onecardtepi:hover {
     transform: scale(1.05);
     background-color: #5e97ba;
     letter-spacing: 0px;
-
 }
 
 .onecardtepi p {
@@ -199,8 +200,6 @@
 }
 
 /*************/
-
-
 
 /*Terapia Pareja*/
 .containertepa {
@@ -219,14 +218,12 @@
     justify-content: center;
     border-radius: 20px;
     text-align: justify;
-
 }
 
 .onecardtepa:hover {
     transform: scale(1.03);
     background-color: #5e97ba;
     letter-spacing: 0px;
-
 }
 
 .onecardtepa p {
@@ -245,7 +242,7 @@
     display: flex;
     margin-bottom: 20px;
     margin-top: 10px;
-    width: calc(100% / 3)
+    width: calc(100% / 3);
 }
 
 /*************/
@@ -267,8 +264,7 @@
     justify-content: center;
     border-radius: 20px;
     text-align: justify;
-    border-color: 2px solid #072E33;
-
+    border-color: 2px solid #072e33;
 }
 
 .onecardteinf:hover {
@@ -302,17 +298,16 @@
 
 /*Terapia Grupal*/
 .containergrup {
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 240px;
+    margin-right: 240px;
     margin-top: 100px;
 }
-
 
 .cardtegru {
     display: flex;
     margin-bottom: 20px;
     margin-top: 10px;
-    width: calc(100% / 3)
+    width: calc(100% / 3);
 }
 
 .onecardtegru {
@@ -325,7 +320,6 @@
     justify-content: center;
     border-radius: 20px;
     text-align: justify;
-
 }
 
 .onecardtegru:hover {
@@ -347,3 +341,67 @@
 }
 
 /*************/
+
+
+/*** Asesoramiento vocacional ***/
+.containerasevoc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    width: 70%;
+    
+}
+
+.containerasevoc h5 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    
+}
+
+.asevoccontent {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+
+
+}
+
+.textasevoc {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 50px;
+    justify-content: center;
+    font-weight: 500;
+    background-color: var(--5to-color);
+
+}
+
+.textasevoc ul li {
+    text-align: left;
+    line-height: 35px;
+    font-weight: 600;
+}
+
+
+.image1asevoc {
+    width: 30%;
+    display: flex;
+    
+}
+.img1asevo{
+    border-radius: 30px 0px 0px 30px;
+}
+
+.image2asevoc {
+    display: flex;
+    width: 30%;
+}
+.img2asevo{
+    border-radius: 0px 30px 30px 0px;
+}
