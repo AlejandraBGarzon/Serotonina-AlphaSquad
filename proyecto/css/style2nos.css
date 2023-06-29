@@ -1,94 +1,165 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); /*navbar */
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');/*icono*/
 @import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap'); /* footer: font-family: 'Text Me One', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');/* title body: font-family: 'Mochiy Pop P One', sans-serif;*/
 
 :root{
-	--1-color: #f65555;
+	--1-color: #07c2b2;
 	--2-color: #e3bebb;
 	--3-color: #efefef;
 	--font-navbar: 'Montserrat', sans-serif;
-	--font-logo: 'Bowlby One', cursive;
+	--font-logo: 'Montserrat';
 	
 }
 
-/* font titulo: font-family: 'Bowlby One', cursive;*/
-#body {
-	width: 100%;
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-/* separador descripcion */
-nav ul { /*Etiqueta de las letras nav*/
-	display: block;
-	justify-content: center;
-	align-items: center;
-	font-weight:bolder;
-	width: 100%;
-	letter-spacing: 5px;
-	padding-bottom: 20px;
-	padding-top: 5px;
-
-	}
-nav li { /*Box del nav */
-	display: flex;
-	justify-content: space-evenly;
-	margin-left: 1.7rem;
-	margin-right: 1.7rem;
-	font-family: 'Raleway', sans-serif;
-	text-align: center;
-	width: 100%;
-	font-size: 30px;
-	text-shadow: 2px 2px 3px var(--1-color) ;
+.navbar {
+    position: relative;
+	left:120vh;
+    display: flex;
+    justify-content: space-between;
+	align-items: flex-end;
+	text-align: right;
+    width: 30%;
+    box-sizing: border-box;
+	color: #e5e5e5;
 }
 
-.nav-item a{ /*Fuente letra navbar*/
-	display: contents;
-    font-family: var(--font-navbar);
+.navbar a {
+    color: var(--color-5);
+    font-size: medium;
+    font-weight: bold;
 }
-#navbarin{
-	padding-top: 0px;
-	padding-bottom: 0px;
+
+.navbar .nav-links ul {
+    display: flex;
 }
-.container-fluid{
-	background-color: var(--2-color);
-	width: 100%;
-	padding: 0px;
+
+.navbar .nav-links ul li {
+    margin: 10px 25px;
+	margin-left: auto;
+}
+
+.nav-links ul li .carro {
+    width: auto !important;
+    height: auto !important;
+    margin: 7 35px;
+    text-decoration: none;
+}
+
+.navbar .nav-links ul li .active a {
+    color: var(--color-3);
+    font-weight: 600;
 }
 /*img nav*/
 #gif1{
-	align-items: center;
-	display: block;
-	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	background-position: center;
+	z-index: -1;
 }
 /*Descripcion*/
-#description1{ /*Texto de descripcion*/
-	text-align: justify;
-	margin-left: 400px;
-	margin-right: 400px;
-	margin-bottom: 1px;
-	text-shadow: 3px 3px 2px var(--2-color) ;
-	border-radius: 38px 38px 38px 38px;
-	background: #efefef;
-	padding: 10px;
-	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);
+#description1{ /*Texto de ¿no te entienden?*/
+	font-size: 40px;
+	bottom: 100px;
+	font-family: "Montserrat";
+	font-weight: bold;
+	margin-top: 50vh;
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
+	padding: 60px;
+	color: #0e9a9f;
+}
+h3{
+	text-align: left;
+	margin-left: 20px;
+	margin-right: 40px; 
+	padding: 40px;
+}
+.E{
+	margin-left: 60px;
+	margin-right: 125vh;
+	text-align: left;
+	background-color: #ffffff;
+}
+#titledescription2{
+	font-size: 30px;
+	margin: 0;
+	margin-left: -14vh;
 }
 #imgdescription{
 	display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
+    align-items: right;
+    text-align: right;
+    flex-direction: row;
 	width: 700px;
-	margin: auto;
+	margin-left: 80vh;
+	margin-top: -72vh;
 
 }
   /*Descripcion*/
+
+  .centered {
+	text-align: center;
+	display: table;
+	border-radius: 1rem;
+  }
+  /*¡Qué placer tenerte aquí, conócenos!*/
   #titledescription{
 	text-align: center;
-	color:#f26465;
+	float: left;
+	position: relative;
+	margin-top: 30vh;
+	margin-left: 36vh;
+	border-radius: 70px;
+	background-position: center;
+	color:rgb#444;
 	font-size: 50px;
-	font-family: 'Mochiy Pop P One', sans-serif;
+	padding: .7rem 2rem;
+	font-weight: semibold;
+	font-family: "Montserrat";
+	background-color: #eeeeee;
+	border: 1px solid #eee;
+	cursor: pointer;
+	transition: 1s ease;
+	box-shadow: .5rem .5rem .5rem #ccc,
+	-.5rem -.5rem 1rem #fff;
+}
+#titledescription:hover{
+box-shadow: .5rem -.5rem 1rem #ccc,
+	.5rem .5rem 1rem #fff;
+}
+  /*Efecto que hace parecer que escribe*/
+#titledescription span{
+	position: absolute;
+	height: 55px;
+	right: 10px;
+	width: 0;
+	border-left: 0.3px solid #000000;
+	color: #000000;
+	background: #eee;
+	animation: escribir 6s infinite alternate steps(35);
+}
+
+
+@keyframes escribir {
+	from{
+		width: 97%;
+	}
+	to{
+		width:3;
+	}
 }
 
 
@@ -97,85 +168,65 @@ nav li { /*Box del nav */
 /*--------Logo y titulo---------*/
 #logoimg{
 	display: block;
-    justify-content: center;
+    justify-content: left;
     text-align: center;
     flex-direction: column;
-	margin-bottom: -35px;
-	width: 100%;
-	background: #e3bebb;
-	padding-top: 10px;
-	text-shadow: 2px 2px 3px #f65555 ;
+	margin-bottom: -13px;
+	width: 20%;
+	background: #00000000;
+	z-index: 2;
 
 }
 #titlelogo{
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-	font-family: var(--font-logo);
-	font-weight:bold;
-	letter-spacing: 3px;
-	font-size: 50px;
-	color: #843f11;
-	width: 100%;
-	display: flex;
-	border-radius: 5px solid #e3bebb;
-	background: #e3bebb;
-	text-shadow: 2px 2px 3px #f65555 ;	
+    align-items: left;
+	margin-left: 18vh;
+	margin-top: -10vh;
+	padding: 1px;
+	display:flex;
+    flex-direction:row;
+	font-family:"Montserrat";
+	font-weight:bolder;
+	font-size: 19px;
+	color: #ffffff;
+	width: 20%;
+	border-radius: 4px solid #15bfbf;
+	background: #e3bebb00;
 }
-
-
-/*------Figura curva sobre descripcion------- */
-.curved {
-	position: relative;
-	background: #e3bebb;
-	height: 13vh;
-	border-bottom-left-radius: 50% 40%;
-	border-bottom-right-radius: 50% 40%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);	
-	
-  } 
-  .centered {
-	text-align: center;
-  }
-  /* fin figura curva*/
 
 
 /*-------mision vision--------*/
 
 #containermivi{
 	margin-top: 100px;
-	margin-bottom: 100px;
-	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);
-	border-radius: 49px 49px 49px 49px;
-	background: #e5e5e5 ;
+	margin-bottom: 200px;
+	box-shadow: 0px 0px 40px rgb(255, 253, 252);
+	border-radius: 50px 49px 49px 49px;
+	background: #fffefe ;
+	width: 1200vh;
+	text-align: right;
 	
 }
 
 #imgmivi{
-	height: auto;
-	width: auto;
-	padding: 10px;
-	border-radius: 49px;
-	object-fit: contain;
-	max-width: 600px;
-	max-height: 370px;
+	display: block;
+    align-items: left;
+    text-align: left;
+    flex-direction: row;
+	width: 490px;
+	margin-top: 9vh;
+	margin-left: 1vh;
 }
 .titlemivi{
-	text-align: center;
-	font-weight: 900;
-	text-shadow: 3px 4px 3px #e3bebb ;
-	font-size: 30px;	
+	text-align: left;
+	font-weight: 900px;
+	font-size: 30px;
+	margin-left: 10vh;	
 
 }
 .textmivi{
-	text-align: justify ;
-	font-size: 20px;
-	padding: 0px 20px 0px 10px;
-	text-shadow: 3px 3px 3px #e3bebb ;	
-	font-weight: 500;
+	text-align: left ;
+	font-size: 19px;
+	margin-left: 50px;
 }
 /*--mision vision fin--*/
 
@@ -184,28 +235,24 @@ nav li { /*Box del nav */
 
 #divworkteam{
 	width: 100%;
-	
+	font-family: "Montserrat";
+	color: #000000;
 }
 
 #textteam{
-	background: #e5e5e5 ;
-	border-radius: 38px 38px 38px 38px;
-	padding: 50px;
-	text-align: justify ;
-	text-shadow: 1px 1px 1px #ff7b7b ;	
-	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);
-	font-size: 1.5rem;
-	
+	text-align: left ;
+	font-size: 18px;
+	margin-left: -50px;
+	color: #000000;
+	font-weight: bold;
 }
 .workteam{
 	text-align: center; 
 	margin-top: 25px;
-	padding-top: 30px;
+	padding-top: 20px;
 	border-radius: 38px 38px 38px 38px;
-	background: #e3bebb;
+	background: #ffffff;
 	font-weight: 500;
-	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);
-	
   }
   
 #textacord {
@@ -214,10 +261,9 @@ nav li { /*Box del nav */
     align-items: center;
     text-align: justify;
     flex-direction: column;
-	font-size: 15px;
-	padding: 5px 30px 5px 30px;
-	text-shadow: 1px 1px 1px #c68b80;
-	
+	font-size: 14px;
+	color: #000000;
+	padding: 5px 30px 5px 30px;	
 
 }
 
@@ -229,8 +275,7 @@ nav li { /*Box del nav */
 	width: 100%;
 	font-weight: bolder;
 	letter-spacing: 2px;
-	color: #7b8494;
-	text-shadow: 1px 1px 1px #c68b80 ;	
+	color: #000000;
 }
 #team-img{
 	border-radius: 30px 30px 30px 30px;
@@ -240,7 +285,7 @@ nav li { /*Box del nav */
 
 /*---------Footer----------*/
 .footer {
-	background-color: #e3bebb;
+	background-color: #0e9a9f;
 	width: 100%;
 	text-align: left;
 	font-family: sans-serif;
@@ -249,12 +294,14 @@ nav li { /*Box del nav */
 	padding: 50px;
 	margin-top: 20px;
 	border-radius: 40px 40px 0px 0px;
-	box-shadow: 0px 0px 40px rgba(198, 139, 128, .6);
+	box-shadow: 0px 0px 40px rgba(198, 139, 128, .2);
   }
   
   .footer .footer-left, .footer .footer-center, .footer .footer-right {
 	display: inline-block;
 	vertical-align: top;
+	font-family: sans-serif;
+
   }
   /* footer izq*/
   .footer .footer-left {
@@ -264,21 +311,22 @@ nav li { /*Box del nav */
   
   .footer .about {
 	line-height: 20px;
-	color: #843f11;
-	font-size: 24px;
+	color: #f8f8f7;
+	font-size: 19px;
 	font-weight: 700;
 	margin: auto;
-	font-family: 'Text Me One', sans-serif;
+	font-family: "Montserrat";
 	text-align: justify;
 	padding-right: 25px;
   }
   
   .footer .about span {/*titulo acerca */
 	display: block;
-	color: #843f11;
+	color: #f3f2f2;
 	font-size: 30px;
 	margin-bottom: 20px;
 	text-align: center;
+
   }
   .menu a{
 	display: flex;
@@ -297,10 +345,10 @@ nav li { /*Box del nav */
 	width: 45px;
 	height: 40px;
 	cursor: pointer;
-	background-color: #843f11;
+	background-color: #0e9a9f;
 	border-radius: 2px;
 	font-size: 25px;
-	color: #c68b80;
+	color: #fffaf9;
 	text-align: center;
 	line-height: 35px;
 	margin-right: 3px;
@@ -314,8 +362,8 @@ nav li { /*Box del nav */
   }
   
   .footer .footer-center i { /* iconos direccion, ubicacion */
-	background-color: #843f11;
-	color: #c68b80;
+	background-color: #f8f7f6;
+	color: #0bc1b4;
 	font-size: 25px;
 	width: 38px;
 	height: 38px;
@@ -325,10 +373,6 @@ nav li { /*Box del nav */
 	margin: 10px 15px;
 	vertical-align: middle;
   }
-
-  #logoimgfo{
-	width: 15px;
-  }
   
   .footer .footer-center i.fa-envelope {
 	font-size: 17px;
@@ -337,7 +381,8 @@ nav li { /*Box del nav */
   
   .footer .footer-center p {/*direccion numero*/
 	display: inline-block;
-	color: #843f11;
+	font-family: "Montserrat";
+	color: #f8f4f1;
 	vertical-align: middle;
 	margin: 0;
 	font-family: 'Text Me One', sans-serif;
@@ -352,8 +397,10 @@ nav li { /*Box del nav */
   }
   
   .footer .footer-center p a { /*contacto*/
-	color: #843f11;
+	color: #e7e3e0;
 	text-decoration: none;
+	font-family: "Montserrat";
+
   }
   
   /* footer der*/
@@ -361,7 +408,8 @@ nav li { /*Box del nav */
 	width: 35%;
   }  
   .footer h2 {
-	color: #843f11;
+	color: #f6f4f3;
+	font-family: "Montserrat";
 	font-size: 36px;
 	font-weight: bolder;
 	margin: 0;
@@ -372,7 +420,8 @@ nav li { /*Box del nav */
 	color: #c68b80;
   }  
   .footer .menu {/* nombre logo footer*/
-	color: #843f11;
+	color: #f7f2ef;
+	font-family: "Montserrat";
 	margin: 20px 0 12px;
 	padding: 0;
 	font-family: 'Text Me One', sans-serif;
@@ -386,6 +435,6 @@ nav li { /*Box del nav */
 	color: inherit;
   }  
   .footer .menu a:hover {
-	color: #c68b80;
+	color: #fef8f7;
   }  
   /*footer fin*/
