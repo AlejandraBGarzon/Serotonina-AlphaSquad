@@ -8,45 +8,43 @@
   <title>Contáctanos</title>
 
   <link rel="icon" href="img/Logotipo.png" type="image/gif">
-
   <link rel="stylesheet" href="css/hdr-ftr.css">
-
   <link rel="stylesheet" href="css/contacto.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-
+  <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
   <!-- ---------------- Contenedor navegación ------------------ -->
-  <div class="bg-opacity">
-    <header class="navbar">
-      <h2 class="logo">
-        <span class="logo-text">Serotonina</span>
-        <a class="logo-img" id="logoimgfoo" href="index.html">
-          <img src="img/Logotipo.png" alt="logofooter" width="90px" height="70px">
-        </a>
-      </h2>
-      <!-- ----------------- Barra de navegación ----------------------- -->
-      <ul class="nav">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="#">Contáctanos</a></li>
-        <div id="menuIcon"><i class="fa-solid fa-bars"></i></div>
+  <header>
+    <nav class="navbar">
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="contacto.html">CONTACTANOS</a></li>
+          <li><a href=""> MAS</a></li>
+          <li><a href="carrito.html" class="carro"><img src="./img/bolsa compras.png" alt="carrito"></a></li>
         </ul>
-    </header>
-  </div>
+      </div>
+      <img src="img/588a64e0d06f6719692a2d10.png" alt="" class="menu-hamburger">
+    </nav>
+    <h2 id="titlelogo">SEROTONINA</h2>
+  </header>
 
   <!-- ------------------------ Contenedor izquierda ------------------------- -->
   <main id="contactMain">
     <div class="container border mt-3 bg-light">
       <div class="row">
-        <div id="leftContainer" class="col-md-6 p-5" style="background-image: url('img/Contac.png'); background-size: cover; background-position: center; opacity: 0.8;">
+        <div id="leftContainer" class="col-md-6 p-5"
+          style="background-image: url('img/Contac.png'); background-size: cover; background-position: center; opacity: 0.8;">
           <h1>Contáctanos</h1>
           <br>
           <h5>
@@ -95,9 +93,9 @@
   <!-- ---------------------------- pie de página ---------------------------- -->
 
   <footer class="footer">
-    <div class="footer-left col-md-3 col-sm-6">
+    <div class="footer-left">
       <p class="about">
-        <span><b>Acerca</b></span> Nuestra plataforma de psicología ofrece apoyo emocional y mental con profesionales
+        <strong>Acerca</strong> Nuestra plataforma de psicología ofrece apoyo emocional y mental con profesionales
         capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30 días,
         promoviendo tu bienestar sin compromiso financiero.
       </p>
@@ -107,32 +105,32 @@
         <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
       </div>
     </div>
-    <div class="footer-center col-md-3 col-sm-6">
+    <div class="footer-center">
       <div>
         <i class="fa fa-map-marker"></i>
         <p>Bogota, Colombia</p>
       </div>
       <div>
         <i class="fa fa-phone"></i>
-        <p> (+57) 0000 000 000</p>
+        <p>(+57) 0000 000 000</p>
       </div>
       <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="#">contacto&#64;serotonina.com</a></p>
+        <p><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
       </div>
     </div>
-    <div class="footer-right col-md-3 col-sm-6">
-      <h2 class="">
+    <div class="footer-right">
+      <h2>
         <span class="logo-text">Serotonina</span>
-        <a class="logo-img" id="logoimgfoo" href="#">
+        <a class="logo-img" id="logoimgfoo" href="index.html">
           <img src="img/Logotipo.png" alt="logofooter" width="90px" height="70px">
         </a>
       </h2>
       <p class="menu">
-        <a href="index.html"> Inicio</a> |
-        <a href="#"> Servicios</a> |
-        <a href="nosotros.html"> Nosotros</a> |
-        <a href="#"> Contacto</a>
+        <a href="index.html">Inicio</a> |
+        <a href="servicios.html">Servicios</a> |
+        <a href="nosotros.html">Nosotros</a> |
+        <a href="contacto.html">Contacto</a>
       </p>
     </div>
   </footer>
@@ -155,6 +153,16 @@
     (function () {
       emailjs.init("IITLzx8BATFKyE0km");
     })();
+  </script>
+
+  <!-- Se inicializa función para menú desplegable -->
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-menu')
+    })
   </script>
 
 </body>

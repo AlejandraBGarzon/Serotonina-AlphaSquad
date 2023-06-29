@@ -2,13 +2,13 @@
 /*                             Validación de datos                            */
 /* Este bloque contiene las funciones de validación para cada campo del       */
 /*   formulario y la función principal que escucha el evento de envío del     */
-/*   formulario para realizar las validaciones y enviar el correo electrónico.*/           
+/*   formulario para realizar las validaciones y enviar el correo electrónico.*/
 /* -------------------------------------------------------------------------- */
 
 
 /* ------------------------ Validación del formulario ----------------------- */
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
+document.getElementById("contactForm").addEventListener("submit", function (event) {
   event.preventDefault(); // Evita que se envíe el formulario de forma predeterminada
 
   // Si cumple con los tres criterios, se inicia la función para enviar el correo
