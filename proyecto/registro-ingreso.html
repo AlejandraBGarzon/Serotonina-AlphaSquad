@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ingreso y registro</title>
+    <link rel="stylesheet" href="css/registro-ingreso.css">
+    <link rel="icon" href="navbar/Logotipo.png">
+    <link rel="stylesheet" href="css/hdft-sign.css">
+    <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">SEROTONINA</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="servicios.html">SERVICIOS</a></li>
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="contacto.html">CONTACTANOS</a></li>
+                    <li><a href=""> MAS</a></li>
+                    <li><a href="carrito.html" class="carro"><img src="navbar/bolsa compras.png" alt="carrito"></a></li>
+                </ul>
+            </div>
+            <img src="navbar/588a64e0d06f6719692a2d10.png" alt="" class="menu-hamburger">
+        </nav>
+    </header>
+
+    <div class="main">
+        <!----- Registro ----->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Registro</h2>
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Ingrese su nombre completo"
+                                    pattern="[A-Za-z]+" title="Ingrese solo letras" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="tel" name="name" id="num" placeholder="Ingrese su numero celular"
+                                    pattern="[0-9]+" title="Ingrese solo números" required minlength="10" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Ingrese su contraseña"
+                                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                    title="Ingrese una contraseña mínimo de 8 caracteres con números, mayúsculas, minúsculas y símbolos"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="password" name="re_pass" id="re_pass" placeholder="Repita su contraseña"
+                                    required />
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit"
+                                    value="Registrarse" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="img/reg-ing/1reg.png" alt="sing up image"></figure>
+                        <a href="#signin" class="signup-image-link">Ya tengo una cuenta</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!----- Ingresar ----->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="img/reg-ing/2reg.png" alt="sing up image"></figure>
+                        <a href="#" class="signup-image-link">Quiero crear una cuenta</a>
+                    </div>
+                    <div class="signin-form">
+                        <h2 class="form-title">Ingresar</h2>
+                        <form method="POST" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_email"><i class="zmdi zmdi-youremail"></i></label>
+                                <input type="email" name="youremail" id="your_email"
+                                    placeholder="Ingrese su correo electrónico"
+                                    title="Por favor, ingrese su correo electrónico" required />
+                                <span id="youremail-error" class="error-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass"
+                                    placeholder="Ingrese su contraseña" title="Por favor, ingrese su contraseña"
+                                    required />
+                            </div>
+                            <div class="agree-terms" id="twoelement">
+                                <label for="remember-me" class="agree-term">Recordar cuenta</label>
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="Ingresar" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <p class="about">
+                <strong>Acerca</strong> Nuestra plataforma de psicología ofrece apoyo emocional y mental con
+                profesionales
+                capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30
+                días,
+                promoviendo tu bienestar sin compromiso financiero.
+            </p>
+            <div class="icons">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Bogota, Colombia</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(+57) 0000 000 000</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <h2>
+                <span class="logo-text">Serotonina</span>
+                <a class="logo-img" id="logoimgfoo" href="index.html">
+                    <img src="navbar/Logotipo.png" alt="logofooter" width="90px"
+                        height="70px">
+                </a>
+            </h2>
+            <p class="menu">
+                <a href="index.html">Inicio</a> |
+                <a href="servicios.html">Servicios</a> |
+                <a href="nosotros.html">Nosotros</a> |
+                <a href="contacto.html">Contacto</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+
+</html>
