@@ -15,47 +15,31 @@
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none !important;
+    text-decoration: none;
     list-style: none;
 }
 
-header {
-    font-family: var(--font);
-    height: 100px;
-    width: 100px;
-}
-
-#titlelogo {
-    align-self: flex-start;
-    margin-top: 10px;
-    align-items: left;
-    margin-left: 10vh;
-    margin-top: -7vh;
-    padding: 1px;
-    display: flex;
-    flex-direction: row;
-    font-family: var(--font);
-    font-weight: bolder;
-    font-size: 19px;
-    color: var(--color-5);
-    width: 20%;
-}
-
 .navbar {
-    position: relative;
-    left: 120vh;
+    position: absolute;
+    padding-right: 20px;
+    margin: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    text-align: right;
-    width: 30%;
+    align-items: center;
+    width: 100%;
     box-sizing: border-box;
-    color: #e5e5e5;
+    font-family: var(--font);
 }
 
 .navbar a {
     color: var(--color-5);
     font-size: medium;
+    font-weight: bold;
+    font-family: var(--font);
+}
+
+.navbar .logo {
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -64,8 +48,7 @@ header {
 }
 
 .navbar .nav-links ul li {
-    margin: 10px 25px;
-    margin-left: auto;
+    margin: 0 25px;
 }
 
 .nav-links ul li .carro {
@@ -88,15 +71,12 @@ header {
     width: 35px;
 }
 
-.navbar a:hover {
-    color: var(--color-0);
-    text-decoration: underline;
-}
-
 menuIcon {
     display: none;
 }
 
+
+/* ------------------------------------ Estilos Pie de Página ----------------------------------- */
 /* ------------------------------------ Estilos Pie de Página ----------------------------------- */
 .footer {
     display: flex;
@@ -153,6 +133,7 @@ menuIcon {
     margin-right: 10px;
     font-size: 20px;
 }
+
 
 /* ---------------------------------------------------------------------------------------------- */
 /*                                          Media Queries                                         */
