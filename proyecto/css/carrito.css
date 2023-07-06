@@ -70,8 +70,10 @@ main {
 }
 
 .contenedor .contenedor-items .item {
+    height: 390px;
     max-width: 200px;
     margin: auto;
+    justify-content: center;
     background: rgba(232, 237, 237, 0.697);
     border: 1px solid var(--color-1);
     border-radius: 10px;
@@ -80,7 +82,11 @@ main {
 }
 
 .contenedor .contenedor-items .item .img-item {
-    width: 100%;
+    width: 200px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contenedor .contenedor-items .item:hover {
