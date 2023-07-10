@@ -1,0 +1,101 @@
+:root {
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    --color-0: #049baed9;
+    --color-1: #1e7898;
+    --color-2: #165a72;
+    --color-3: #0f3c4c;
+    --color-4: #d3eaf2;
+    --color-5: #ffffff;
+}
+
+body {
+    font-weight: 600;
+    font-family: var(--font);
+    background-image: url(https://thancguide.org/wp-content/uploads/2022/05/mental-health-mh-head.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-3);
+    margin: 0;
+    padding: 0;
+}
+
+#intro,
+header,
+.card,
+#questions,
+#results {
+    background-color: rgba(0, 175, 184, 0.285);
+}
+
+#intro {
+    text-align: center;
+    color: var(--color-5);
+    padding: 20px;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: rgba(0, 221, 255, 0.458);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 200px;
+    height: 100px;
+}
+
+.card:hover {
+    background-color: rgba(0, 174, 201, 0.458);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--color-5);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+#questions {
+    padding: 20px;
+}
+
+h3 {
+    color: var(--color-3);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+.btn {
+    background-color: var(--color-0);
+    color: var(--color-5);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#results {
+    color: var(--color-3);
+    padding: 20px;
+    margin-top: 20px;
+}
