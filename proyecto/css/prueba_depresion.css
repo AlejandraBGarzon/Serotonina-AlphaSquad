@@ -11,7 +11,7 @@
 body {
     font-weight: 600;
     font-family: var(--font);
-    background-image: url(https://thancguide.org/wp-content/uploads/2022/05/mental-health-mh-head.png);
+    background-image: url(https://wallpapercave.com/wp/wp8911832.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: var(--color-3);
@@ -95,7 +95,27 @@ form input[type="radio"] {
 }
 
 #results {
-    color: var(--color-3);
+    background-color: var(--color-4);
     padding: 20px;
     margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#results h3 {
+    color: var(--color-1);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#results p {
+    color: var(--color-2);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#results .recommendation {
+    color: var(--color-3);
+    font-weight: bold;
 }
