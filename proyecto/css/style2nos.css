@@ -75,6 +75,9 @@ header {
 }
 
 /*Descripcion*/
+.titleintroduccion {
+  width: 60%;
+}
 .description1 {
   /*Texto de ¿no te entienden?*/
   font-size: 60px;
@@ -101,12 +104,13 @@ header {
   flex-direction: row;
   justify-content: center;
   margin: auto;
-  width: 80%;
+  min-width: 40%;
   margin-bottom: 100px;
   height: 100%;
+  width: 40%;
 }
 .introduccion p {
-	width: 60%;
+  min-width: 50%;
   text-align: center;
   margin: auto;
   display: flex;
@@ -127,8 +131,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  max-width: 300px;
   margin: auto;
+  max-height: 400px;
 }
 
 /*Descripcion*/
@@ -167,14 +172,14 @@ header {
 
 #containermivi {
   margin: auto;
-  justify-content: space-around;
+  justify-content: center;
   box-shadow: 0px 0px 40px rgb(255, 253, 252);
   border-radius: 50px;
   display: flex;
   flex-direction: row;
   margin-bottom: 120px;
-  width: 70%;
-  flex-wrap: wrap;
+  width: 55%;
+  flex-wrap: nowrap;
   text-wrap: balance;
 }
 
@@ -191,7 +196,6 @@ header {
   text-align: center;
   font-weight: 900px;
   font-size: 30px;
-  margin-left: 10vh;
 }
 
 .textmivi {
@@ -199,21 +203,21 @@ header {
   font-size: 19px;
   display: flex;
   justify-content: center;
-  padding: 0px 80px 0px 80px;
+  padding: 0px 10px;
 }
 
 .misionvi {
   background-color: rgba(11, 193, 180, 0.5);
   border-radius: 38px 38px 38px 38px;
-  margin: 20px;
+  margin: 10px 60px;
   padding: 20px;
 }
 
 .mivision {
   background-color: rgba(11, 193, 180, 0.5);
   border-radius: 38px 38px 38px 38px;
-  margin: 20px;
   padding: 20px;
+  margin: 10px 60px;
 }
 
 /*--mision vision fin--*/
@@ -282,6 +286,10 @@ header {
 
 #team-img {
   border-radius: 30px 30px 30px 30px;
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /*--equipo trabajo fin--*/
@@ -323,7 +331,7 @@ header {
   font-family: var(--font-navbar);
   text-wrap: balance;
   text-align: center;
-  padding-right: 25px;
+
 }
 
 .footer .about span {
@@ -424,7 +432,7 @@ header {
   text-align: center;
 }
 
-.footer-right .titlefooter{
+.footer-right .titlefooter {
   color: var(--2-color);
   font-weight: bolder;
   font-size: 40px;
@@ -451,32 +459,282 @@ header {
   color: #fef8f7;
 }
 
-/*footer fin*/
-@media (max-width: 768px){
-	#imgdescription{
+
+
+
+
+@media (max-width: 879px) {
+	.titleintroduccion {
+		width: 80%;
+	  }
+	
+	  #imgdescription {
+		margin: 0px 10px;
+	  }
+	  .introduccion {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	  }
+	  .introduccion p {
+		text-align: center;
+		text-wrap: balance;
+		margin: auto;
+	  }
+	
+	  .titledescription2 {
+		width: 100%;
+		font-size: 35px;
+		font-weight: bolder;
+		text-wrap: nowrap;
+		margin: 0px 10px;
+	  }
+	
+	  .textteam {
+		width: 100%;
+		text-align: center;
+		font-size: 16px;	
+		overflow-wrap: break-word;
+	  }
+
+	
+	  #divworkteam {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	  }
+	
+	  .textacord {
+		margin: 0px;
+		width: 100%;
+		padding: 0px;
+		text-wrap: balance;
+		overflow-wrap: break-word;
+	  }
+	
+	  .row {
+		margin: 0px 10px;
+		display: flex;
+		flex-direction: column;
+		width: 95% ;
+	  }
+	
+	  #containermivi {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 50px 5px;
+	  }
+	
+	  .textmivi {
+		width: 100%;
+		margin: 0;
+		padding: 3px;
+		text-wrap: balance;
+		overflow-wrap: break-word;
+		inline-size: wrap;
+		font-size: 15px;
+	  }
+	  .misionvi{
+		width: 95%;
+		
+
+	  }
+	  .mivision{
+		width: 95%;
+	  }
+	  #imgmivi{
+		max-width: 300px;
+		
+	  }
+	  .textdivworkteam{
+		width: 85%;
+		margin: 5px 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	  }
+
+	
+	  .footer-left{
+		width: 80%;
+	  }
+
+	  .footer-right .menu{
+		font-size: 18px;
+	  }
+
+	  .footer .footer-center{
+		display: flex;
+		flex-direction: row;
+		font-size: 10px;
+		justify-content: center;
+		width: 400px;
+		
+	  }
+	  footer {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: center;
+	  }
+	
+	  .footer .footer-right {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	  }
+	  .footer-right .menu {
+		width: 500px;
+		flex-wrap: nowrap;
+		align-items: center;
+	  }
+	
+	  .footer .footer-center {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-
-	section .divworkteam .titledescription2{
-		
-		width: 100%;
-		font-size: 20px;
-	}
-
-	section .divworkteamdivworkteam .textteam{
-		width: 1000px;
+		width: 400px;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		font-size: 9px;
+		padding-left: 0px;
+		margin: 5px 10px;
+	  }
+	
+	  .footer .footer-center div {
+		justify-content: center;
+		align-items: center;
+		width: calc(90%/3);
 		display: flex;
-		margin: 0;
-		padding: 0;
+		flex-direction: column;
+		
+	  }
+	
+	  .footer .footer-left {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 500px;
+		margin-top: 40px;
+		padding-right: 0px;
+
+	  }
+	  .footer-left p {
+		display: flex;
+		align-items: center;
+	  }
+	
+	  .footer .footer-left .about {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		justify-content: center;
+		width: 350px;
+		font-size: 17px;
+	  }
 	}
 
+	
+@media (min-width: 880) and (max-width: 1050px) {
+  .titleintroduccion {
+    width: 60%;
+  }
 
+  #imgdescription {
+    margin: 0px 10px;
+  }
+  .introduccion {
+    width: 90%;
+  }
+  .introduccion p {
+    text-align: center;
+    text-wrap: balance;
+    margin: auto;
+  }
 
+  section .divworkteam {
+    width: 100%;
+  }
+  .titledescription2 {
+    width: 100%;
+    font-size: 50px;
+    font-weight: bolder;
+    text-wrap: nowrap;
+  }
 
+  .textteam {
+    width: 470px;
+    margin: auto;
+    overflow-wrap: break-word;
+  }
+
+  #divworkteam {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .textacord {
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+
+  .teamcards {
+    margin: 0px 10px;
+  }
+
+  #containermivi {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .textmivi {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    inline-size: wrap;
+  }
 }
-@media (max-width: 1245px){
+
+
+@media (min-width: 1050px) and (max-width: 1229px) {
+  .titleintroduccion {
+    width: 60%;
+  }
+  .introduccion {
+    width: 70%;
+  }
+  .teamcards {
+    margin: 0px 10px;
+  }
+  #containermivi {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .card1team .card2team .card3team {
+    margin: 0px;
+    padding: 0px;
+  }
+  .textacord {
+    padding: 5px;
+  }
+
   footer {
     display: flex;
     flex-direction: column-reverse;
@@ -512,21 +770,21 @@ header {
     display: flex;
     flex-direction: column;
     margin: 10px 20px;
+	padding-left: 0px;
   }
 
   .footer .footer-left {
     display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 500px;
-	margin-top: 40px;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin-top: 40px;
+	padding-right: 0px;
   }
   .footer-left p {
     display: flex;
-	align-items: center;
+    align-items: center;
   }
-
-
 
   .footer .footer-left .about {
     display: flex;
@@ -535,11 +793,4 @@ header {
     margin: auto;
     justify-content: center;
   }
-}
-
-
-@media (min-width: 768px) and (max-width: 800px) 
-
-
-@media (min-width: 1025px) {
 }
