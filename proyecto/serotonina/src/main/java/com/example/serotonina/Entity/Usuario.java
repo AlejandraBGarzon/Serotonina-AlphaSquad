@@ -24,7 +24,7 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name = "tipo_usuario_id_tipo_usu")
-    private TipoUsuario tipo_usuario; // Corregir el nombre del campo a tipo_usuario
+    private TipoUsuario tipo_usuario;
 
     public int getId_usu() {
         return id_usu;
@@ -66,11 +66,11 @@ public class Usuario {
         this.contrasenia_usu = contrasenia_usu;
     }
 
-    public TipoUsuario getTipo_usuario() { // Corregir el nombre del método a getTipo_usuario()
+    public TipoUsuario getTipo_usuario() {
         return tipo_usuario;
     }
 
-    public void setTipo_usuario(TipoUsuario tipo_usuario) { // Corregir el nombre del método a setTipo_usuario()
+    public void setTipo_usuario(TipoUsuario tipo_usuario) {
         this.tipo_usuario = tipo_usuario;
     }
 }

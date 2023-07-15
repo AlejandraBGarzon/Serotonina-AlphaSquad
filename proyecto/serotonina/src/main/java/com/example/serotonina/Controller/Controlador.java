@@ -1,54 +1,63 @@
 package com.example.serotonina.Controller;
 
 import com.example.serotonina.Entity.Usuario;
-import com.example.serotonina.Entity.TipoUsuario;
-import com.example.serotonina.Service.USIMPL;
-import com.example.serotonina.Repository.TipoUsuarioRepo; // Agrega la importación del repositorio de TipoUsuario
+import com.example.serotonina.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/CRUDRepo")
+@RequestMapping("/usuarios")
 public class Controlador {
 
     @Autowired
-    private USIMPL usimpl;
+    private UsuarioService usuarioService;
 
-    @Autowired
-    private TipoUsuarioRepo tipoUsuarioRepo; // Inyecta el repositorio de TipoUsuario
-
-    @GetMapping("/ConsultarUsuarios")
-    public ResponseEntity<List<Usuario>> ConsultarUsuarios() {
-        List<Usuario> usuarioList = this.usimpl.ConsultarUsuario();
-        return ResponseEntity.ok(usuarioList);
+    // GET http://localhost:8080/usuarios
+    @GetMapping
+    public ResponseEntity<List<Usuario>> consultarUsuarios() {
+        List<Usuario> usuarios = usuarioService.ConsultarUsuario();
+        return ResponseEntity.ok(usuarios);
     }
 
-    @PostMapping("/CrearUsuario")
-    public ResponseEntity<Usuario> CrearUsuario(@RequestBody Usuario usuario) {
-        // Aquí obtén el tipo de usuario por su ID utilizando el repositorio de TipoUsuario
-        TipoUsuario tipoUsuario = tipoUsuarioRepo.obtenerTipoUsuarioPorId(usuario.getTipoUsuario().getId_tipo_usu());
-        if (tipoUsuario != null) {
-            usuario.setTipoUsuario(tipoUsuario);
-            Usuario usuarioCrear = this.usimpl.CrearUsuario(usuario);
-            return ResponseEntity.status(HttpStatus.CREATED).body(usuarioCrear);
-        } else {
-            return ResponseEntity.badRequest().body(null); // Enviar una respuesta de error si el tipo de usuario no se encuentra
-        }
+    // POST http://localhost:8080/usuarios
+    //{
+    //  "nombre_usu": "John Doe",
+    //  "telefono_usu": "123456789",
+    //  "correo_usu": "johndoe@example.com",
+    //  "contrasenia_usu": "secreta123",
+    //  "tipo_usuario": {
+    //    "id_tipo_usu": 1
+    //  }
+    //}
+    @PostMapping
+    public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario) {
+        Usuario nuevoUsuario = usuarioService.CrearUsuario(usuario);
+        return ResponseEntity.ok(nuevoUsuario);
     }
 
-    @PutMapping("/ModificarUsuario")
-    public ResponseEntity<Usuario> ModificarUsuario(@RequestBody Usuario usuario) {
-        Usuario usuarioModificado = this.usimpl.ModificarUsuario(usuario);
-        return ResponseEntity.status(HttpStatus.OK).body(usuarioModificado);
+    // http://localhost:8080/usuarios/1
+    // {
+    //  "nombre_usu": "John Doe Modificado",
+    //  "telefono_usu": "987654321",
+    //  "correo_usu": "johndoe_modificado@example.com",
+    //  "contrasenia_usu": "nueva_contrasenia",
+    //  "tipo_usuario": {
+    //    "id_tipo_usu": 2
+    //  }
+    //}
+    @PutMapping("/{id}")
+    public ResponseEntity<Usuario> modificarUsuario(@PathVariable int id, @RequestBody Usuario usuario) {
+        Usuario usuarioModificado = usuarioService.ModificarUsuario(id, usuario);
+        return ResponseEntity.ok(usuarioModificado);
     }
 
-    @GetMapping("/BuscarUsuario/{id}")
-    public ResponseEntity<Usuario> BuscarUsuario(@PathVariable int id) {
-        Usuario usuario = this.usimpl.BuscarUsuario(id);
+    // GET http://localhost:8080/usuarios/1
+    @GetMapping("/{id}")
+    public ResponseEntity<Usuario> buscarUsuario(@PathVariable int id) {
+        Usuario usuario = usuarioService.BuscarUsuario(id);
         if (usuario != null) {
             return ResponseEntity.ok(usuario);
         } else {
@@ -56,9 +65,10 @@ public class Controlador {
         }
     }
 
-    @DeleteMapping("/EliminarUsuario/{id}")
-    public ResponseEntity<?> EliminarUsuario(@PathVariable int id) {
-        this.usimpl.EliminarUsuario(id);
-        return ResponseEntity.ok().build();
+    // http://localhost:8080/usuarios/2
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarUsuario(@PathVariable int id) {
+        usuarioService.EliminarUsuario(id);
+        return ResponseEntity.noContent().build();
     }
 }

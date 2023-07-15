@@ -28,7 +28,7 @@ CREATE TABLE `tipo_usuario` (
   `id_tipo_usu` int NOT NULL AUTO_INCREMENT,
   `tipo_usu` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_tipo_usu`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,7 +37,7 @@ CREATE TABLE `tipo_usuario` (
 
 LOCK TABLES `tipo_usuario` WRITE;
 /*!40000 ALTER TABLE `tipo_usuario` DISABLE KEYS */;
-INSERT INTO `tipo_usuario` VALUES (1,'ADMIN'),(2,'TERAPEUTA'),(3,'MEDICO'),(4,'CONTADOR'),(5,'SOPORTE'),(6,'SUPERUSUARIO');
+INSERT INTO `tipo_usuario` VALUES (1,'ADMIN'),(2,'TERAPEUTA'),(3,'MEDICO'),(4,'CONTADOR'),(5,'SOPORTE'),(6,'SUPERUSUARIO'),(7,'CLIENTE');
 /*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-15 12:14:02
+-- Dump completed on 2023-07-15 16:45:49
