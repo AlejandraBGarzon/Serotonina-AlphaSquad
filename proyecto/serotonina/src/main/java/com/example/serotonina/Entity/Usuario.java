@@ -7,69 +7,70 @@ import jakarta.persistence.*;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUsuario")
-    private int idUsuario;
+    @Column(name = "id_usu")
+    private int id_usu;
 
-    @Column(name = "NombreUsu")
-    private String nombreUsu;
+    @Column(name = "nombre_usu")
+    private String nombre_usu;
 
-    @Column(name = "ApellidoUsu")
-    private String apellidoUsu;
+    @Column(name = "telefono_usu")
+    private String telefono_usu;
 
-    @Column(name = "TelefonoUsu")
-    private String telefonoUsu;
+    @Column(name = "correo_usu")
+    private String correo_usu;
 
-    @Column(name = "CorreoUsu")
-    private String correoUsu;
+    @Column(name = "contrasenia_usu")
+    private String contrasenia_usu;
 
-    @Column(name = "ContraseniaUsu")
-    private String contraseniaUsu;
+    @ManyToOne
+    @JoinColumn(name = "tipo_usuario_id_tipo_usu")
+    private TipoUsuario tipo_usuario; // Corregir el nombre del campo a tipo_usuario
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public int getId_usu() {
+        return id_usu;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setId_usu(int id_usu) {
+        this.id_usu = id_usu;
     }
 
-    public String getNombreUsu() {
-        return nombreUsu;
+    public String getNombre_usu() {
+        return nombre_usu;
     }
 
-    public void setNombreUsu(String nombreUsu) {
-        this.nombreUsu = nombreUsu;
+    public void setNombre_usu(String nombre_usu) {
+        this.nombre_usu = nombre_usu;
     }
 
-    public String getApellidoUsu() {
-        return apellidoUsu;
+    public String getTelefono_usu() {
+        return telefono_usu;
     }
 
-    public void setApellidoUsu(String apellidoUsu) {
-        this.apellidoUsu = apellidoUsu;
+    public void setTelefono_usu(String telefono_usu) {
+        this.telefono_usu = telefono_usu;
     }
 
-    public String getTelefonoUsu() {
-        return telefonoUsu;
+    public String getCorreo_usu() {
+        return correo_usu;
     }
 
-    public void setTelefonoUsu(String telefonoUsu) {
-        this.telefonoUsu = telefonoUsu;
+    public void setCorreo_usu(String correo_usu) {
+        this.correo_usu = correo_usu;
     }
 
-    public String getCorreoUsu() {
-        return correoUsu;
+    public String getContrasenia_usu() {
+        return contrasenia_usu;
     }
 
-    public void setCorreoUsu(String correoUsu) {
-        this.correoUsu = correoUsu;
+    public void setContrasenia_usu(String contrasenia_usu) {
+        this.contrasenia_usu = contrasenia_usu;
     }
 
-    public String getContraseniaUsu() {
-        return contraseniaUsu;
+    public TipoUsuario getTipo_usuario() { // Corregir el nombre del método a getTipo_usuario()
+        return tipo_usuario;
     }
 
-    public void setContraseniaUsu(String contraseniaUsu) {
-        this.contraseniaUsu = contraseniaUsu;
+    public void setTipo_usuario(TipoUsuario tipo_usuario) { // Corregir el nombre del método a setTipo_usuario()
+        this.tipo_usuario = tipo_usuario;
     }
 }

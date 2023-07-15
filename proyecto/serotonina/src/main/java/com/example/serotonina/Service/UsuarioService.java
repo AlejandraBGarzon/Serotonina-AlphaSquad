@@ -10,7 +10,7 @@ public interface UsuarioService {
 
     public Usuario ModificarUsuario(Usuario usuario);
 
-    public Usuario BuscarUsuario(int idUsuario);
+    public Usuario BuscarUsuario(int id_usu);
 
-    public void EliminarUsuario(int idUsuario);
+    public void EliminarUsuario(int id_usuario);
 }
