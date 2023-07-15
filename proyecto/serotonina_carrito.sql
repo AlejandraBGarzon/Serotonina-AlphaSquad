@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `serotonina` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `serotonina`;
 -- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: serotonina
@@ -23,13 +25,13 @@ DROP TABLE IF EXISTS `carrito`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `carrito` (
-  `idCarrito` int NOT NULL,
-  `Total` decimal(10,0) NOT NULL,
-  `Servicios_idServicios` int NOT NULL,
-  PRIMARY KEY (`idCarrito`,`Servicios_idServicios`),
-  KEY `fk_Carrito_Servicios1_idx` (`Servicios_idServicios`),
-  CONSTRAINT `fk_Carrito_Servicios1` FOREIGN KEY (`Servicios_idServicios`) REFERENCES `servicios` (`idServicios`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `id_car` int NOT NULL AUTO_INCREMENT,
+  `total_car` decimal(10,0) NOT NULL,
+  `usuarios_id_usu` int NOT NULL,
+  PRIMARY KEY (`id_car`),
+  KEY `fk_carrito_usuarios_idx` (`usuarios_id_usu`),
+  CONSTRAINT `fk_carrito_usuarios` FOREIGN KEY (`usuarios_id_usu`) REFERENCES `usuarios` (`id_usu`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -50,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 21:09:55
+-- Dump completed on 2023-07-14 18:54:38

@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `serotonina` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `serotonina`;
 -- MySQL dump 10.13  Distrib 8.0.33, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: serotonina
@@ -23,19 +25,16 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
-  `idUsuario` int NOT NULL,
-  `NombreUsu` varchar(45) NOT NULL,
-  `ApellidoUsu` varchar(45) NOT NULL,
-  `TelefonoUsu` varchar(45) NOT NULL,
-  `ContraseñaUsu` varchar(45) NOT NULL,
-  `TipoUsuario_idTipoUsuario` int NOT NULL,
-  `Servicios_idServicios` int NOT NULL,
-  PRIMARY KEY (`idUsuario`,`TipoUsuario_idTipoUsuario`,`Servicios_idServicios`),
-  KEY `fk_Usuario_TipoUsurio_idx` (`TipoUsuario_idTipoUsuario`),
-  KEY `fk_Usuario_Servicios1_idx` (`Servicios_idServicios`),
-  CONSTRAINT `fk_Usuario_Servicios1` FOREIGN KEY (`Servicios_idServicios`) REFERENCES `servicios` (`idServicios`),
-  CONSTRAINT `fk_Usuario_TipoUsurio` FOREIGN KEY (`TipoUsuario_idTipoUsuario`) REFERENCES `tipousuario` (`idTipoUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `id_usu` int NOT NULL AUTO_INCREMENT,
+  `nombre_usu` varchar(45) NOT NULL,
+  `telefono_usu` varchar(45) NOT NULL,
+  `correo_usu` varchar(45) NOT NULL,
+  `contrasenia_usu` varchar(45) NOT NULL,
+  `tipo_usuario_id_tipo_usu` int NOT NULL,
+  PRIMARY KEY (`id_usu`,`tipo_usuario_id_tipo_usu`),
+  KEY `fk_usuarios_tipo_usuario1_idx` (`tipo_usuario_id_tipo_usu`),
+  CONSTRAINT `fk_usuarios_tipo_usuario1` FOREIGN KEY (`tipo_usuario_id_tipo_usu`) REFERENCES `tipo_usuario` (`id_tipo_usu`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +43,6 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1110539089,'Mario',' Sanchez','3102994496','Mario.08',2,89817),(1110539090,'Yury',' Valderrama','3102889745','Yury.08',1,89526),(1110539090,'Luis',' Bermudez','3102889735','Luis.08',2,89522),(1110539090,'Beatriz',' Perez','3157894564','Beatriz.08',3,89519),(1110539090,'Maria',' Masmela','3102089745','Maria.08',3,89520),(1110539090,'Laura',' Triana','3102889645','laura.08',3,89521),(1110539090,'Angelica',' Ortiz','3102889745','Angelica.08',4,89527),(1110539090,'MARCELA',' Gualtero','3102889945','Marcela.08',5,89525),(1110539090,'Angie',' Oviedo','3102789745','Angie.08',6,89523),(1110539704,'Erika',' Oviedo','3219340640','Yussed.08',1,89518);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-13 21:09:55
+-- Dump completed on 2023-07-14 18:54:39

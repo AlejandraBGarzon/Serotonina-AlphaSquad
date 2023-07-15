@@ -18,27 +18,26 @@ USE `serotonina`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `servicios`
+-- Table structure for table `tipo_usuario`
 --
 
-DROP TABLE IF EXISTS `servicios`;
+DROP TABLE IF EXISTS `tipo_usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `servicios` (
-  `id_serv` int NOT NULL AUTO_INCREMENT,
-  `tipo_serv` varchar(45) NOT NULL,
-  `precio_serv` decimal(10,0) NOT NULL,
-  PRIMARY KEY (`id_serv`)
+CREATE TABLE `tipo_usuario` (
+  `id_tipo_usu` int NOT NULL AUTO_INCREMENT,
+  `tipo_usu` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id_tipo_usu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `servicios`
+-- Dumping data for table `tipo_usuario`
 --
 
-LOCK TABLES `servicios` WRITE;
-/*!40000 ALTER TABLE `servicios` DISABLE KEYS */;
-/*!40000 ALTER TABLE `servicios` ENABLE KEYS */;
+LOCK TABLES `tipo_usuario` WRITE;
+/*!40000 ALTER TABLE `tipo_usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tipo_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
