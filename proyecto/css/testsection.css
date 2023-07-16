@@ -44,10 +44,6 @@ header {
   margin-bottom: 10px;
 }
 
-.card p {
-  font-size: 14px;
-}
-
 #intro {
   margin-top: 20px;
   text-align: center;
@@ -88,13 +84,71 @@ p {
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px;
   background-color: var(--color-1);
   color: var(--color-4);
   text-decoration: none;
   border-radius: 5px;
+  font-size: 16px;
 }
 
 .btn:hover {
   background-color: var(--color-2);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-0);
+  color: var(--color-3);
+  margin-top: 10%;
+  padding: 15px 9%;
+  height: auto;
+}
+
+.footer-left {
+  flex-basis: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-center {
+  flex-basis: 50%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-right {
+  flex-basis: 50%;
+  text-align: center;
+}
+
+.footer h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-5);
+  line-height: 40px;
+  margin: 0;
+}
+
+.footer p {
+  color: var(--color-4);
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer .about {
+  margin-bottom: 10px;
+}
+
+.footer .icons {
+  margin-top: 20px;
+}
+
+.footer .icons a {
+  color: var(--color-3);
+  margin-right: 10px;
+  font-size: 20px;
 }

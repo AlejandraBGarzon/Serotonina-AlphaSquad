@@ -49,7 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
       resultsSection.scrollIntoView({ behavior: 'smooth' });
 
     } else {
-      alert('Por favor, responde todas las preguntas antes de enviar la prueba.');
+      // Mostrar alerta con SweetAlert
+      Swal.fire({
+        icon: 'warning',
+        title: 'Respuestas incompletas',
+        text: 'Por favor, responde todas las preguntas antes de enviar la prueba.',
+      });
     }
   });
 });

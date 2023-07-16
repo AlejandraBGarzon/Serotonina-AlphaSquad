@@ -3,29 +3,34 @@
 
 <head>
   <title>Prueba de Ansiedad</title>
+  <link rel="icon" href="navbar/Logotipo.png" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="css/pruebas.css">
-  <link rel="stylesheet" href="css/at-background.css">
+  <link rel="stylesheet" href="css/ant-background.css">
+  <link rel="stylesheet" href="css/pruebas-mediaq.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
 </head>
 
 <body>
 
+  <!-- Enlaces de navegación -->
   <header>
     <div class="card">
-      <a href="bienvenida.html">
-        <h3><i class="fas fa-arrow-left"></i> Panel de Usuario</h3>
+      <a href="testsection.html">
+        <h3> <i class="fas fa-arrow-left"></i> Sección de Pruebas </h3>
       </a>
     </div>
     <div class="card">
-      <a href="pruebas.html">
-        <h3>Sección de Pruebas <i class="fa-solid fa-arrow-right"></i></h3>
+      <a href="bienvenida.html">
+        <h3> </i> Panel de Usuario <i class="fa-solid fa-arrow-right"></i> </h3>
       </a>
     </div>
   </header>
 
+  <!-- Introducción a prueba -->
   <section id="intro">
     <h2>Evaluación de niveles de ansiedad</h2>
     <p>Esta prueba te ayudará a evaluar tus niveles de ansiedad y te proporcionará una comprensión de cómo te sientes en
@@ -35,6 +40,7 @@
   <section id="questions">
     <h3>Responde las siguientes preguntas:</h3>
     <form>
+      <!-- Preguntas de la prueba de ansiedad -->
       <label for="question1">¿Con qué frecuencia experimentas sensaciones de inquietud o nerviosismo?</label><br>
       <input type="radio" name="question1" value="1">Nunca<br>
       <input type="radio" name="question1" value="2">Rara vez<br>
@@ -99,9 +105,54 @@
     <button id="submitBtn" class="btn">Enviar</button>
   </section>
 
+  <!-- Los resultados de la prueba se mostrarán aquí después de enviar el formulario -->
   <div id="results"></div>
 
   <script src="js/prueba_ansiedad.js"></script>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="footer-left">
+      <p class="about">
+        <strong>Acerca</strong> Nuestra plataforma de psicología ofrece apoyo emocional y mental con profesionales
+        capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30 días,
+        promoviendo tu bienestar sin compromiso financiero.
+      </p>
+      <div class="icons">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>Bogota, Colombia</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>(+57) 0000 000 000</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <h2>
+        <span class="logo-text">Serotonina</span>
+        <a class="logo-img" id="logoimgfoo" href="index.html">
+          <img src="nav/Logotipo.png" alt="logofooter" width="90px" height="70px">
+        </a>
+      </h2>
+      <p class="menu">
+        <a href="index.html">Inicio</a> |
+        <a href="servicios.html">Servicios</a> |
+        <a href="nosotros.html">Nosotros</a> |
+        <a href="contacto.html">Contacto</a>
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>
