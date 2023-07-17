@@ -34,7 +34,7 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id_usu`,`tipo_usuario_id_tipo_usu`),
   KEY `fk_usuarios_tipo_usuario1_idx` (`tipo_usuario_id_tipo_usu`),
   CONSTRAINT `fk_usuarios_tipo_usuario1` FOREIGN KEY (`tipo_usuario_id_tipo_usu`) REFERENCES `tipo_usuario` (`id_tipo_usu`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'John Doe Modificado','987654321','johndoe_modificado@example.com','nueva_contrasenia',2),(3,'Alice Johnson','111111111','alice@example.com','password123',2),(4,'Bob Smith','222222222','bob@example.com','pass456',3),(5,'Carol Lee','333333333','carol@example.com','hello123',4),(6,'David Wang','444444444','david@example.com','123abc',5),(7,'Emma Chen','555555555','emma@example.com','mypassword',1),(8,'Frank Liu','666666666','frank@example.com','pass321',6),(9,'Grace Kim','777777777','grace@example.com','gracepass',2),(10,'Henry Nguyen','888888888','henry@example.com','987654321',3),(11,'Isabella Rodriguez','999999999','isabella@example.com','qwerty123',4);
+INSERT INTO `usuarios` VALUES (1,'Emma Chen','555555555','emma@example.com','mypassword',3),(2,'John Doe Modificado','987654321','johndoe_modificado@example.com','nueva_contrasenia',1),(3,'Alice Johnson','111111111','alice@example.com','password123',1),(4,'Grace Kim','777777777','grace@example.com','gracepass',1),(5,'Bob Smith','222222222','bob@example.com','pass456',2),(6,'Henry Nguyen','888888888','henry@example.com','987654321',2);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-15 16:45:50
+-- Dump completed on 2023-07-17 15:18:48
