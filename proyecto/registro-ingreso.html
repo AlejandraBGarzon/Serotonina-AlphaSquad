@@ -44,23 +44,35 @@
                         <form method="POST" class="register-form" id="register-form">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" placeholder="Ingrese su nombre completo"
+                                <input type="text" name="nombre_usu" id="name" placeholder="Ingrese su nombre completo"
                                     pattern="[A-Za-z]+" title="Ingrese solo letras" required />
                             </div>
-
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="tel" name="name" id="num" placeholder="Ingrese su numero celular"
+                                <input type="tel" name="telefono_usu" id="num" placeholder="Ingrese su numero celular"
                                     pattern="[0-9]+" title="Ingrese solo números" required minlength="10" />
                             </div>
                             <div class="form-group">
+                                <label for="tipo_usuario" class="form-label">
+                                </label>
+                                <select name="tipo_usuario_id_tipo_usu" id="tipo_usuario" required>
+                                    <option value="" disabled selected>Selecciona un tipo de usuario</option>
+                                    <option value="1">ADMIN</option>
+                                    <option value="2">TERAPEUTA</option>
+                                    <option value="3">MEDICO</option>
+                                    <option value="4">CONTADOR</option>
+                                    <option value="5">SOPORTE</option>
+                                    <option value="6">SUPERUSUARIO</option>
+                                </select>
+                            </div>                            
+                            <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" placeholder="Ingrese su correo electrónico"
+                                <input type="email" name="correo_usu" id="email" placeholder="Ingrese su correo electrónico"
                                     required />
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Ingrese su contraseña"
+                                <input type="password" name="contrasenia_usu" id="pass" placeholder="Ingrese su contraseña"
                                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                                     title="Ingrese una contraseña mínimo de 8 caracteres con números, mayúsculas, minúsculas y símbolos"
                                     required />
