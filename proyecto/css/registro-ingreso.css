@@ -121,6 +121,8 @@ body {
   /* Ajusta estos valores según tus preferencias para el campo de selección */
   width: 100%;
   border: none;
+  background-color: #ffffff;
+  color: grey;
   border-bottom: 1px solid var(--1er-color);
   padding: 6px 30px;
   font-family: var(--font);
