@@ -1,12 +1,10 @@
 package com.example.serotonina.Controller;
 
 import com.example.serotonina.Entity.Usuario;
-import com.example.serotonina.Repository.UsuarioRepo;
 import com.example.serotonina.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -16,9 +14,6 @@ public class Controlador {
 
     @Autowired
     private UsuarioService usuarioService;
-
-    @Autowired
-    private UsuarioRepo usuarioRepo;
 
     // GET http://localhost:8080/usuarios
     @GetMapping
@@ -75,21 +70,5 @@ public class Controlador {
     public ResponseEntity<Void> eliminarUsuario(@PathVariable int id) {
         usuarioService.EliminarUsuario(id);
         return ResponseEntity.noContent().build();
-    }
-
-    @PostMapping("/ingreso")
-    public String login(@RequestParam String your_email, @RequestParam String your_pass) {
-        // Consulta el usuario en la base de datos por correo electrónico
-        Usuario usuario = usuarioRepo.findByCorreoUsu(your_email);
-        if (usuario != null) {
-            // Verifica la contraseña
-            if (usuario.getContrasenia_usu().equals(your_pass)) {
-                // Inicio de sesión exitoso
-                return "redirect:/bienvenida.html";
-            }
-        }
-
-        // Credenciales inválidas, redirige a la página de inicio de sesión nuevamente
-        return "redirect:/usuarios/ingreso?error";
     }
 }

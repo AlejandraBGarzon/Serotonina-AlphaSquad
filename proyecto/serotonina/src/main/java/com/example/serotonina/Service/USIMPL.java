@@ -67,6 +67,4 @@ public class USIMPL implements UsuarioService {
     public void EliminarUsuario(int id_usu) {
         usuarioRepo.deleteById(id_usu);
     }
-
-    }
-
+}
