@@ -45,12 +45,12 @@
                             action="http://localhost:8080/usuarios">
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="nombre_usu" id="name" placeholder="Ingrese su nombre completo"
+                                <input type="text" name="nombre_usu" id="nombre" placeholder="Ingrese su nombre completo"
                                     pattern="[A-Za-z]+" title="Ingrese solo letras" required />
                             </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="tel" name="telefono_usu" id="num" placeholder="Ingrese su numero celular"
+                                <input type="tel" name="telefono_usu" id="telefono" placeholder="Ingrese su numero celular"
                                     pattern="[0-9]+" title="Ingrese solo números" required minlength="10" />
                             </div>
                             <div class="form-group">
@@ -64,12 +64,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="correo_usu" id="email"
+                                <input type="email" name="correo_usu" id="correo"
                                     placeholder="Ingrese su correo electrónico" required />
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="contrasenia_usu" id="pass"
+                                <input type="password" name="contrasenia_usu" id="contrasenia"
                                     placeholder="Ingrese su contraseña"
                                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                                     title="Ingrese una contraseña mínimo de 8 caracteres con números, mayúsculas, minúsculas y símbolos"
@@ -94,7 +94,7 @@
             </div>
         </section>
         <!----- Ingresar ----->
-        <section class="sign-in">
+        <section class="sign-in" id="ingreso">
             <div class="container">
                 <div class="signin-content">
                     <div class="signin-image">
@@ -107,14 +107,14 @@
                             action="http://localhost:8080/usuarios/ingreso">
                             <div class="form-group">
                                 <label for="your_email"><i class="zmdi zmdi-youremail"></i></label>
-                                <input type="email" name="youremail" id="your_email"
+                                <input type="email" name="correo_usu" id="your_email"
                                     placeholder="Ingrese su correo electrónico"
                                     title="Por favor, ingrese su correo electrónico" required />
                                 <span id="youremail-error" class="error-message"></span>
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="your_pass" id="your_pass"
+                                <input type="password" name="contrasenia_usu" id="your_pass"
                                     placeholder="Ingrese su contraseña" title="Por favor, ingrese su contraseña"
                                     required />
                             </div>
@@ -178,7 +178,7 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/registro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const menuHamburger = document.querySelector(".menu-hamburger")
