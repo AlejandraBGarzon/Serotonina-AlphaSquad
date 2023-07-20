@@ -98,7 +98,7 @@ loginForm.addEventListener('submit', function (event) {
             });
             setTimeout(() => {
                 // Redirigir a la página deseada después del inicio de sesión exitoso después de  un segundo
-                location.href = 'bienvenida.html';
+                location.href = 'panelusuario.html';
             }, 1000);
         } else {
             // Validar si el correo electrónico y la contraseña coinciden con los valores almacenados
