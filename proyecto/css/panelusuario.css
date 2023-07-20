@@ -10,7 +10,6 @@
 
 body {
   font-family: var(--font);
-  font-size: medium;
   font-weight: 600;
   margin: 0;
   padding: 0;
@@ -53,15 +52,39 @@ ul {
 
 li,
 p {
-  color: var(--color-3);
+  font-size: 17px;
+  color: var(--color-4);
   margin-bottom: 10px;
 }
 
 a {
-  color: var(--color-4);
+  color: var(--color-3);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--color-3);
+  color: var(--color-2);
+}
+
+/* ----------------------------------------- Responsive ----------------------------------------- */
+/* Media queries para dispositivos móviles */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr; /* Cambiar a una columna en dispositivos móviles */
+  }
+
+  section {
+    margin: 10px 0; /* Espaciado vertical en dispositivos móviles */
+  }
+}
+
+/* Media queries para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    grid-template-columns: 1fr 1fr; /* Restaurar la distribución de dos columnas en tablets */
+  }
+
+  section {
+    margin: 10px; /* Restaurar el margen original en tablets */
+  }
 }
