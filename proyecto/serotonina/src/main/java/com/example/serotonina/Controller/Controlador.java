@@ -1,8 +1,10 @@
 package com.example.serotonina.Controller;
 
 import com.example.serotonina.Entity.Usuario;
+import com.example.serotonina.Repository.UsuarioRepo;
 import com.example.serotonina.Service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +25,9 @@ public class Controlador {
         return ResponseEntity.ok(usuarios);
     }
 
+    // ENDPOINT PARA REGISTRO USUARIO //
     // POST http://localhost:8080/usuarios
+    // FORMATO JSON PARA POSTMAN:
     //{
     //  "nombre_usu": "John Doe",
     //  "telefono_usu": "123456789",
@@ -34,7 +38,14 @@ public class Controlador {
     //  }
     //}
     @PostMapping
-    public ResponseEntity<Usuario> crearUsuario(@RequestBody Usuario usuario) {
+    public ResponseEntity<?> crearUsuario(@RequestBody Usuario usuario) {
+        // Verificar si el correo electrónico ya está registrado
+        if (usuarioService.isEmailRegistered(usuario.getCorreo_usu())) {
+            String errorMessage = "El correo electrónico ya está registrado.";
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(errorMessage);
+        }
+
+        // Proceder con el registro normal creando un nuevo usuario
         Usuario nuevoUsuario = usuarioService.CrearUsuario(usuario);
         return ResponseEntity.ok(nuevoUsuario);
     }
@@ -72,4 +83,24 @@ public class Controlador {
         usuarioService.EliminarUsuario(id);
         return ResponseEntity.noContent().build();
     }
+
+    // ENDPOINT PARA INICIO DE SESIÓN //
+    @Autowired
+    private UsuarioRepo usuarioRepo;
+
+    @PostMapping("/ingreso")
+    public ResponseEntity<?> login(@RequestParam("correo_usu") String correo,
+                                   @RequestParam("contrasenia_usu") String contrasenia) {
+
+        Usuario usuario = usuarioRepo.findUsuarioByCorreoAndContrasenia(correo, contrasenia);
+
+        if (usuario != null) {
+            // Autenticación exitosa
+            return ResponseEntity.ok(usuario);
+        } else {
+            String errorMessage = "Credenciales incorrectas, por favor verifica tu correo y contraseña.";
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorMessage);
+        }
+    }
 }
+

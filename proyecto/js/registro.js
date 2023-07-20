@@ -1,34 +1,53 @@
-document.getElementById('register-form').addEventListener('submit', function (event) {
-  event.preventDefault();
-  registrarUsuario(); // Llamar a la función registrarUsuario para procesar el registro
-});
+async function checkEmailRegistration(correo) {
+  const url = `http://localhost:8080/usuarios?correo_usu=${encodeURIComponent(correo)}`;
+
+  try {
+    const response = await fetch(url);
+
+    if (response.ok) {
+      const data = await response.json();
+      return data !== null && data !== undefined;
+    } else if (response.status === 409) {
+      return true;
+    } else {
+      throw new Error('Error al verificar el correo electrónico.');
+    }
+  } catch (error) {
+    console.error('Error al verificar el correo electrónico:', error);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    throw error;
+  }
+}
 
 async function registrarUsuario() {
   const url = 'http://localhost:8080/usuarios';
-  const registroForm = {}; // Inicializar el objeto vacío o sin datos
+  const registroForm = new FormData();
 
-  // Aquí, el usuario debería proporcionar los datos a través del formulario
-  registroForm.nombre_usu = document.getElementById('nombre').value;
-  registroForm.telefono_usu = document.getElementById('telefono').value;
-  registroForm.correo_usu = document.getElementById('correo').value;
-  registroForm.contrasenia_usu = document.getElementById('contrasenia').value;
+  registroForm.append('nombre_usu', document.getElementById('nombre').value);
+  registroForm.append('telefono_usu', document.getElementById('telefono').value);
+  registroForm.append('correo_usu', document.getElementById('correo').value);
+  registroForm.append('contrasenia_usu', document.getElementById('contrasenia').value);
 
-  // Obtener el valor seleccionado de tipo_usuario_id_tipo_usu y configurarlo como la propiedad tipo_usuario
   const tipoUsuarioId = document.getElementById('tipo_usuario').value;
-  registroForm.tipo_usuario = { id_tipo_usu: parseInt(tipoUsuarioId) };
+  registroForm.append('tipo_usuario_id_tipo_usu', tipoUsuarioId);
 
   const confirmarContrasenia = document.getElementById('re_pass').value;
 
-  // Registrar el valor seleccionado de tipo_usuario_id_tipo_usu antes de hacer la solicitud
-  console.log("Selected tipo_usuario_id_tipo_usu:", registroForm.tipo_usuario_id_tipo_usu);
-
-  if (!registroForm.nombre_usu || !registroForm.telefono_usu || !registroForm.tipo_usuario || !registroForm.correo_usu || !registroForm.contrasenia_usu || registroForm.contrasenia_usu !== confirmarContrasenia) {
-    // Mostrar mensajes de error utilizando SweetAlert
-    Swal.fire({
-      icon: 'error',
-      title: 'Error en el registro',
-      text: 'Por favor, complete todos los campos obligatorios y verifique que las contraseñas coincidan.'
-    });
+  if (
+    !registroForm.get('nombre_usu') ||
+    !registroForm.get('telefono_usu') ||
+    !registroForm.get('tipo_usuario_id_tipo_usu') ||
+    !registroForm.get('correo_usu') ||
+    !registroForm.get('contrasenia_usu') ||
+    registroForm.get('contrasenia_usu') !== confirmarContrasenia
+  ) {
+    setTimeout(() => {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error en el registro',
+        text: 'Por favor, complete todos los campos obligatorios y verifique que las contraseñas coincidan.'
+      });
+    }, 1000);
     return;
   }
 
@@ -36,41 +55,47 @@ async function registrarUsuario() {
     const response = await fetch(url, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: JSON.stringify(registroForm)
+      body: new URLSearchParams(registroForm)
     });
 
-    if (!response.ok) {
+    if (response.ok) {
+      const nuevoUsuario = await response.json();
+      console.log('Usuario registrado:', nuevoUsuario);
+
+      setTimeout(() => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Registro exitoso',
+          text: `¡Registro exitoso!\n\nNombre: ${registroForm.get('nombre_usu')}\nNúmero: ${registroForm.get('telefono_usu')}\nEmail: ${registroForm.get('correo_usu')}`
+        });
+      }, 1000);
+
+      setTimeout(() => {
+        window.location.href = '#ingreso';
+      }, 1000);
+
+      document.getElementById('nombre').value = '';
+      document.getElementById('telefono').value = '';
+      document.getElementById('tipo_usuario').value = '';
+      document.getElementById('correo').value = '';
+      document.getElementById('contrasenia').value = '';
+      document.getElementById('re_pass').value = '';
+    } else if (response.status === 409) {
+      setTimeout(() => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Error en el registro',
+          text: 'El correo electrónico ya está registrado. Por favor, utiliza un correo electrónico diferente.'
+        });
+      }, 1000);
+    } else {
       throw new Error('Error al registrar el usuario.');
     }
-
-    const nuevoUsuario = await response.json();
-    console.log('Usuario registrado:', nuevoUsuario);
-
-    // Mostrar mensaje de éxito utilizando SweetAlert
-    Swal.fire({
-      icon: 'success',
-      title: 'Registro exitoso',
-      text: `¡Registro exitoso!\n\nNombre: ${registroForm.nombre_usu}\nNúmero: ${registroForm.telefono_usu}\nEmail: ${registroForm.correo_usu}`
-    });
-
-    // Redirigir al formulario de inicio de sesión después de 1 segundo (1000 milisegundos)
-    setTimeout(() => {
-      window.location.href = '#ingreso';
-    }, 1000);
-
-    // Limpiar el formulario después del registro exitoso
-    document.getElementById('nombre').value = '';
-    document.getElementById('telefono').value = '';
-    document.getElementById('tipo_usuario').value = '';
-    document.getElementById('correo').value = '';
-    document.getElementById('contrasenia').value = '';
-    document.getElementById('re_pass').value = '';
-
   } catch (error) {
     console.error('Error en el registro:', error);
-    // Mostrar mensaje de error utilizando SweetAlert
+    await new Promise(resolve => setTimeout(resolve, 1000));
     Swal.fire({
       icon: 'error',
       title: 'Error en el registro',
@@ -78,3 +103,43 @@ async function registrarUsuario() {
     });
   }
 }
+
+let formSubmitted = false;
+
+document.getElementById('register-form').addEventListener('submit', async function (event) {
+  event.preventDefault();
+  document.getElementById('signup').disabled = true;
+
+  if (formSubmitted) {
+    return;
+  }
+
+  const correo = document.getElementById('correo').value;
+
+  try {
+    formSubmitted = true;
+    const isEmailRegistered = await checkEmailRegistration(correo);
+
+    if (isEmailRegistered) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      Swal.fire({
+        icon: 'error',
+        title: 'Error en el registro',
+        text: 'El correo electrónico ya está registrado. Por favor, utiliza un correo electrónico diferente.'
+      });
+      return;
+    }
+
+    await registrarUsuario();
+  } catch (error) {
+    console.error('Error en el registro:', error);
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    Swal.fire({
+      icon: 'error',
+      title: 'Error en el registro',
+      text: 'Ocurrió un error al verificar el correo electrónico. Por favor, inténtalo nuevamente.'
+    });
+  } finally {
+    formSubmitted = false;
+  }
+});

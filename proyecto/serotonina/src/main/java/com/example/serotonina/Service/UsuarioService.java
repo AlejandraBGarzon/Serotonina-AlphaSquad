@@ -9,4 +9,5 @@ public interface UsuarioService {
     Usuario ModificarUsuario(int id, Usuario usuario);
     Usuario BuscarUsuario(int id_usu);
     void EliminarUsuario(int id_usu);
+    boolean isEmailRegistered(String correo);
 }

@@ -67,4 +67,10 @@ public class USIMPL implements UsuarioService {
     public void EliminarUsuario(int id_usu) {
         usuarioRepo.deleteById(id_usu);
     }
+
+    @Override
+    public boolean isEmailRegistered(String correo) {
+        Usuario usuario = usuarioRepo.findUsuarioByCorreoUsu(correo);
+        return usuario != null;
+    }
 }

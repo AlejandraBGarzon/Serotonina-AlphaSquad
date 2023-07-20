@@ -61,7 +61,7 @@
                                     <option value="2">Profesional Salud Mental</option>
                                     <option value="3">Administrador</option>
                                 </select>
-                            </div>
+                            </div>                            
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
                                 <input type="email" name="correo_usu" id="correo"
@@ -125,6 +125,7 @@
                             <div class="form-group form-button">
                                 <input type="submit" name="signin" id="signin" class="form-submit" value="Ingresar" />
                             </div>
+                            <div id="error-message"></div>
                         </form>
                     </div>
                 </div>
@@ -179,6 +180,7 @@
     </footer>
 
     <script src="js/registro.js"></script>
+    <script src="js/ingreso.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const menuHamburger = document.querySelector(".menu-hamburger")
