@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Estres</title>
+    <link rel="icon" href="navbar/Logotipo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/pruebas.css">
+    <link rel="stylesheet" href="css/st-background.css">
+    <link rel="stylesheet" href="css/pruebas-mediaq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Enlaces de navegación -->
+    <header>
+        <div class="card">
+            <a href="testsection.html">
+                <h3> <i class="fas fa-arrow-left"></i> Sección de Pruebas </h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="bienvenida.html">
+                <h3> </i> Panel de Usuario <i class="fa-solid fa-arrow-right"></i> </h3>
+            </a>
+        </div>
+    </header>
+
+    <!-- Introducción a prueba -->
+    <section id="intro">
+        <h2>Prueba de Estrés</h4>
+            <p>Evalúa tus niveles de estrés y proporciona información sobre cómo el estrés puede estar afectando tu
+                bienestar
+                emocional y físico.</p>
+    </section>
+
+    <section id="questions">
+        <h3>Responde las siguientes preguntas:</h3>
+        <form>
+            <!-- Preguntas de la prueba de estrés -->
+            <label for="question1">¿Con qué frecuencia experimentas sensaciones de agobio o tensión?</label><br>
+            <input type="radio" name="question1" value="1">Nunca<br>
+            <input type="radio" name="question1" value="2">Rara vez<br>
+            <input type="radio" name="question1" value="3">A veces<br>
+            <input type="radio" name="question1" value="4">Frecuentemente<br>
+            <input type="radio" name="question1" value="5">Siempre<br><br>
+
+            <label for="question2">¿Cuánto te afectan las preocupaciones constantes sobre diferentes aspectos de tu
+                vida?</label><br>
+            <input type="radio" name="question2" value="1">No me afectan<br>
+            <input type="radio" name="question2" value="2">Poco<br>
+            <input type="radio" name="question2" value="3">Moderadamente<br>
+            <input type="radio" name="question2" value="4">Bastante<br>
+            <input type="radio" name="question2" value="5">Mucho<br><br>
+
+            <label for="question3">¿Con qué frecuencia tienes dificultades para relajarte o descansar debido al
+                estrés?</label><br>
+            <input type="radio" name="question3" value="1">Nunca<br>
+            <input type="radio" name="question3" value="2">Rara vez<br>
+            <input type="radio" name="question3" value="3">A veces<br>
+            <input type="radio" name="question3" value="4">Frecuentemente<br>
+            <input type="radio" name="question3" value="5">Siempre<br><br>
+
+            <label for="question4">En qué medida te sientes irritable o enfadado/a en situaciones
+                estresantes?</label><br>
+            <input type="radio" name="question4" value="1">No me siento irritable o enfadado/a<br>
+            <input type="radio" name="question4" value="2">Poco irritable o enfadado/a<br>
+            <input type="radio" name="question4" value="3">Moderadamente irritable o enfadado/a<br>
+            <input type="radio" name="question4" value="4">Bastante irritable o enfadado/a<br>
+            <input type="radio" name="question4" value="5">Muy irritable o enfadado/a<br><br>
+
+            <label for="question5">¿Con qué frecuencia experimentas síntomas físicos del estrés, como dolores de cabeza,
+                tensión muscular o problemas digestivos?</label><br>
+            <input type="radio" name="question5" value="1">Nunca<br>
+            <input type="radio" name="question5" value="2">Rara vez<br>
+            <input type="radio" name="question5" value="3">A veces<br>
+            <input type="radio" name="question5" value="4">Frecuentemente<br>
+            <input type="radio" name="question5" value="5">Siempre<br><br>
+
+            <label for="question6">¿Cuánto te preocupa la opinión o crítica de los demás?</label><br>
+            <input type="radio" name="question6" value="1">No me preocupa<br>
+            <input type="radio" name="question6" value="2">Poco me preocupa<br>
+            <input type="radio" name="question6" value="3">Moderadamente me preocupa<br>
+            <input type="radio" name="question6" value="4">Bastante me preocupa<br>
+            <input type="radio" name="question6" value="5">Mucho me preocupa<br><br>
+
+            <label for="question7">En qué medida evitas situaciones o actividades que te generan estrés?</label><br>
+            <input type="radio" name="question7" value="1">No evito situaciones o actividades<br>
+            <input type="radio" name="question7" value="2">Poco evito situaciones o actividades<br>
+            <input type="radio" name="question7" value="3">Moderadamente evito situaciones o actividades<br>
+            <input type="radio" name="question7" value="4">Bastante evito situaciones o actividades<br>
+            <input type="radio" name="question7" value="5">Mucho evito situaciones o actividades<br><br>
+
+            <label for="question8">¿Con qué frecuencia te resulta difícil controlar tus pensamientos o preocupaciones
+                relacionados con el estrés?</label><br>
+            <input type="radio" name="question8" value="1">Nunca<br>
+            <input type="radio" name="question8" value="2">Rara vez<br>
+            <input type="radio" name="question8" value="3">A veces<br>
+            <input type="radio" name="question8" value="4">Frecuentemente<br>
+            <input type="radio" name="question8" value="5">Siempre<br><br>
+        </form>
+        <button id="submitBtn" class="btn">Enviar</button>
+    </section>
+
+    <!-- Los resultados de la prueba se mostrarán aquí después de enviar el formulario -->
+    <div id="results"></div>
+
+    <script src="js/prueba_estres.js"></script>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p class="about">
+                <strong>Acerca</strong> Nuestra plataforma de psicología ofrece apoyo emocional y mental con
+                profesionales
+                capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30
+                días,
+                promoviendo tu bienestar sin compromiso financiero.
+            </p>
+            <div class="icons">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Bogota, Colombia</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>(+57) 0000 000 000</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <h2>
+                <span class="logo-text">Serotonina</span>
+                <a class="logo-img" id="logoimgfoo" href="index.html">
+                    <img src="nav/Logotipo.png" alt="logofooter" width="90px" height="70px">
+                </a>
+            </h2>
+            <p class="menu">
+                <a href="index.html">Inicio</a> |
+                <a href="servicios.html">Servicios</a> |
+                <a href="nosotros.html">Nosotros</a> |
+                <a href="contacto.html">Contacto</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
