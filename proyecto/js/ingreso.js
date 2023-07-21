@@ -1,31 +1,35 @@
-const loginForm = document.getElementById("login-form");
-const errorMessage = document.getElementById("error-message");
+/* ---------------------------------------------------------------------------------------------- */
+/*                               API FETCH PARA REGISTRO DE USUARIO                               */
+/* ---------------------------------------------------------------------------------------------- */
 
-loginForm.addEventListener("submit", async (event) => {
-  event.preventDefault(); // Prevent the default form submission behavior
+const formularioLogin = document.getElementById("login-form");
+const mensajeError = document.getElementById("error-message");
 
-  const formData = new FormData(loginForm);
+formularioLogin.addEventListener("submit", async (evento) => {
+  evento.preventDefault(); // Evitar el comportamiento de envío predeterminado del formulario
+
+  const datosFormulario = new FormData(formularioLogin);
 
   try {
-    const response = await fetch("http://localhost:8080/usuarios/ingreso", {
+    const respuesta = await fetch("http://localhost:8080/usuarios/ingreso", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: new URLSearchParams(formData),
+      body: new URLSearchParams(datosFormulario),
     });
 
-    if (!response.ok) {
-      // Check if the response status is not 2xx (i.e., not successful)
-      const errorData = await response.json();
-      throw new Error(errorData.error || "Failed to log in.");
+    if (!respuesta.ok) {
+      // Verificar si el estado de respuesta no es 2xx (es decir, no fue exitoso)
+      const datosError = await respuesta.json();
+      throw new Error(datosError.error || "Error al iniciar sesión.");
     }
 
-    // Login successful, redirect or handle the response data
-    const responseData = await response.json();
-    console.log("User data:", responseData);
-    // Redirect to the welcome page or perform other actions.
+    // Inicio de sesión exitoso, redireccionar o manejar los datos de respuesta
+    const datosRespuesta = await respuesta.json();
+    console.log("Datos de usuario:", datosRespuesta);
+    // Redireccionar a la página de bienvenida o realizar otras acciones.
   } catch (error) {
-    errorMessage.textContent = error.message;
+    mensajeError.textContent = error.message;
   }
 });

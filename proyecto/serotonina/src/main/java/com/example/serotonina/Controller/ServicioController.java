@@ -1,7 +1,5 @@
 package com.example.serotonina.Controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import com.example.serotonina.Entity.Servicio;
 import com.example.serotonina.Service.ServicioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,6 @@ import java.util.Optional;
 public class ServicioController {
 
     private final ServicioService servicioService;
-    private final Logger logger = LoggerFactory.getLogger(ServicioController.class);
 
     @Autowired
     public ServicioController(ServicioService servicioService) {
@@ -38,7 +35,7 @@ public class ServicioController {
 
     @PostMapping
     public ResponseEntity<?> guardarServicio(@RequestBody Servicio servicio) {
-        logger.debug("Valor de servicio.getPrecio(): {}", servicio.getPrecio());
+
         // Validación para evitar que el campo 'precio' sea nulo
         if (servicio.getPrecio() == null) {
             return ResponseEntity.badRequest().body("El campo 'precio' no puede ser nulo.");

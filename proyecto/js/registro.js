@@ -1,3 +1,7 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                               API FECTH PARA REGISTRO DE USUARIO                               */
+/* ---------------------------------------------------------------------------------------------- */
+
 async function checkEmailRegistration(correo) {
   const url = `http://localhost:8080/usuarios?correo_usu=${encodeURIComponent(correo)}`;
 
