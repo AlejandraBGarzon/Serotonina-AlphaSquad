@@ -28,7 +28,7 @@
 
 html,
 body {
-  background-image: url(https://www.universityofcalifornia.edu/sites/default/files/styles/article_default_banner/public/brain-blue-yellow.jpeg?h=2bacc77b&itok=9jL4XBGT);
+  background-image: url(https://d2ydtwisqcxv72.cloudfront.net/customer-empathy.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -58,12 +58,13 @@ header {
 
 .card:hover {
   background-color: rgba(0, 174, 201, 0.458);
+  color: var(--color-5);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card a {
   text-decoration: none;
-  color: var(--color-1);
+  color: var(--color-4);
 }
 
 .card h3 {
@@ -76,7 +77,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px;
+  margin: 5%;
 }
 
 #main-container {
@@ -91,8 +92,12 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 60vh;
   transition: min-height 0.3s ease;
+}
+
+.welcome {
+  text-align: center;
 }
 
 .container h1 {
@@ -102,21 +107,24 @@ main {
 
 .container p {
   color: var(--color-5);
+  font-size: large;
 }
 
 .container button {
   font-weight: 600;
-  color: var(--color-5);
-  background-color: var(--color-0);
-  border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
+  color: var(--color-0);
+  background-color: var(--color-5);
+  border-radius: 10px;
+  width: 100%;
+  padding: 15px 30px;
+  margin: 15px 0px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .container button:hover {
   background-color: var(--color-1);
+  color: var(--color-4);
 }
 
 .icon-container {
@@ -146,7 +154,6 @@ main {
 
 .custom-select {
   width: 100%;
-  /* Puedes ajustar el valor según tus necesidades */
 }
 
 #add-item-form-container input[type="text"],
@@ -172,20 +179,6 @@ main {
 }
 
 #add-item-form-container input[type="submit"]:hover {
-  background-color: var(--color-1);
-}
-
-#explore-button {
-  color: var(--color-5);
-  background-color: var(--color-0);
-  border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#explore-button:hover {
   background-color: var(--color-1);
 }
 
@@ -220,7 +213,7 @@ main {
   color: var(--color-5);
   background-color: var(--color-0);
   border: none;
-  padding: 10px 20px;
+  padding: 15px 30px;
   margin-top: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -260,43 +253,42 @@ main {
   color: #888;
 }
 
-/* Estilos para el botón de reacciones (corazón) */
 .item i.fa-heart {
-  margin: 25px;
+  margin: 15px;
   color: var(--color-0);
-  /* Color del corazón no pulsado */
-  font-size: 22px;
-  /* Ajusta el tamaño de fuente según tus preferencias */
+  font-size: 25px;
 }
 
-/* Estilos para el botón de reacciones (corazón) en estado pulsado */
 .item i.fa-heart.reacted {
   color: var(--color-1);
-  /* Color del corazón pulsado */
-  font-size: 24px;
-  /* Ajusta el tamaño de fuente según tus preferencias */
+  font-size: 27px;
   animation: pulse 1s;
-  /* Animación al pulsar */
 }
 
 .item i.fa-heart:hover {
   color: var(--color-2);
 }
 
-/* Estilos para el espacio de comentarios */
 .item textarea {
+  font-size: large;
+  background-color: var(--color-0);
   margin-top: 10px;
   margin-bottom: 5px;
 }
 
-/* Estilos para el contenedor de comentarios */
+.heart-icon.react-animation {
+  animation: heartBeat 0.7s infinite;
+}
+
 .comment-section {
   margin: 20px;
 }
 
 .comment-container {
   border: 1px solid #ccc;
-  background-color: var(--color-1);
+  background-color: var(--color-0);
+  font-style: italic;
+  text-align: left;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
@@ -307,17 +299,9 @@ main {
   color: var(--color-4);
 }
 
-/* Estilo para el botón de comentarios */
 .btn-comment {
-  margin: 10px;
+  margin: auto;
 }
-
-/* Estilo para el icono de corazón reaccionado */
-.react-icon {
-  color: red;
-  /* Cambia el color cuando se reacciona */
-}
-
 
 /* ------------------------------------ ESTILOS PIE DE PÁGINA ----------------------------------- */
 .footer {

@@ -225,33 +225,40 @@ document.addEventListener('DOMContentLoaded', function () {
       listItem.appendChild(descriptionElement);
       listItem.appendChild(dateElement);
 
-      // Crear un botón de eliminar
-      const deleteButton = createDeleteButton(listItem, i);
-      listItem.appendChild(deleteButton);
-
       let reacted = false; // Variable para rastrear si se ha reaccionado a esta publicación
 
       // Crear el icono de corazón para el botón de reacciones
       const heartIcon = document.createElement('i');
       heartIcon.classList.add('fas', 'fa-heart');
-      heartIcon.style.marginRight = '10px';
+      heartIcon.style.marginRight = '5px'; // Añadir un margen derecho al icono
       heartIcon.style.cursor = 'pointer';
       listItem.appendChild(heartIcon);
 
+      // Crear un span para el texto "Me gusta"
+      const heartText = document.createElement('span');
+      heartText.textContent = 'Me gusta';
+      listItem.appendChild(heartText);
+
+      // Crear un span para el contador de reacciones
+      const reactionCount = document.createElement('span');
+      reactionCount.textContent = '0';
+      listItem.appendChild(reactionCount);
+
       // Agregar el evento click al icono de corazón
-      let reactionCount = 0; // Variable para contar las reacciones
       heartIcon.addEventListener('click', () => {
         if (!reacted) {
-          reactionCount++;
+          reactionCount.textContent = `${parseInt(reactionCount.textContent) + 1}`; // Incrementar el número de reacciones
           heartIcon.classList.add('reacted');
-          heartIcon.textContent = ` ${reactionCount}`; // Usar textContent para agregar el número de reacciones
         } else {
-          reactionCount--;
+          reactionCount.textContent = `${parseInt(reactionCount.textContent) - 1}`; // Decrementar el número de reacciones
           heartIcon.classList.remove('reacted');
-          heartIcon.textContent = ''; // Quitar el número de reacciones
         }
         reacted = !reacted; // Cambiar el estado de reacción
       });
+
+      // Crear un botón de eliminar
+      const deleteButton = createDeleteButton(listItem, i);
+      listItem.appendChild(deleteButton);
 
       // Crear un espacio para comentarios
       const commentSection = document.createElement('div');
