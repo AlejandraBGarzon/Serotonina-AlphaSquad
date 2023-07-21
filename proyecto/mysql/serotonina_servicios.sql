@@ -25,9 +25,9 @@ DROP TABLE IF EXISTS `servicios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `servicios` (
-  `id_serv` int NOT NULL AUTO_INCREMENT,
+  `id_serv` bigint NOT NULL,
   `tipo_serv` varchar(45) NOT NULL,
-  `precio_serv` decimal(10,0) NOT NULL,
+  `precio_serv` bigint DEFAULT NULL,
   PRIMARY KEY (`id_serv`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -38,6 +38,7 @@ CREATE TABLE `servicios` (
 
 LOCK TABLES `servicios` WRITE;
 /*!40000 ALTER TABLE `servicios` DISABLE KEYS */;
+INSERT INTO `servicios` VALUES (1,'Terapia individual',80000),(2,'Terapia de pareja',120000),(3,'Terapia familiar',150000),(4,'Paquete: Manejo del estrés',300000),(5,'Programa: Salud mental en el trabajo',100000),(6,'Taller de autocuidado',70000),(7,'Paquete: Habilidades sociales',250000),(8,'Programa: Terapia en grupo',60000),(9,'Libro: \"El poder del ahora\"',35000),(10,'Libro: \"Man\'s Search for Meaning\"',25000),(11,'Libro: \"El arte de amar\"',20000),(12,'Libro: \"La mente nueva del emperador\"',30000),(13,'Guía: Salud mental diaria',15000),(14,'Guía: Cómo cultivar la atención plena',18000),(15,'Guía: Meditación para principiantes',12000),(16,'Guía: Autocuidado emocional',22000);
 /*!40000 ALTER TABLE `servicios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -50,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-17 15:18:49
+-- Dump completed on 2023-07-21 11:00:46

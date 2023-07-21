@@ -25,8 +25,8 @@ DROP TABLE IF EXISTS `carrito`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `carrito` (
-  `id_car` int NOT NULL AUTO_INCREMENT,
-  `total_car` decimal(10,0) NOT NULL,
+  `id_car` bigint NOT NULL AUTO_INCREMENT,
+  `total_car` bigint DEFAULT NULL,
   `usuarios_id_usu` int NOT NULL,
   PRIMARY KEY (`id_car`),
   KEY `fk_carrito_usuarios_idx` (`usuarios_id_usu`),
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-17 15:18:45
+-- Dump completed on 2023-07-21 11:00:46

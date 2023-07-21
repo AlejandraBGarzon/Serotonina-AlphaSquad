@@ -32,9 +32,10 @@ CREATE TABLE `usuarios` (
   `contrasenia_usu` varchar(45) NOT NULL,
   `tipo_usuario_id_tipo_usu` int NOT NULL,
   PRIMARY KEY (`id_usu`,`tipo_usuario_id_tipo_usu`),
+  UNIQUE KEY `uk_correo_usu` (`correo_usu`),
   KEY `fk_usuarios_tipo_usuario1_idx` (`tipo_usuario_id_tipo_usu`),
   CONSTRAINT `fk_usuarios_tipo_usuario1` FOREIGN KEY (`tipo_usuario_id_tipo_usu`) REFERENCES `tipo_usuario` (`id_tipo_usu`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +44,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Emma Chen','555555555','emma@example.com','mypassword',3),(2,'John Doe Modificado','987654321','johndoe_modificado@example.com','nueva_contrasenia',1),(3,'Alice Johnson','111111111','alice@example.com','password123',1),(4,'Grace Kim','777777777','grace@example.com','gracepass',1),(5,'Bob Smith','222222222','bob@example.com','pass456',2),(6,'Henry Nguyen','888888888','henry@example.com','987654321',2);
+INSERT INTO `usuarios` VALUES (1,'Emma Chen','555555555','emma@example.com','mypassword',3),(2,'John Doe Modificado','987654321','johndoe_modificado@example.com','nueva_contrasenia',1),(3,'Alice Johnson','111111111','alice@example.com','password123',1),(4,'Grace Kim','777777777','grace@example.com','gracepass',1),(5,'Bob Smith','222222222','bob@example.com','pass456',2),(6,'Henry Nguyen','888888888','henry@example.com','987654321',2),(7,'Ale','1234567890','ale@email.com','%4321edcbA',1),(10,'Pepe','0987654321','pepe@email.com','54321cbA!',2),(12,'Jane Smith','5551234567','janesmith@exampl.com','nueva_contrasenia',1);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-07-17 15:18:48
+-- Dump completed on 2023-07-21 11:00:47
