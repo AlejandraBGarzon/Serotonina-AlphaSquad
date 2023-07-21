@@ -229,9 +229,85 @@ document.addEventListener('DOMContentLoaded', function () {
       const deleteButton = createDeleteButton(listItem, i);
       listItem.appendChild(deleteButton);
 
+      let reacted = false; // Variable para rastrear si se ha reaccionado a esta publicación
+
+      // Crear el icono de corazón para el botón de reacciones
+      const heartIcon = document.createElement('i');
+      heartIcon.classList.add('fas', 'fa-heart');
+      heartIcon.style.marginRight = '10px';
+      heartIcon.style.cursor = 'pointer';
+      listItem.appendChild(heartIcon);
+
+      // Agregar el evento click al icono de corazón
+      let reactionCount = 0; // Variable para contar las reacciones
+      heartIcon.addEventListener('click', () => {
+        if (!reacted) {
+          reactionCount++;
+          heartIcon.classList.add('reacted');
+          heartIcon.textContent = ` ${reactionCount}`; // Usar textContent para agregar el número de reacciones
+        } else {
+          reactionCount--;
+          heartIcon.classList.remove('reacted');
+          heartIcon.textContent = ''; // Quitar el número de reacciones
+        }
+        reacted = !reacted; // Cambiar el estado de reacción
+      });
+
+      // Crear un espacio para comentarios
+      const commentSection = document.createElement('div');
+      commentSection.classList.add('comment-section'); // Agregamos una clase para el contenedor de comentarios
+      const commentTextArea = document.createElement('textarea');
+      commentTextArea.placeholder = 'Escribe tu comentario aquí...';
+      commentTextArea.style.width = '100%';
+      commentTextArea.style.height = '100px';
+      commentTextArea.style.resize = 'vertical';
+      commentSection.appendChild(commentTextArea);
+
+      const commentButton = document.createElement('button');
+      commentButton.textContent = 'Comentar';
+      commentButton.classList.add('btn');
+      commentButton.classList.add('btn-primary');
+      commentButton.classList.add('btn-comment'); // Agregamos una clase para identificar el botón de comentarios
+      commentSection.appendChild(commentButton);
+
+      const commentList = document.createElement('div'); // Contenedor para mostrar los comentarios
+      commentList.classList.add('comment-list');
+      commentSection.appendChild(commentList);
+
+      listItem.appendChild(commentSection);
+
       // Agregar el elemento de lista a la lista de elementos
       itemList.appendChild(listItem);
     }
+
+    // Evento click para el botón "Comentar"
+    itemList.addEventListener('click', (event) => {
+      const commentButton = event.target.closest('.btn-comment');
+      if (commentButton) {
+        const listItem = commentButton.closest('.list-group-item');
+        const index = Array.from(itemList.parentElement.children).indexOf(listItem);
+        const commentTextArea = listItem.querySelector('textarea');
+        const comment = commentTextArea.value.trim();
+        if (comment !== '') {
+          addComment(listItem, comment); // Llamamos a la función para agregar el comentario
+          commentTextArea.value = '';
+        }
+      }
+    });
+  }
+
+  // Función para agregar un comentario a una publicación
+  function addComment(listItem, comment) {
+    const commentList = listItem.querySelector('.comment-list');
+
+    const commentContainer = document.createElement('div');
+    commentContainer.classList.add('comment-container'); // Clase para el contenedor de cada comentario
+
+    const commentText = document.createElement('p');
+    commentText.textContent = comment;
+    commentContainer.appendChild(commentText);
+
+    commentList.appendChild(commentContainer);
   }
 
   /* ---------------------------------- Botón para Eliminar Item ---------------------------------- */
