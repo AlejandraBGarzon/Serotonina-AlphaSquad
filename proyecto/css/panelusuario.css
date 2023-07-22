@@ -20,6 +20,7 @@ body {
 }
 
 main {
+  margin-top: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -49,7 +50,6 @@ margin: 15px;
   width: 60px;
   height: auto;
 }
-
 
 .welcome-section {
   position: relative;
