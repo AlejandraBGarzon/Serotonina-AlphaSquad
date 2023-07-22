@@ -14,6 +14,14 @@
   --font-navbar: "Montserrat", sans-serif;
   --font-logo: "Montserrat";
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
 header {
   background: url(../img/nosotros/tepia.mp4);
   background-size: cover;
@@ -26,42 +34,64 @@ header {
 
 .navbar {
   position: absolute;
-  text-align: center;
-  text-wrap: balance;
-  width: 100%;
-  box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0);
+  margin: 1.4em;
+  margin-top: 4vh;
   display: flex;
-  margin: auto;
-  padding: auto;
+  justify-content: space-between;
+  align-items: left;
+  width: 93%;
+  box-sizing: border-box;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar a {
-  color: var(--color-5);
+  color: whitesmoke;
   font-size: medium;
   font-weight: bold;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar a:hover {
+  /*Efecto de raya bajo y sombreado por encima*/
+  border-bottom: 2px solid white;
+}
+
+.navbar .logo {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0.1em;
+  margin-left: 2em;
 }
 
 .navbar .nav-links ul {
   display: flex;
-  list-style: none;
+  margin-top: 1em;
 }
 
 .navbar .nav-links ul li {
-  margin: 10px 25px;
-  margin-left: auto;
+  margin: 0 1.2em;
 }
 
 .nav-links ul li .carro {
   width: auto !important;
   height: auto !important;
-  margin: 7 35px;
+  margin: 1 35px;
   text-decoration: none;
+  list-style: none;
 }
 
 .navbar .nav-links ul li .active a {
-  color: var(--color-3);
+  color: #05161A;
   font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+  display: none;
+  position: absolute;
+  right: 50px;
+  width: 50px;
+  padding: 1em;
+  cursor: pointer;
 }
 
 /*img nav*/
