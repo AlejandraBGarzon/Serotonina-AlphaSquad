@@ -5,24 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="navbar/Logotipo.png" type="image/x-icon">
+  <link rel="icon" href="navbar/NewLogo.png" type="image/x-icon">
   <link rel="stylesheet" href="css/carrito.css">
+  <link rel="stylesheet" href="css/pasarela.css">
   <link rel="stylesheet" href="css/hdft-cart.css">
-  <link rel="stylesheet" href="css/mediaqueries.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <script src="js/app.js" async></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Carrito</title>
 </head>
 
 <body>
-
   <!-- ----------------- Barra de navegación ----------------------- -->
   <header>
     <nav class="navbar">
@@ -32,9 +31,9 @@
           <li><a href="index.html">INICIO</a></li>
           <li><a href="servicios.html">SERVICIOS</a></li>
           <li><a href="nosotros.html">NOSOTROS</a></li>
-          <li><a href="contacto.html">CONTACTANOS</a></li>
-          <li><a href=""> MAS</a></li>
-          <li><a href="carrito.html" class="carro"><img src="navbar/bolsa compras.png" alt="carrito"></a></li>
+          <li><a href="contacto.html">CONTÁCTANOS</a></li>
+          <li><a href="carrito.html" class="carro">
+              <img src="navbar/CC.png"></a></li>
         </ul>
       </div>
       <img src="navbar/588a64e0d06f6719692a2d10.png" alt="" class="menu-hamburger">
@@ -65,7 +64,7 @@
           <p class="descripcion">Sesiones para abordar problemas personales, emocionales y desafíos que puedas estar
             experimentando.</p>
           <!--Un elemento de texto con la clase "precio-item" que muestra el precio "$15.000".-->
-          <span class="precio-item">$80.000/sesión</span>
+          <span class="precio-item">$80.000/u</span>
           <!-- Un botón con la clase "boton-item" que muestra el texto "Agregar al Carrito".-->
           <button class="boton-item">Agregar al Carrito</button>
         </div>
@@ -74,7 +73,7 @@
           <img src="img/carrito/couple.jpg" alt="" class="img-item">
           <p class="descripcion">Sesiones para resolver conflictos, fortalecer su relación y mejorar su comunicación y
             conexión en pareja.</p>
-          <span class="precio-item">$120.000/sesión</span>
+          <span class="precio-item">$120.000/u</span>
           <button class="boton-item">Agregar al Carrito</button>
         </div>
         <div class="item">
@@ -82,7 +81,7 @@
           <img src="img/carrito/family.jpg" alt="" class="img-item">
           <p class="descripcion">Sesiones para abordar los desafíos y dinámicas familiares, mejorar la comunicación, la
             armonía y las relaciones.</p>
-          <span class="precio-item">$150.000/sesión</span>
+          <span class="precio-item">$150.000/u</span>
           <button class="boton-item">Agregar al Carrito</button>
         </div>
         <div class="item">
@@ -98,14 +97,14 @@
           <img src="img/carrito/work.jpg" alt="" class="img-item">
           <p class="descripcion">Servicio de apoyo y orientación para abordar el estrés
             laboral y desarrollar estrategias efectivas.</p>
-          <span class="precio-item">$100.000/sesión</span>
+          <span class="precio-item">$100.000/u</span>
           <button class="boton-item">Agregar al Carrito</button>
         </div>
         <div class="item">
           <span class="titulo-item">Taller de autocuidado</span>
           <img src="img/carrito/selfcare.jpg" alt="" class="img-item">
           <p class="descripcion">Sesiones grupales para aprender habilidades prácticas de autocuidado y bienestar.</p>
-          <span class="precio-item">$70.000/taller</span>
+          <span class="precio-item">$70.000/u</span>
           <button class="boton-item">Agregar al Carrito</button>
         </div>
         <div class="item">
@@ -124,8 +123,6 @@
           <span class="precio-item">$60.000</span>
           <button class="boton-item">Agregar al Carrito</button>
         </div>
-        </nav>
-        </header>
 
         <!-- Elementos de libros y guías -->
         <div class="item">
@@ -195,13 +192,7 @@
       </div>
       <!-- ------------------------------------------------------------------------------------------- -->
 
-      <!--Carrito de Compras-->
-
-
-
-
-
-
+      <!-- ----------------------------------- Carrito de Compras ------------------------------------ -->
       <div class="carrito" id="carrito">
         <div class="header-carrito">
           <h2>Tu Carrito</h2>
@@ -211,14 +202,13 @@
         <div class="carrito-total">
           <div class="fila">
             <div class="carrito-totalcompra">
-            <strong>Subtotal:</strong>
-            <span class="carrito-precio-total">
-              $120.000,00
-            </span>
-          </div>
-            
-        
-<!---Payment-->    
+              <strong>Subtotal:</strong>
+              <span class="carrito-precio-total">
+                $120.000,00
+              </span>
+            </div>
+
+            <!---Payment-->
             <div class="screenPayment">
               <div class="payment">
                 <h2 class="payment-headline type-L">Métodos de pago</h2>
@@ -228,25 +218,23 @@
                     <label for="paypal">PSE</label>
                   </div>
                   <p class="textpse">Serás redireccionado/da para completar el pago</p>
-                  <img class="textpseimg" src="img/carrito/pse.png" alt="pse"> 
+                  <img class="textpseimg" src="img/carrito/pse.png" alt="pse">
                 </div>
                 <div class="payment-tab payment-tab-isActive">
                   <div class="payment-radioGroup">
                     <input checked type="radio" name="cardType" id="creditCart" value="creditCard">
                     <label for="creditCart">Débito/Crédito</label>
                   </div>
-                  <img class="payment-cardimg"
-                       src="//my-assets.netlify.com/codepen/dailyui-002/img_cards.svg" alt="pay01">
+                  <img class="payment-cardimg" src="//my-assets.netlify.com/codepen/dailyui-002/img_cards.svg"
+                    alt="pay01">
                   <div class="textInputGroup">
                     <label for="nameOnCard">Nombre y apellido</label>
-                    <input id="nameOnCard"
-                           name="nameOnCard"
-                           required
-                           type="text">
+                    <input id="nameOnCard" name="nameOnCard" required type="text">
                   </div>
                   <div class="textInputGroup">
                     <label for="cardNumber">Numero de tarjeta</label>
-                    <input id="cardNumber" name="cardNumber" placeholder="1234 - 5678 - 9876 - 5432" required type="text">
+                    <input id="cardNumber" name="cardNumber" placeholder="1234 - 5678 - 9876 - 5432" required
+                      type="text">
                   </div>
                   <div class="textInputGroup textInputGroup-halfWidth">
                     <label for="expirationDate">Fecha de expiración</label>
@@ -258,25 +246,21 @@
                   </div>
                 </div>
               </div>
-        
+
               <div class="billing">
                 <h2 class="type-L">Direccion de facturacion</h2>
                 <div class="checkboxGroup">
-                  <input checked id="billingSameAsShipping" name="billingSameAsShipping" type="checkbox" value="billingSameAsShipping">
+                  <input checked id="billingSameAsShipping" name="billingSameAsShipping" type="checkbox"
+                    value="billingSameAsShipping">
                   <label for="billingSameAsShipping">Mi dirección de facturación es mi dirección de envío.</label>
                 </div>
               </div>
               <button class="btn-pagar">Completar el pago<i class="fa-solid fa-bag-shopping"></i> </button>
             </div>
-       
-
-
-
-
-      </div>
-      
+          </div>
     </section>
   </main>
+
   <!----- footer ----->
   <footer class="footer">
     <div class="footer-left">
@@ -309,7 +293,7 @@
       <h2>
         <span class="logo-text">Serotonina</span>
         <a class="logo-img" id="logoimgfoo" href="index.html">
-          <img src="navbar/Logotipo.png" alt="logofooter" width="90px" height="70px">
+          <img src="navbar/NewLogo.png" alt="logofooter" width="90px" height="70px">
         </a>
       </h2>
       <p class="menu">
@@ -326,11 +310,11 @@
   <script>
     const menuHamburger = document.querySelector(".menu-hamburger")
     const navLinks = document.querySelector(".nav-links")
-
     menuHamburger.addEventListener('click', () => {
       navLinks.classList.toggle('mobile-menu')
     })
   </script>
+
 </body>
 
 </html>

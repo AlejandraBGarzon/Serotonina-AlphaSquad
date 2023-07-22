@@ -27,59 +27,64 @@ header {
 
 .navbar {
   position: absolute;
-  padding-right: 20px;
-  margin: 30px;
+  margin: 1.4em;
+  margin-top: 4vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  align-items: left;
+  width: 93%;
   box-sizing: border-box;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .navbar a {
-  color: var(--color-5);
+  color: whitesmoke;
   font-size: medium;
   font-weight: bold;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar a:hover {
+  /*Efecto de raya bajo y sombreado por encima*/
+  border-bottom: 2px solid white;
 }
 
 .navbar .logo {
   font-size: 2em;
   font-weight: bold;
+  margin-top: 0.1em;
+  margin-left: 2em;
 }
 
 .navbar .nav-links ul {
   display: flex;
+  margin-top: 1em;
 }
 
 .navbar .nav-links ul li {
-  margin: 0 25px;
+  margin: 0 1.2em;
 }
 
 .nav-links ul li .carro {
   width: auto !important;
   height: auto !important;
-  margin: 7 35px;
+  margin: 1 35px;
   text-decoration: none;
   list-style: none;
 }
 
 .navbar .nav-links ul li .active a {
-  color: var(--color-3);
+  color: #05161A;
   font-weight: 600;
-
 }
 
 .navbar .menu-hamburger {
   display: none;
   position: absolute;
-  right: 30px;
-  width: 35px;
-}
-
-.navbar a:hover {
-  color: var(--color-0);
-
-  text-decoration: none;
+  right: 50px;
+  width: 50px;
+  padding: 1em;
+  cursor: pointer;
 }
 
 menuIcon {
@@ -149,19 +154,21 @@ menuIcon {
 
 /* ----------------------------------------- Para Navbar ---------------------------------------- */
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:750px) {
   .navbar {
     padding-right: 0;
     margin: 0;
   }
 
   .navbar .logo {
-    left: 30px;
-    margin-top: 40px;
+    position: fixed;
+    left: 1em;
+    margin-top: 50px;
+    margin-left: 21px;
   }
 
   .navbar .menu-hamburger {
-    margin-top: 40px;
+    margin-top: 60vh;
     display: block;
     z-index: 12;
   }
@@ -169,16 +176,15 @@ menuIcon {
   .nav-links {
     top: 0;
     z-index: 10;
-    left: 0;
     position: absolute;
     background-color: rgba(36, 50, 50, 0.472);
     backdrop-filter: blur(10px);
-    width: 100%;
+    width: 40%;
     height: 100vh;
     display: flexbox;
     justify-content: center;
     align-items: center;
-    margin-left: 100%;
+    margin-left: 67%;
     transition: all 0.5s ease;
   }
 
@@ -191,11 +197,12 @@ menuIcon {
   .nav-links ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
   }
 
   .navbar .nav-links ul li {
-    margin: 25px 0;
+    margin: 25px 30px;
+    margin-top: 9vh;
     font-size: 1.2em;
   }
 
