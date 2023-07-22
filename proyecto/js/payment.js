@@ -1,3 +1,7 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                                 FUNCIONALIDAD PASARELA DE PAGO                                 */
+/* ---------------------------------------------------------------------------------------------- */
+
 var radios = document.querySelectorAll('.payment-radioGroup > input');
 
 for (var i = 0; i < radios.length; i++) {

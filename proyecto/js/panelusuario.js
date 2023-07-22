@@ -1,3 +1,7 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                          FUNCIONALIDAD PARA PERFIL EN PANEL DE USUARIO                         */
+/* ---------------------------------------------------------------------------------------------- */
+
 document.addEventListener('DOMContentLoaded', function () {
     // Obtener los valores almacenados en el Local Storage
     const name = localStorage.getItem('Name');
