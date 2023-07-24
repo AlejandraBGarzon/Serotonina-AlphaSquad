@@ -14,14 +14,14 @@
 body {
   font-family: var(--font);
   font-weight: 600;
-  background-image: url(https://daffy.ghost.io/content/images/2023/03/17.png);
+  background: url(https://i.ibb.co/zQz3Nzs/Azul-Oscuro-y-Rosa-Sencillo-Oscuro-Tecnolog-a-y-Videojuegos-Sitio-Web-La-Venta-Al-Minorista-2.png)no-repeat;
 }
 
 header {
   display: flex;
   justify-content: space-between;
 }
-
+/*Botones de la parte superior*/
 .card {
   background-color: rgba(0, 221, 255, 0.458);
   border-radius: 5px;
@@ -36,10 +36,10 @@ header {
   background-color: rgba(0, 174, 201, 0.458);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
+/*Letras dentro de los botones*/
 .card a {
   text-decoration: none;
-  color: var(--color-1);
+  color: rgb(249, 243, 243);
 }
 
 .card h3 {
@@ -48,14 +48,21 @@ header {
 }
 
 #intro {
-  margin-top: 20px;
-  text-align: center;
-  padding: 20px;
+  margin-top: 1vh;
+  width: 50%;
+  text-align: left;
+  padding: 9vh;
+  color: #ffffff;
+}
+
+#intro .welcome{
+  color: white;
+  font-size: 10vh;
+  text-shadow: #4c0f0f;
 }
 
 #intro h2,
 p {
-  color: var(--color-0);
   margin-bottom: 10px;
 }
 
@@ -70,12 +77,12 @@ p {
 
 #intro,
 .prueba {
-  background-color: rgba(255, 255, 255, 0.285);
+  background-color: rgba(2, 0, 0, 0);
 }
 
 #pruebas {
   color: var(--color-2);
-  margin-top: 40px;
+  margin-top: 46vh;
 }
 
 .prueba {
@@ -102,56 +109,75 @@ p {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   background-color: var(--color-0);
-  color: var(--color-3);
-  margin-top: 10%;
-  padding: 15px 9%;
+  color: white;
+  margin-top: 20vh;
+  padding: 2vh 9%;
   height: auto;
 }
 
 .footer-left {
   flex-basis: 100%;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 2px;
+  text-align: right;
 }
-
-.footer-center {
+/*Bogotá*/
+.footer-center .cont {
+  width: 97%;
   flex-basis: 50%;
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: right;
+  margin-bottom: 1.8vh;
+  margin-top: -9vh;
+  color: #fffefd;
+  font-weight: lighter;
+  font-size: 2.4vh;
 }
 
 .footer-right {
-  flex-basis: 50%;
-  text-align: center;
+  flex-basis: 80%;
+  text-align: right;
 }
 
 .footer h2 {
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--color-5);
-  line-height: 40px;
+  font-size: 18px;
+  font-weight: 70;
+  color: white;
+  line-height: 4px;
   margin: 0;
 }
 
 .footer p {
-  color: var(--color-4);
+  color: white;
+  width: 30%;
   font-size: 14px;
   margin: 0;
+  text-align: left;
+  padding: 3px;
 }
 
 .footer .about {
   margin-bottom: 10px;
+  font-size: 9vh;
+  color: white;
+}
+
+.footer .aboutUs {
+  font-size: 2vh;
 }
 
 .footer .icons {
-  margin-top: 20px;
+  margin-top: 6vh;
+ 
+
 }
 
 .footer .icons a {
-  color: var(--color-3);
-  margin-right: 10px;
-  font-size: 20px;
+  color: white;
+  margin-right: 6vh;
+  text-align: right;
+  margin-left: -2vh;
+  font-size: 8vh;
+  flex-direction: row;
+
 }

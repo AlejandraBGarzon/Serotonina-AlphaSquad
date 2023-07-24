@@ -17,7 +17,7 @@ body {
   font-weight: 600;
   margin: 0;
   padding: 0;
-  background-image: url('https://wpr-public.s3.amazonaws.com/wprorg/styles/resp_orig_custom_user_wide_1x/s3/images/segments/brain-5868033_1920_0.jpg?itok=CSJL4o6w');
+  background-image: url(https://i.ibb.co/GvJwSsb/Azul-Oscuro-y-Rosa-Sencillo-Oscuro-Tecnolog-a-y-Videojuegos-Sitio-Web-La-Venta-Al-Minorista-12.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -25,16 +25,18 @@ body {
 
 main {
   margin-top: 15px;
+  margin-left: 11vh;
+  margin-right: 11vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 /* Agrega estos estilos a tu archivo CSS */
 section {
-  background: rgba(4, 155, 174, 0.633);
+  background: rgba(189, 213, 216, 0.637);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.794);
   margin: 10px;
   text-align: center;
 }
@@ -57,15 +59,32 @@ margin: 15px;
 
 .welcome-section {
   position: relative;
-  padding: 40px;
-  text-align: center;
-  color: var(--color-5);
+  padding: 5vh;
+  text-align: right;
   grid-column: 1 / -1;
+  box-shadow: none;
+  background-color: transparent;
+
+}
+
+.content h1{
+  color: #0f3c4c;
+  font-size: 14vh;
+  width: 100%;
+  text-align: right;
+  align-items: center;
+}
+
+.content p{
+  text-align: right;
+  color: #0f3c4c;
+  margin-bottom: 21vh;
+
 }
 
 h1,
 h2 {
-  color: var(--color-5);
+  color:rgb(8, 84, 110);
 }
 
 ul {
@@ -76,19 +95,94 @@ ul {
 li,
 p {
   font-size: 17px;
-  color: var(--color-4);
+  color: rgb(5, 94, 95);
   margin-bottom: 10px;
 }
 
 a {
-  color: rgb(248, 251, 251);
+  color: rgb(15, 130, 130);
   text-decoration: none;
+  text-decoration: overline;
 }
 
 a:hover {
   color: var(--color-3);
 }
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--color-0);
+  color: white;
+  margin-top: 20vh;
+  padding: 2vh 9%;
+  height: auto;
+}
 
+.footer-left {
+  flex-basis: 100%;
+  margin-bottom: 2px;
+  text-align: right;
+}
+/*Bogotá*/
+.footer-center .cont {
+  width: 97%;
+  flex-basis: 50%;
+  text-align: right;
+  margin-bottom: 1.8vh;
+  margin-top: -9vh;
+  color: #fffefd;
+  font-weight: lighter;
+  font-size: 2.4vh;
+}
+
+.footer-right {
+  flex-basis: 80%;
+  text-align: right;
+}
+
+.footer h2 {
+  font-size: 18px;
+  font-weight: 70;
+  color: white;
+  line-height: 4px;
+  margin: 0;
+}
+
+.footer p {
+  color: white;
+  width: 30%;
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  padding: 3px;
+}
+
+.footer .about {
+  margin-bottom: 10px;
+  font-size: 9vh;
+  color: white;
+}
+
+.footer .aboutUs {
+  font-size: 2vh;
+}
+
+.footer .icons {
+  margin-top: 6vh;
+ 
+
+}
+
+.footer .icons a {
+  color: white;
+  margin-right: 6vh;
+  text-align: right;
+  margin-left: -2vh;
+  font-size: 8vh;
+  flex-direction: row;
+
+}
 /* ----------------------------------------- Responsive ----------------------------------------- */
 /* Media queries para dispositivos móviles */
 @media (max-width: 767px) {

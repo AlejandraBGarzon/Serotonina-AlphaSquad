@@ -28,7 +28,7 @@
 
 html,
 body {
-  background-image: url(https://d2ydtwisqcxv72.cloudfront.net/customer-empathy.png);
+  background-image: url(https://i.ibb.co/dPXydLf/Azul-Oscuro-y-Rosa-Sencillo-Oscuro-Tecnolog-a-y-Videojuegos-Sitio-Web-La-Venta-Al-Minorista-8.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -47,7 +47,6 @@ header {
 }
 
 .card {
-  background-color: rgba(0, 221, 255, 0.458);
   border-radius: 5px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -82,7 +81,6 @@ main {
 }
 
 #main-container {
-  background: rgba(4, 155, 174, 0.633);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -91,34 +89,39 @@ main {
 .container {
   display: inline-flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   min-height: 60vh;
   transition: min-height 0.3s ease;
 }
 
 .welcome {
-  text-align: center;
+  text-align: left;
 }
 
 .container h1 {
-  color: var(--color-4);
-  margin-bottom: 10px;
+  width: 100%;
+  color: rgb(253, 255, 255);
+  margin-left: -15vh;
+  font-size: 13vh;
 }
 
 .container p {
-  color: var(--color-5);
+  color: white;
   font-size: large;
+  margin-left: -15vh;
+  margin-top: 2vh;
 }
 
 .container button {
   font-weight: 600;
-  color: var(--color-0);
-  background-color: var(--color-5);
-  border-radius: 10px;
-  width: 100%;
+  color: white;
+  background-color: rgba(248, 103, 151, 0);
+  border-radius: 50px;
+  width: 23%;
   padding: 15px 30px;
-  margin: 15px 0px;
+  margin: 3vh 0px;
+  margin-left: -14vh;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -129,8 +132,8 @@ main {
 }
 
 .icon-container {
-  display: inline-block;
-  margin-right: 10px;
+  display:block;
+  margin-right: 10vh;
 }
 
 .icon {
@@ -321,53 +324,75 @@ main {
 .footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
   background-color: var(--color-0);
-  color: var(--color-3);
-  margin-top: 10%;
-  padding: 15px 9%;
+  color: white;
+  margin-top: 20vh;
+  padding: 2vh 9%;
   height: auto;
 }
 
 .footer-left {
   flex-basis: 100%;
-  margin-bottom: 20px;
-  text-align: center;
+  margin-bottom: 2px;
+  text-align: right;
 }
-
-.footer-center {
+/*Bogotá*/
+.footer-center .cont {
+  width: 97%;
   flex-basis: 50%;
-  text-align: center;
-  margin-bottom: 20px;
+  text-align: right;
+  margin-bottom: 1.8vh;
+  margin-top: -9vh;
+  color: #fffefd;
+  font-weight: lighter;
+  font-size: 2.4vh;
 }
 
 .footer-right {
-  flex-basis: 50%;
-  text-align: center;
+  flex-basis: 80%;
+  text-align: right;
 }
 
 .footer h2 {
-  color: var(--color-5);
-  line-height: 40px;
+  font-size: 18px;
+  font-weight: 70;
+  color: white;
+  line-height: 4px;
   margin: 0;
 }
 
 .footer p {
+  color: white;
+  width: 30%;
   font-size: 14px;
   margin: 0;
+  text-align: left;
+  padding: 3px;
 }
 
 .footer .about {
   margin-bottom: 10px;
+  font-size: 9vh;
+  color: white;
+}
+
+.footer .aboutUs {
+  font-size: 2vh;
 }
 
 .footer .icons {
-  margin-top: 20px;
+  margin-top: 6vh;
+ 
+
 }
 
 .footer .icons a {
-  color: var(--color-3);
-  margin-right: 10px;
-  font-size: 20px;
+  color: white;
+  margin-right: 6vh;
+  text-align: right;
+  margin-left: -2vh;
+  font-size: 8vh;
+  flex-direction: row;
+
 }

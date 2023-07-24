@@ -54,7 +54,7 @@ h2 {
 
 body {
   margin: 0;
-  background: url(https://i.ibb.co/FD8pDWV/IMGP2.png) no-repeat fixed;
+  background: url(https://i.ibb.co/K65hDFY/Red-and-White-Modern-Safe-Flight-Album-Cover.png) no-repeat fixed;
   background-size: cover;
   font-size: 13px;
   line-height: 1.8;
@@ -211,6 +211,82 @@ option {
   /* Cambiar este valor al deseado */
 }
 
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--color-0);
+  color: white;
+  margin-top: 20vh;
+  padding: 2vh 9%;
+  height: auto;
+}
+
+.footer-left {
+  flex-basis: 100%;
+  margin-bottom: 2px;
+  text-align: right;
+}
+/*Bogotá*/
+.footer-center .cont {
+  width: 97%;
+  flex-basis: 50%;
+  text-align: right;
+  margin-bottom: 1.8vh;
+  margin-top: -9vh;
+  color: #fffefd;
+  font-weight: lighter;
+  font-size: 2.4vh;
+}
+
+.footer-right {
+  flex-basis: 80%;
+  text-align: right;
+}
+
+.footer h2 {
+  font-size: 18px;
+  font-weight: 70;
+  color: white;
+  line-height: 4px;
+  margin: 0;
+}
+
+.footer p {
+  color: white;
+  width: 30%;
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  padding: 3px;
+}
+
+.footer .about {
+  margin-bottom: 10px;
+  font-size: 9vh;
+  color: white;
+}
+
+.footer .aboutUs {
+  font-size: 2vh;
+  color: #fef3f3;
+}
+
+.footer .icons {
+  margin-top: 6vh;
+  color: white;
+ 
+
+}
+
+.footer .icons {
+  margin-right: 6vh;
+  text-align: right;
+  margin-left: 2vh;
+  font-size: 8vh;
+  flex-direction: row;
+
+}
 
 /* MediaQuery*/
 @media screen and (max-width: 1200px) {
