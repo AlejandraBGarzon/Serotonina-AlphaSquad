@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Serotonina</title>
+	<link rel="icon" href="./img/NewLogo.png" type="image/gif">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/6ae7eff8aa.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+	<nav class="navbar">
+		<a href="#" class="logo">SEROTONINA</a>
+		<div class="nav-links">
+			<ul>
+				<li><a href="#">INICIO</a></li>
+				<li><a href="servicios.html">SERVICIOS</a></li>
+				<li><a href="nosotros.html">NOSOTROS</a></li>
+				<li><a href="contacto.html">CONTÁCTANOS</a></li>
+				<li><a href="carrito.html" class="carro">
+					<img src="img/CC.png"></a></li>
+			</ul>
+		</div>
+		<img src="navbar/588a64e0d06f6719692a2d10.png" alt="" class="menu-hamburger">
+	</nav>
+	<header>
+
+		<section class="hero"> <!--Texto del encabezado-->
+			<div class="hero-text">
+				<h1>Atiende el universo</h1>
+				<h3> que llevas dentro</h3>
+				<p>"Toda persona tiene la capacidad de
+					cambiarse a sí misma". Albert Ellis</p>
+			</div>
+			<a href="registro-ingreso.html" class="boton">Empieza hoy</a>
+		</section>
+	</header>
+	<div class="icons"> <!--Estos son los iconos de redes-->
+		<a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+		<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+		<a href="https://www.web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+	</div>
+</body>
+<script>
+	const menuHamburger = document.querySelector(".menu-hamburger")
+	const navLinks = document.querySelector(".nav-links")
+
+	menuHamburger.addEventListener('click', () => {
+		navLinks.classList.toggle('mobile-menu')
+	})
+</script>
+
+</html>
