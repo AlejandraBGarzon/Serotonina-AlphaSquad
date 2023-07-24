@@ -1,0 +1,229 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                           ESTILOS PARA NAVBAR Y FOOTER PANEL USUARIO                           */
+/* ---------------------------------------------------------------------------------------------- */
+
+:root {
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    --color-0: #049baed9;
+    --color-1: #1e7898;
+    --color-2: #165a72;
+    --color-3: #0f3c4c;
+    --color-4: #d3eaf2;
+    --color-5: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+header {
+    font-family: var(--font);
+    height: 100px;
+    width: 100px;
+}
+
+.navbar {
+    position: absolute;
+    margin: 1.4em;
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 93%;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar a {
+    color: whitesmoke;
+    font-size: medium;
+    font-weight: bold;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar a:hover {
+    /*Efecto de raya bajo y sombreado por encima*/
+    border-bottom: 2px solid white;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.1em;
+    margin-left: 2em;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    margin-top: 1em;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 1.2em;
+}
+
+.nav-links ul li .carro {
+    width: auto !important;
+    height: auto !important;
+    margin: 1 35px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar .nav-links ul li .active a {
+    color: #05161A;
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+menuIcon {
+    display: none;
+}
+
+/* ------------------------------------ Estilos Pie de Página ----------------------------------- */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-0);
+    color: var(--color-3);
+    margin-top: 5%;
+    padding: 15px 9%;
+    height: auto;
+}
+
+.footer-left {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-center {
+    flex-basis: 50%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-5);
+    line-height: 40px;
+    margin: 0;
+}
+
+.footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer .about {
+    margin-bottom: 10px;
+}
+
+.footer .icons {
+    margin-top: 20px;
+}
+
+.footer .icons a {
+    color: var(--color-3);
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                          Media Queries                                         */
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------- Para Navbar ---------------------------------------- */
+
+@media screen and (max-width:750px) {
+    .navbar {
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .navbar .logo {
+        position: fixed;
+        left: 1em;
+        margin-top: 50px;
+        margin-left: 21px;
+    }
+
+    .navbar .menu-hamburger {
+        margin-top: 60vh;
+        display: block;
+        z-index: 12;
+    }
+
+    .nav-links {
+        top: 0;
+        z-index: 10;
+        position: absolute;
+        background-color: rgba(36, 50, 50, 0.472);
+        backdrop-filter: blur(10px);
+        width: 40%;
+        height: 100vh;
+        display: flexbox;
+        justify-content: center;
+        align-items: center;
+        margin-left: 67%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 30px;
+        margin-top: 9vh;
+        font-size: 1.2em;
+    }
+
+
+    /* ----------------------------------------- Para Footer ---------------------------------------- */
+
+    @media screen and (max-width: 768px) {
+        .footer {
+            padding: 15px 5%;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        .footer h2 {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+}

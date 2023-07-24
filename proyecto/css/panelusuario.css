@@ -1,0 +1,211 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                                    ESTILOS PANEL DE USUARIO                                    */
+/* ---------------------------------------------------------------------------------------------- */
+
+:root {
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+  --color-0: #049baed9;
+  --color-1: #1e7898;
+  --color-2: #165a72;
+  --color-3: #0f3c4c;
+  --color-4: #d3eaf2;
+  --color-5: #ffffff;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://i.ibb.co/GvJwSsb/Azul-Oscuro-y-Rosa-Sencillo-Oscuro-Tecnolog-a-y-Videojuegos-Sitio-Web-La-Venta-Al-Minorista-12.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  margin-top: 15px;
+  margin-left: 11vh;
+  margin-right: 11vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Agrega estos estilos a tu archivo CSS */
+section {
+  background: rgba(189, 213, 216, 0.637);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.794);
+  margin: 10px;
+  text-align: center;
+}
+
+.content-container {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.icon-container {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.icon {
+  margin: 15px;
+  width: 60px;
+  height: auto;
+}
+
+.welcome-section {
+  position: relative;
+  padding: 5vh;
+  text-align: right;
+  grid-column: 1 / -1;
+  box-shadow: none;
+  background-color: transparent;
+
+}
+
+.content h1 {
+  color: #0f3c4c;
+  font-size: 14vh;
+  width: 100%;
+  text-align: right;
+  align-items: center;
+}
+
+.content p {
+  text-align: right;
+  color: #0f3c4c;
+  margin-bottom: 21vh;
+
+}
+
+h1,
+h2 {
+  color: rgb(8, 84, 110);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li,
+p {
+  font-size: 17px;
+  color: rgb(5, 94, 95);
+  margin-bottom: 10px;
+}
+
+a {
+  color: rgb(15, 130, 130);
+  text-decoration: none;
+  text-decoration: overline;
+}
+
+a:hover {
+  color: var(--color-3);
+}
+
+/* Estilos para el footer específico con la clase .custom-footer */
+.custom-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--color-0);
+  color: white;
+  margin-top: 20vh;
+  padding: 2vh 9%;
+  height: auto;
+}
+
+.custom-footer .footer-left {
+  flex-basis: 100%;
+  margin-bottom: 2px;
+  text-align: right;
+}
+
+.custom-footer .footer-center .cont {
+  width: 97%;
+  flex-basis: 50%;
+  text-align: right;
+  margin-bottom: 1.8vh;
+  margin-top: -9vh;
+  color: #fffefd;
+  font-weight: lighter;
+  font-size: 2.4vh;
+}
+
+.custom-footer .footer-right {
+  flex-basis: 80%;
+  text-align: right;
+}
+
+.custom-footer h2 {
+  font-size: 18px;
+  font-weight: 70;
+  color: white;
+  line-height: 4px;
+  margin: 0;
+}
+
+.custom-footer p {
+  color: white;
+  width: 30%;
+  font-size: 14px;
+  margin: 0;
+  text-align: left;
+  padding: 3px;
+}
+
+.custom-footer .about {
+  margin-bottom: 10px;
+  font-size: 9vh;
+  color: white;
+}
+
+.custom-footer .aboutUs {
+  font-size: 2vh;
+}
+
+.custom-footer .icons {
+  margin-top: 6vh !important;
+}
+
+.custom-footer .icons a {
+  color: white !important;
+  margin-right: 6vh !important;
+  text-align: right !important;
+  margin-left: -2vh !important;
+  font-size: 8vh !important;
+  flex-direction: row !important;
+}
+
+/* ----------------------------------------- Responsive ----------------------------------------- */
+/* Media queries para dispositivos móviles */
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: 1fr;
+    /* Cambiar a una columna en dispositivos móviles */
+  }
+
+  section {
+    margin: 10px 0;
+    /* Espaciado vertical en dispositivos móviles */
+  }
+}
+
+/* Media queries para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+    /* Restaurar la distribución de dos columnas en tablets */
+  }
+
+  section {
+    margin: 10px;
+    /* Restaurar el margen original en tablets */
+  }
+}

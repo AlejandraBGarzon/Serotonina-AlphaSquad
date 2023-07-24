@@ -1,0 +1,77 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                   DISEÑO RESPONSIVA PARA TEST PSICOLÓGICOS Y SU SECCIÓN                        */
+/* ---------------------------------------------------------------------------------------------- */
+
+/* Estilos para dispositivos móviles (celulares) */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    .card {
+        width: 150px;
+    }
+
+    .card h3 {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    #intro h2 {
+        font-size: 24px;
+    }
+
+    form input[type="radio"] {
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    #results {
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 10px 7%;
+    }
+}
+
+/* Estilos para tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .card {
+        width: 180px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    form input[type="radio"] {
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 16px 30px;
+        font-size: 15px;
+    }
+
+    #results {
+        padding: 30px;
+    }
+
+    .footer {
+        padding: 20px 9%;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamiento</title>
+    <link rel="icon" href="navbar/NewLogo.png" type="image/gif">
+    <link rel="stylesheet" href="css/agendar.css">
+    <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Enlaces de navegación -->
+    <header>
+        <div class="card">
+            <a href="testsection.html">
+                <h3> <i class="fas fa-arrow-left"></i> Sección de Pruebas </h3>
+            </a>
+        </div>
+        <div class="card">
+            <a href="panelusuario.html">
+                <h3> </i> Panel de Usuario <i class="fa-solid fa-arrow-right"></i> </h3>
+            </a>
+        </div>
+    </header>
+
+
+    <h1>Agendar sesiones</h1>
+
+    <!-- Mostrar información del servicio adquirido -->
+    <div id="serviciosAdquiridos">
+        <h2>Servicios Adquiridos:</h2>
+        <ul id="listaServicios">
+            <!-- La lista de servicios adquiridos se generará aquí -->
+        </ul>
+    </div>
+
+    <!-- Formulario de agendamiento -->
+    <div id="formularioAgendamiento">
+        <h2>Agendar Servicio:</h2>
+        <form>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" required><br>
+
+            <label for="terapeuta">Terapeuta:</label>
+            <select id="terapeuta" required>
+                <option value="" disabled selected>Selecciona un terapeuta</option>
+                <!-- Lista de terapeutas generada dinámicamente -->
+                <option value="terapeuta1">Ana Gómez (Terapia Cognitivo-Conductual)</option>
+                <option value="terapeuta2">Juan Pérez (Psicoterapia Psicoanalítica)</option>
+                <option value="terapeuta3">María Rodríguez (Terapia Gestalt)</option>
+                <option value="terapeuta4">Carlos Sánchez (Terapia Familiar Sistémica)</option>
+                <!-- Agrega más opciones aquí si es necesario -->
+            </select><br>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p class="about">
+                <strong>Envíanos un mensaje</strong>
+            </p>
+            <p class="aboutUs"> Este sitio fue diseñado y construido con amor para hacer la salud mental accesible y
+                asequible, ofreciendo apoyo psicológico con profesionales
+                capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30
+                días,
+                promoviendo tu bienestar sin compromiso financiero</p>
+
+            <div class="footer-center">
+                <p class="cont">Bogota, Colombia</p>
+                <p class="cont">(+57) 312 339 6937</p>
+                <p class="cont"><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="menu">
+                <a href="index.html">Inicio</a> |
+                <a href="servicios.html">Servicios</a> |
+                <a href="nosotros.html">Nosotros</a> |
+                <a href="contacto.html">Contacto</a>
+            </p>
+        </div>
+    </footer>
+    <!--Fin Footer-->
+
+    <script>
+        // Recuperar la información del servicio adquirido del Local Storage
+        let serviciosAdquiridos = JSON.parse(localStorage.getItem('carrito'));
+
+        // Mostrar la información del servicio adquirido en la página
+        if (serviciosAdquiridos && serviciosAdquiridos.length > 0) {
+            let listaServicios = document.getElementById('listaServicios');
+            serviciosAdquiridos.forEach((servicio, index) => {
+                let servicioItem = document.createElement('li');
+                servicioItem.innerText = `${servicio.titulo}, ${servicio.precio}`;
+                listaServicios.appendChild(servicioItem);
+            });
+        }
+    </script>
+    <script src="js/agendar.js"></script>
+</body>
+
+</html>

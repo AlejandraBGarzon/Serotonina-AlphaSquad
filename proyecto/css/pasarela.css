@@ -1,0 +1,252 @@
+/*Tarjeta*/
+.billing {
+    margin-top: 36px;
+    padding: 0 10px;
+}
+
+.billing-headline {
+    margin-bottom: 10px;
+}
+
+.buttonCheckout {
+    background: var(--color-0);
+    border: none;
+    bottom: 0;
+    color: #fff;
+    font: 700 18px "Jaldi", sans-serif;
+    height: 60px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    outline: 0;
+    width: 100%;
+}
+
+.buttonCheckout-web {
+    position: absolute;
+}
+
+@media (max-width: 639px) {
+    .buttonCheckout-web {
+        display: none;
+    }
+}
+
+.buttonCheckout-mobile {
+    position: sticky;
+}
+
+@media (min-width: 640px) {
+    .buttonCheckout-mobile {
+        display: none;
+    }
+}
+
+.buttonCheckout:active {
+    background: #00b94d;
+}
+
+.checkboxGroup input[type=checkbox] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkboxGroup>label {
+    cursor: pointer;
+    color: black;
+    font-size: 15px;
+}
+
+.checkboxGroup>input[type=checkbox]:checked~label::before {
+    background: var(--color-0) url(//my-assets.netlify.com/codepen/dailyui-002/ico_checkmark.svg) center center/16px 13px no-repeat;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 18px;
+    margin-right: 10px;
+    top: 7px;
+    transition: 150ms ease-out;
+    position: relative;
+    width: 18px;
+    margin-bottom: 2px;
+}
+
+.checkboxGroup>input[type=checkbox]:not(:checked)~label::before {
+    background: #fff center center/16px 13px no-repeat;
+    border: 2px solid #cfd8dc;
+    box-sizing: border-box;
+    content: "";
+    display: inline-block;
+    height: 25px;
+    margin-right: 10px;
+    top: 7px;
+    transition: 150ms ease-out;
+    position: relative;
+    width: 25px;
+}
+
+.screenPayment {
+    padding-bottom: 100px;
+    background-color: var(--color-5);
+}
+
+.type-S {
+    color: #263238;
+    font: 700 13.5338345865px/100% "Jaldi", sans-serif;
+}
+
+.type-L {
+    color: #0f3c4c;
+    font: 700 23.94px/100% "Jaldi", sans-serif;
+    text-align: left;
+    font-size: 22px;
+}
+
+.type-XL {
+    color: #263238;
+    font: 700 31.8402px/100% "Jaldi", sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.payment {
+    margin-top: 36px;
+    padding: 0 10px;
+}
+
+.payment-cardimg {
+    height: 23px;
+    position: absolute;
+    right: 19px;
+    top: 16px;
+    width: 96px;
+}
+
+.payment-headline {
+    margin-bottom: 10px;
+}
+
+.payment-radioGroup {
+    margin-bottom: 10px;
+}
+
+.payment-radioGroup>input {
+    position: absolute;
+    visibility: hidden;
+    font-size: 25px;
+
+}
+
+.payment-radioGroup>input:checked~label::before {
+    border: 7px solid var(--color-0);
+}
+
+.payment-radioGroup>input:checked~label {
+    font-size: 25px;
+}
+
+.payment-radioGroup>label {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    top: -2px;
+}
+
+.payment-radioGroup>label::before {
+    transition: 100ms ease-out;
+    box-sizing: border-box;
+    background: #fff;
+    border: 2px solid #cfd8dc;
+    border-radius: 100%;
+    content: "";
+    display: inline-block;
+    height: 22px;
+    margin-right: 10px;
+    position: relative;
+    top: 6px;
+    width: 22px;
+}
+
+.payment-tab {
+    background: #eceff1;
+    border: 2px solid #eceff1;
+    box-sizing: border-box;
+    height: 60px;
+    overflow: hidden;
+    padding: 13px 20px;
+    position: relative;
+    transition: 150ms ease-out;
+    width: 100%;
+}
+
+.payment-tab:first-of-type {
+    border-radius: 5px 5px 0 0;
+}
+
+.payment-tab:last-of-type {
+    border-radius: 0 0 5px 5px;
+}
+
+.payment-tab-isActive {
+    background: #ffffff;
+}
+
+.payment-tab-isActive:nth-of-type(1) {
+    height: 140px;
+}
+
+.payment-tab-isActive:nth-of-type(2) {
+    height: 307px;
+}
+
+.payment-tab .textpse {
+    color: black;
+    font-size: 15px;
+    text-align: center;
+}
+
+.payment-tab .textpseimg {
+    width: 170px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}
+
+.textInputGroup>input {
+    border: 2px solid #cfd8dc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    font: 400 18px "Jaldi", sans-serif;
+    height: 50px;
+    margin: -15px auto 5px;
+    padding: 5px 10px 0 11px;
+    transition: 100ms ease-out;
+    width: 100%;
+}
+
+.textInputGroup>input:focus {
+    border: 2px solid var(--color-0);
+    outline: 0;
+}
+
+.textInputGroup>label {
+    background: #ffffff;
+    display: inline-block;
+    font: 700 18px "Jaldi", sans-serif;
+    margin: 5px auto auto 8px;
+    padding: 0px 5px;
+}
+
+.textInputGroup-halfWidth {
+    float: left;
+    width: 48%;
+}
+
+.textInputGroup-halfWidthRight {
+    float: right;
+    width: 48%;
+}

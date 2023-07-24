@@ -1,0 +1,323 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                          ESTILOS LISTA SERVICIOS Y CARRITO DE COMPRAS                          */
+/* ---------------------------------------------------------------------------------------------- */
+
+/* ---------------------- Colores y Fuentes -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    --color-0: #049baed9;
+    /*0%*/
+    --color-1: #1e7898;
+    /*20%*/
+    --color-2: #165a72;
+    /*40%*/
+    --color-3: #0f3c4c;
+    /*60%*/
+    --color-4: #d3eaf2;
+    /*80%*/
+    --color-5: #ffffff;
+    /*100%*/
+}
+
+body {
+    background-image: url(https://i.ibb.co/m4s1p6s/Azul-Oscuro-y-Rosa-Sencillo-Oscuro-Tecnolog-a-y-Videojuegos-Sitio-Web-La-Venta-Al-Minorista-13.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: var(--font);
+    font-weight: 600;
+}
+
+.welcome {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--color-4);
+    padding: 30px 0;
+}
+
+.welcome h4 {
+    font-size: large;
+}
+
+/* ------------------------------------- Lista de Productos y Servicios ------------------------------------- */
+main {
+    flex: 1;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+.contenedor {
+    max-width: 80%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* oculto lo que queda fuera del .contenedor */
+    contain: paint;
+}
+
+.contenedor .contenedor-items {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+    /* width: 60%; */
+    width: 100%;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item {
+    height: 390px;
+    max-width: 200px;
+    margin: auto;
+    justify-content: center;
+    background: rgba(232, 237, 237, 0.697);
+    border: 1px solid var(--color-1);
+    border-radius: 10px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.contenedor .contenedor-items .item .img-item {
+    width: 200px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor .contenedor-items .item:hover {
+    box-shadow: 0 0 10px var(--color-0);
+    scale: 1.05;
+}
+
+.contenedor .contenedor-items .item .titulo-item {
+    display: block;
+    color: var(--color-3);
+    font-weight: bold;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contenedor .contenedor-items .item .descripcion {
+    margin: 10px auto;
+    color: var(--color-2);
+    text-align: center;
+}
+
+.contenedor .contenedor-items .item .precio-item {
+    color: var(--color-0);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item {
+    display: block;
+    margin: 10px auto;
+    border: none;
+    background-color: var(--color-1);
+    color: var(--color-5);
+    padding: 5px 22px;
+    border-radius: 5px;
+    border-color: var(--color-5);
+    cursor: pointer;
+}
+
+.contenedor .contenedor-items .item .boton-item:hover {
+    background-color: var(--color-4);
+    color: var(--color-0);
+}
+
+/* ------------------------------------------- Carrito ------------------------------------------ */
+.carrito {
+    border: 1px solid var(--color-0);
+    width: 35%;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: auto;
+    position: sticky;
+    top: 0;
+    transition: .3s;
+    /* Estilos para ocultar */
+    margin-right: -100%;
+    opacity: 0;
+}
+
+.carrito .header-carrito {
+    background-color: var(--color-1);
+    color: var(--color-5);
+    text-align: center;
+    padding: 30px 0;
+}
+
+.carrito .carrito-item {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    position: relative;
+    border-bottom: 1px solid var(--color-0);
+    padding: 20px;
+    background-color: var(--color-5);
+}
+
+.carrito .carrito-item img {
+    margin-right: 20px;
+}
+
+.carrito .carrito-item .carrito-item-titulo {
+    display: block;
+    color: var(--color-1);
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.carrito .carrito-item .selector-cantidad {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.carrito .carrito-item .carrito-item-cantidad {
+    border: none;
+    font-size: 18px;
+    background-color: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+.carrito .carrito-item .selector-cantidad i {
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-1);
+    cursor: pointer;
+}
+
+.carrito .carrito-item .carrito-item-precio {
+    font-weight: bold;
+    color: var(--color-2);
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.carrito .carrito-item .btn-eliminar {
+    position: absolute;
+    right: 15px;
+
+    color: var(--color-2);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-3);
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+
+.carrito .carrito-item .btn-eliminar i {
+    pointer-events: none;
+}
+
+.carrito-total {
+    background-color: var(--color-5);
+    padding: 30px;
+}
+
+.carrito-total .fila {
+
+    align-items: center;
+    color: var(--color-1);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carrito-total .btn-pagar {
+    display: block;
+    width: 100%;
+    border: none;
+    background: var(--color-0);
+    color: var(--color-5);
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 20px;
+}
+
+.carrito-total .btn-pagar:hover {
+    scale: 1.05;
+}
+
+.carrito-total .fila .carrito-totalcompra {
+    text-align: center;
+}
+
+.carrito-total .fila .carrito-totalcompra strong {
+    text-align: center;
+}
+
+.carrito-total .fila .carrito-totalcompra span {
+    text-align: center;
+    color: black;
+    font-size: 28px;
+}
+
+/* ----------------------------------------- Responsive ----------------------------------------- */
+
+/* Media query para tablet */
+@media screen and (max-width: 850px) {
+    .contenedor {
+        display: block;
+    }
+
+    .contenedor-items {
+        width: 100% !important;
+    }
+
+    .carrito {
+        width: 100%;
+    }
+}
+
+/* Media query para móvil */
+@media only screen and (max-width: 768px) {
+    .contenedor .contenedor-items {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor .contenedor-items .item {
+        max-width: 100%;
+    }
+
+    .carrito {
+        margin-right: 0;
+        opacity: 1;
+        width: 100%;
+    }
+}

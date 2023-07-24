@@ -1,0 +1,287 @@
+:root {
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    --color-0: #049baed9;
+    --color-1: #1e7898;
+    --color-2: #165a72;
+    --color-3: #0f3c4c;
+    --color-4: #d3eaf2;
+    --color-5: #ffffff;
+}
+
+/* Estilos generales */
+body {
+    font-family: var(--font);
+    font-weight: 600;
+    background-image: url(https://i.ibb.co/fH2kDYs/Naranja-Negocios-Servicios-Sitio-Web-4.png);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #0f3c4c;
+    margin-left: 2vh;
+}
+
+h2 {
+    color: #0f3c4c;
+    margin-left: 3vh;
+}
+
+.card {
+    background-color: rgba(0, 221, 255, 0.458);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 200px;
+    height: 50px;
+}
+
+.card:hover {
+    background-color: rgba(0, 174, 201, 0.458);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+    text-decoration: none;
+    color: white;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el formulario de agendamiento */
+#formularioAgendamiento {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+}
+
+#formularioAgendamiento h2 {
+    font-size: 24px;
+    color: var(--color-0);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#formularioAgendamiento label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--color-3);
+    font-weight: bold;
+    /* Limitar el ancho de los labels */
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+#formularioAgendamiento input[type="text"],
+#formularioAgendamiento input[type="date"],
+#formularioAgendamiento input[type="time"] {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid var(--color-3);
+    border-radius: 5px;
+}
+
+/* Estilos para el select del formulario de agendamiento */
+#formularioAgendamiento select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-3);
+    border-radius: 5px;
+    appearance: none;
+    background: transparent;
+}
+
+#formularioAgendamiento select option {
+    color: var(--color-3);
+    background-color: var(--color-5);
+}
+
+#formularioAgendamiento select::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Solid', sans-serif;
+    font-size: 14px;
+    color: var(--color-3);
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#formularioAgendamiento button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-1);
+    color: var(--color-4);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#formularioAgendamiento button[type="submit"]:hover {
+    background-color: var(--color-2);
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--color-0);
+    color: white;
+    margin-top: 20vh;
+    padding: 2vh 9%;
+    height: auto;
+}
+
+.footer-left {
+    flex-basis: 100%;
+    margin-bottom: 2px;
+    text-align: right;
+}
+
+/*Bogotá*/
+.footer-center .cont {
+    width: 97%;
+    flex-basis: 50%;
+    text-align: right;
+    margin-bottom: 1.8vh;
+    margin-top: -9vh;
+    color: #fffefd;
+    font-weight: lighter;
+    font-size: 2.4vh;
+}
+
+.footer-right {
+    flex-basis: 80%;
+    text-align: right;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 70;
+    color: white;
+    line-height: 4px;
+    margin: 0;
+}
+
+.footer p {
+    color: white;
+    width: 30%;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    padding: 3px;
+}
+
+.footer .about {
+    margin-bottom: 10px;
+    font-size: 9vh;
+    color: white;
+}
+
+.footer .aboutUs {
+    font-size: 2vh;
+}
+
+.footer .icons {
+    margin-top: 6vh;
+
+
+}
+
+.footer .icons a {
+    color: white;
+    margin-right: 6vh;
+    text-align: right;
+    margin-left: -2vh;
+    font-size: 8vh;
+    flex-direction: row;
+
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 767px) {
+    #formularioAgendamiento {
+        max-width: 90%;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #formularioAgendamiento h2 {
+        font-size: 20px;
+    }
+
+    #formularioAgendamiento label {
+        font-size: 14px;
+    }
+
+    #formularioAgendamiento input[type="text"],
+    #formularioAgendamiento input[type="date"],
+    #formularioAgendamiento input[type="time"] {
+        width: 90%;
+        padding: 8px;
+    }
+
+    #formularioAgendamiento select {
+        width: 93%;
+    }
+
+    #formularioAgendamiento button[type="submit"] {
+        width: 93%;
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .footer {
+        padding: 10px 7%;
+    }
+}
+
+/* Estilos para tablets */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .card {
+        width: 180px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    #formularioAgendamiento {
+        max-width: 70%;
+        padding: 15px;
+    }
+
+    #formularioAgendamiento h2 {
+        font-size: 22px;
+    }
+
+    .footer {
+        padding: 20px 9%;
+    }
+}

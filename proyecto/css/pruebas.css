@@ -1,0 +1,206 @@
+/* ---------------------------------------------------------------------------------------------- */
+/*                                   ESTILOS TESTS PSICOLÓGICOS                                   */
+/* ---------------------------------------------------------------------------------------------- */
+
+:root {
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    --color-0: #049baed9;
+    --color-1: #1e7898;
+    --color-2: #165a72;
+    --color-3: #0f3c4c;
+    --color-4: #d3eaf2;
+    --color-5: #ffffff;
+}
+
+body {
+    font-weight: 600;
+    font-family: var(--font);
+    color: var(--color-3);
+    margin: 0;
+    padding: 0;
+}
+
+#intro,
+header,
+.card,
+#questions,
+#results {
+    background-color: rgba(0, 175, 184, 0.285);
+}
+
+#intro {
+    text-align: center;
+    color: var(--color-3);
+    padding: 20px;
+}
+
+header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: rgba(0, 221, 255, 0.458);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 200px;
+    height: 50px;
+}
+
+.card:hover {
+    background-color: rgba(0, 174, 201, 0.458);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--color-5);
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+#questions {
+    padding: 20px;
+}
+
+h3 {
+    color: var(--color-3);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="radio"] {
+    margin-bottom: 5px;
+    margin-left: 25px;
+}
+
+.btn {
+    margin-left: 25px;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-1);
+    color: var(--color-5);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: var(--color-2);
+    color: var(--color-4);
+}
+
+#results {
+    background-color: rgba(255, 255, 255, 0.458);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#results h3 {
+    color: var(--color-1);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#results p {
+    color: var(--color-2);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#results .recommendation {
+    color: var(--color-3);
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--color-0);
+    color: white;
+    margin-top: 20vh;
+    padding: 2vh 9%;
+    height: auto;
+  }
+  
+  .footer-left {
+    flex-basis: 100%;
+    margin-bottom: 2px;
+    text-align: right;
+  }
+  /*Bogotá*/
+  .footer-center .cont {
+    width: 97%;
+    flex-basis: 50%;
+    text-align: right;
+    margin-bottom: 1.8vh;
+    margin-top: -9vh;
+    color: #fffefd;
+    font-weight: lighter;
+    font-size: 2.4vh;
+  }
+  
+  .footer-right {
+    flex-basis: 80%;
+    text-align: right;
+  }
+  
+  .footer h2 {
+    font-size: 18px;
+    font-weight: 70;
+    color: white;
+    line-height: 4px;
+    margin: 0;
+  }
+  
+  .footer p {
+    color: white;
+    width: 30%;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    padding: 3px;
+  }
+  
+  .footer .about {
+    margin-bottom: 10px;
+    font-size: 9vh;
+    color: white;
+  }
+  
+  .footer .aboutUs {
+    font-size: 2vh;
+  }
+  
+  .footer .icons {
+    margin-top: 6vh;
+   
+  
+  }
+  
+  .footer .icons a {
+    color: white;
+    margin-right: 6vh;
+    text-align: right;
+    margin-left: -2vh;
+    font-size: 8vh;
+    flex-direction: row;
+  
+  }
