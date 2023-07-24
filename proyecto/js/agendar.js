@@ -64,9 +64,20 @@ formulario.addEventListener('submit', function (event) {
     event.preventDefault();
 
     // Obtener los valores del formulario
-    const fecha = document.getElementById('fecha').value;
+    const fechaInput = document.getElementById('fecha');
+    const fecha = fechaInput.value;
     const hora = document.getElementById('hora').value;
-    const terapeuta = document.getElementById('terapeuta').value;
+    const terapeutaSelect = document.getElementById('terapeuta');
+    const terapeuta = terapeutaSelect.options[terapeutaSelect.selectedIndex].text;
+
+    // Validar que la fecha sea mayor o igual a Julio de 2023
+    const fechaLimite = new Date('2023-07-01');
+    const fechaSeleccionada = new Date(fecha);
+
+    if (fechaSeleccionada < fechaLimite) {
+        mostrarErrorSweetAlert('La fecha debe ser a partir de Julio de 2023.');
+        return; // Detener el proceso de envío del formulario
+    }
 
     // Validar que todos los campos estén llenos
     if (fecha && hora && terapeuta) {
