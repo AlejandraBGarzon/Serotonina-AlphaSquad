@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
     userItems.push(newItem);
     localStorage.setItem('UserItems', JSON.stringify(userItems));
-  
+
     // Renderizar los items actualizados en la interfaz
     items.push(newItem);
     renderItems();
@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Crear un elemento de fecha
       const dateElement = document.createElement('p');
       dateElement.classList.add('item-date');
+      dateElement.style.margin = '10px 0';
       dateElement.textContent = 'Publicado el ' + item.date;
 
       // Agregar los elementos al elemento de lista
@@ -283,6 +284,9 @@ document.addEventListener('DOMContentLoaded', function () {
       commentButton.classList.add('btn');
       commentButton.classList.add('btn-primary');
       commentButton.classList.add('btn-comment'); // Agregamos una clase para identificar el botón de comentarios
+      commentButton.style.backgroundColor = 'rgba(248, 103, 151, 0.7)';
+      commentButton.style.marginLeft = 'auto';
+      commentButton.style.marginRight = 'auto';
       commentSection.appendChild(commentButton);
 
       const commentList = document.createElement('div'); // Contenedor para mostrar los comentarios
@@ -349,13 +353,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const storedName = localStorage.getItem('Name');
     const userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
     const createdByUser = userItems[index] && userItems[index].user === storedName;
-  
+
     if (createdByUser) {
       // Crear un botón de eliminar solo para las publicaciones del usuario actual
       const deleteButton = document.createElement('button');
       deleteButton.classList.add('btn', 'btn-danger', 'delete-button');
       deleteButton.textContent = 'Eliminar';
-  
+
       // Agregar un evento click al botón de eliminar
       deleteButton.addEventListener('click', () => {
         // Mostrar una confirmación antes de eliminar el elemento
@@ -365,13 +369,13 @@ document.addEventListener('DOMContentLoaded', function () {
           let userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
           userItems.splice(index, 1);
           localStorage.setItem('UserItems', JSON.stringify(userItems));
-  
+
           // Eliminar el elemento del array 'items' y remover el elemento de la lista
           items.splice(index - defaultItems.length, 1);
           listItem.remove();
         }
       });
-  
+
       // Devolver el botón de eliminar
       return deleteButton;
     } else {
@@ -538,11 +542,11 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     ];
 
-      // Verificar si existen elementos del usuario actual en el almacenamiento local
-  const userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
+    // Verificar si existen elementos del usuario actual en el almacenamiento local
+    const userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
 
-  // Combinar elementos predeterminados con elementos del usuario actual
-  items = [...defaultItems, ...userItems];
+    // Combinar elementos predeterminados con elementos del usuario actual
+    items = [...defaultItems, ...userItems];
     renderItems();
   }
 

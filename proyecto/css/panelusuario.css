@@ -42,17 +42,17 @@ section {
 }
 
 .content-container {
-  display: inline-block; 
-  margin-bottom: 10px; 
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .icon-container {
-  display: inline-block; 
+  display: inline-block;
   margin-right: 10px;
 }
 
 .icon {
-margin: 15px;
+  margin: 15px;
   width: 60px;
   height: auto;
 }
@@ -67,7 +67,7 @@ margin: 15px;
 
 }
 
-.content h1{
+.content h1 {
   color: #0f3c4c;
   font-size: 14vh;
   width: 100%;
@@ -75,7 +75,7 @@ margin: 15px;
   align-items: center;
 }
 
-.content p{
+.content p {
   text-align: right;
   color: #0f3c4c;
   margin-bottom: 21vh;
@@ -84,7 +84,7 @@ margin: 15px;
 
 h1,
 h2 {
-  color:rgb(8, 84, 110);
+  color: rgb(8, 84, 110);
 }
 
 ul {
@@ -108,7 +108,9 @@ a {
 a:hover {
   color: var(--color-3);
 }
-.footer {
+
+/* Estilos para el footer específico con la clase .custom-footer */
+.custom-footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -119,13 +121,13 @@ a:hover {
   height: auto;
 }
 
-.footer-left {
+.custom-footer .footer-left {
   flex-basis: 100%;
   margin-bottom: 2px;
   text-align: right;
 }
-/*Bogotá*/
-.footer-center .cont {
+
+.custom-footer .footer-center .cont {
   width: 97%;
   flex-basis: 50%;
   text-align: right;
@@ -136,12 +138,12 @@ a:hover {
   font-size: 2.4vh;
 }
 
-.footer-right {
+.custom-footer .footer-right {
   flex-basis: 80%;
   text-align: right;
 }
 
-.footer h2 {
+.custom-footer h2 {
   font-size: 18px;
   font-weight: 70;
   color: white;
@@ -149,7 +151,7 @@ a:hover {
   margin: 0;
 }
 
-.footer p {
+.custom-footer p {
   color: white;
   width: 30%;
   font-size: 14px;
@@ -158,50 +160,52 @@ a:hover {
   padding: 3px;
 }
 
-.footer .about {
+.custom-footer .about {
   margin-bottom: 10px;
   font-size: 9vh;
   color: white;
 }
 
-.footer .aboutUs {
+.custom-footer .aboutUs {
   font-size: 2vh;
 }
 
-.footer .icons {
-  margin-top: 6vh;
- 
-
+.custom-footer .icons {
+  margin-top: 6vh !important;
 }
 
-.footer .icons a {
-  color: white;
-  margin-right: 6vh;
-  text-align: right;
-  margin-left: -2vh;
-  font-size: 8vh;
-  flex-direction: row;
-
+.custom-footer .icons a {
+  color: white !important;
+  margin-right: 6vh !important;
+  text-align: right !important;
+  margin-left: -2vh !important;
+  font-size: 8vh !important;
+  flex-direction: row !important;
 }
+
 /* ----------------------------------------- Responsive ----------------------------------------- */
 /* Media queries para dispositivos móviles */
 @media (max-width: 767px) {
   main {
-    grid-template-columns: 1fr; /* Cambiar a una columna en dispositivos móviles */
+    grid-template-columns: 1fr;
+    /* Cambiar a una columna en dispositivos móviles */
   }
 
   section {
-    margin: 10px 0; /* Espaciado vertical en dispositivos móviles */
+    margin: 10px 0;
+    /* Espaciado vertical en dispositivos móviles */
   }
 }
 
 /* Media queries para tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
   main {
-    grid-template-columns: 1fr 1fr; /* Restaurar la distribución de dos columnas en tablets */
+    grid-template-columns: 1fr 1fr;
+    /* Restaurar la distribución de dos columnas en tablets */
   }
 
   section {
-    margin: 10px; /* Restaurar el margen original en tablets */
+    margin: 10px;
+    /* Restaurar el margen original en tablets */
   }
 }
