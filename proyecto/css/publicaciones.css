@@ -231,6 +231,7 @@ main {
   padding: 20px;
   border: 1px solid #ccc;
   background-color: #f5f5f5;
+  color: #0f3c4c;
   text-align: center;
 }
 
@@ -270,39 +271,51 @@ main {
   color: var(--color-2);
 }
 
-.item textarea {
-  font-size: large;
-  background-color: var(--color-0);
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
 .heart-icon.react-animation {
   animation: heartBeat 0.7s infinite;
 }
 
-.comment-section {
-  margin: 20px;
+.item textarea {
+  font-size: large;
+  border: 1px solid var(--color-2);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  resize: vertical;
+}
+
+.comment-list {
+  margin-top: 10px;
+}
+
+.comment-container .comment-text {
+  color: var(--color-3);
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .comment-container {
-  border: 1px solid #ccc;
-  background-color: var(--color-0);
-  font-style: italic;
-  text-align: left;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  border: 1px solid var(--color-2);
+  padding: 5px;
+  margin-bottom: 5px;
 }
 
-.comment-container p {
-  margin: 0;
-  color: var(--color-4);
+.comment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-3);
+  font-size: 12px;
 }
 
-.btn-comment {
-  margin: auto;
+.user-name {
+  font-weight: bold;
 }
+
+.comment-date {
+  margin-left: 10px;
+}
+
 
 /* ------------------------------------ ESTILOS PIE DE PÁGINA ----------------------------------- */
 .footer {

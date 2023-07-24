@@ -42,6 +42,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // Evitar que el formulario se envíe automáticamente
     event.preventDefault();
 
+    // Obtener el nombre de usuario almacenado en el almacenamiento local
+    const storedName = localStorage.getItem('Name');
+
     // Obtener los valores de los campos del formulario y eliminar los espacios en blanco
     const nameInput = document.getElementById('name-input');
     const descriptionInput = tinymce.get('description-input');
@@ -66,7 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
             hour: 'numeric',
             minute: 'numeric'
           }),
-          imageUrl: null
+          imageUrl: null,
+          user: storedName // Agregamos el nombre de usuario al objeto newItem
         };
 
         /* ---------------------------------- Al crear el nuevo item ---------------------------------- */
@@ -106,9 +110,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function saveNewItem(newItem) {
-    // Agregar el nuevo item a la lista de items
-    items.push(newItem);
+    // Agregar el nuevo item al almacenamiento local del usuario
+    let userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
+    userItems.push(newItem);
+    localStorage.setItem('UserItems', JSON.stringify(userItems));
+  
     // Renderizar los items actualizados en la interfaz
+    items.push(newItem);
     renderItems();
 
     // Limpiar los valores de campos de entrada y restablecer la visualización de los contenedores
@@ -204,10 +212,10 @@ document.addEventListener('DOMContentLoaded', function () {
         imageContainer.appendChild(imageElement);
       }
 
-      // Crear un elemento de título
+      // Crear un elemento de título (nombre del usuario)
       const nameElement = document.createElement('h4');
       nameElement.classList.add('item-name');
-      nameElement.textContent = item.name;
+      nameElement.textContent = `Por: ${item.user}`; // Mostramos el nombre del usuario junto al texto "Por:"
 
       // Crear un elemento de descripción
       const descriptionElement = document.createElement('div');
@@ -296,7 +304,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const commentTextArea = listItem.querySelector('textarea');
         const comment = commentTextArea.value.trim();
         if (comment !== '') {
-          addComment(listItem, comment); // Llamamos a la función para agregar el comentario
+          const userName = localStorage.getItem('Name'); // Obtenemos el nombre del usuario del almacenamiento local
+          addComment(listItem, comment, userName); // Llamamos a la función para agregar el comentario
           commentTextArea.value = '';
         }
       }
@@ -304,40 +313,71 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Función para agregar un comentario a una publicación
-  function addComment(listItem, comment) {
+  function addComment(listItem, comment, userName) {
     const commentList = listItem.querySelector('.comment-list');
 
     const commentContainer = document.createElement('div');
-    commentContainer.classList.add('comment-container'); // Clase para el contenedor de cada comentario
+    commentContainer.classList.add('comment-container');
 
     const commentText = document.createElement('p');
     commentText.textContent = comment;
+    commentText.style.color = 'var(--color-3)';
     commentContainer.appendChild(commentText);
+
+    const commentDetails = document.createElement('div');
+    commentDetails.classList.add('comment-details');
+
+    const userNameElement = document.createElement('span');
+    userNameElement.classList.add('user-name');
+    userNameElement.textContent = userName;
+    commentDetails.appendChild(userNameElement);
+
+    const dateElement = document.createElement('span');
+    dateElement.classList.add('comment-date');
+    dateElement.textContent = new Date().toLocaleString('es-ES');
+    commentDetails.appendChild(dateElement);
+
+    commentContainer.appendChild(commentDetails);
 
     commentList.appendChild(commentContainer);
   }
 
+
   /* ---------------------------------- Botón para Eliminar Item ---------------------------------- */
-
   function createDeleteButton(listItem, index) {
-    // Crear un botón de eliminar
-    const deleteButton = document.createElement('button');
-    deleteButton.classList.add('btn', 'btn-danger', 'delete-button');
-    deleteButton.textContent = 'Eliminar';
-
-    // Agregar un evento click al botón de eliminar
-    deleteButton.addEventListener('click', () => {
-      // Mostrar una confirmación antes de eliminar el elemento
-      const confirmDelete = confirm('¿Estás seguro de que quieres eliminar este item?');
-      if (confirmDelete) {
-        // Eliminar el elemento del array 'items' y remover el elemento de la lista
-        items.splice(index, 1);
-        listItem.remove();
-      }
-    });
-
-    // Devolver el botón de eliminar
-    return deleteButton;
+    // Verificar si el item fue creado por el usuario actual
+    const storedName = localStorage.getItem('Name');
+    const userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
+    const createdByUser = userItems[index] && userItems[index].user === storedName;
+  
+    if (createdByUser) {
+      // Crear un botón de eliminar solo para las publicaciones del usuario actual
+      const deleteButton = document.createElement('button');
+      deleteButton.classList.add('btn', 'btn-danger', 'delete-button');
+      deleteButton.textContent = 'Eliminar';
+  
+      // Agregar un evento click al botón de eliminar
+      deleteButton.addEventListener('click', () => {
+        // Mostrar una confirmación antes de eliminar el elemento
+        const confirmDelete = confirm('¿Estás seguro de que quieres eliminar este item?');
+        if (confirmDelete) {
+          // Eliminar el elemento del array 'userItems' y remover el elemento de la lista
+          let userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
+          userItems.splice(index, 1);
+          localStorage.setItem('UserItems', JSON.stringify(userItems));
+  
+          // Eliminar el elemento del array 'items' y remover el elemento de la lista
+          items.splice(index - defaultItems.length, 1);
+          listItem.remove();
+        }
+      });
+  
+      // Devolver el botón de eliminar
+      return deleteButton;
+    } else {
+      // Si el item no fue creado por el usuario actual, devolver un elemento vacío (sin botón de eliminar)
+      return document.createElement('div');
+    }
   }
 
   /* ---------------------------------- Cargar items predeterminados ---------------------------------- */
@@ -356,7 +396,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://i.pinimg.com/originals/5a/96/82/5a9682044ee35ddd09401c3a961a5dc9.png"
+        imageUrl: "https://i.pinimg.com/originals/5a/96/82/5a9682044ee35ddd09401c3a961a5dc9.png",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Cuidado personal y bienestar",
@@ -368,7 +411,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://escandala.com/wp-content/uploads/2021/04/INFO-Salud-mental-01-1.jpg"
+        imageUrl: "https://escandala.com/wp-content/uploads/2021/04/INFO-Salud-mental-01-1.jpg",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Terapia individual",
@@ -380,7 +426,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://i.pinimg.com/736x/87/9f/84/879f842ce3727571136b6db1e3b1c67f.jpg"
+        imageUrl: "https://i.pinimg.com/736x/87/9f/84/879f842ce3727571136b6db1e3b1c67f.jpg",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Meditación y mindfulness",
@@ -392,7 +441,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://eurofitness.com/wp-content/uploads/2020/01/rutina-meditacion-mindfullness.jpg"
+        imageUrl: "https://eurofitness.com/wp-content/uploads/2020/01/rutina-meditacion-mindfullness.jpg",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Consejos para mejorar la autoestima",
@@ -404,7 +456,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://www.hakunamatata.com.co/wp-content/uploads/2020/12/mejorar-autoestima.jpg"
+        imageUrl: "https://www.hakunamatata.com.co/wp-content/uploads/2020/12/mejorar-autoestima.jpg",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Psicoterapia de pareja",
@@ -416,7 +471,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://image.jimcdn.com/app/cms/image/transf/dimension=681x10000:format=png/path/s1cc52c3943ca9ea9/image/ie7ad1a22b4334dc8/version/1572290574/image.png"
+        imageUrl: "https://image.jimcdn.com/app/cms/image/transf/dimension=681x10000:format=png/path/s1cc52c3943ca9ea9/image/ie7ad1a22b4334dc8/version/1572290574/image.png",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Estrategias para manejar el estrés",
@@ -428,7 +486,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/09/08133730/Mes-del-corazon-01.jpg"
+        imageUrl: "https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2017/09/08133730/Mes-del-corazon-01.jpg",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Consejos para el autocuidado emocional",
@@ -440,7 +501,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://cdn.somosestupendas.com/psicologia/20220906181226/Autocuidado-768x1024.jpg"
+        imageUrl: "https://cdn.somosestupendas.com/psicologia/20220906181226/Autocuidado-768x1024.jpg",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Terapia familiar",
@@ -452,7 +516,10 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://1.bp.blogspot.com/-_zUOMbHw7D4/WKrbxoo6nPI/AAAAAAAAAnM/ijkRq1woTtoPQop_FtXZdU9GzG06Hsb1QCLcB/s1600/TERAPIA%2BFAMILIAR%2BCON%2BNI%25C3%2591OS%2BY%2BADOLESCENTES.png"
+        imageUrl: "https://1.bp.blogspot.com/-_zUOMbHw7D4/WKrbxoo6nPI/AAAAAAAAAnM/ijkRq1woTtoPQop_FtXZdU9GzG06Hsb1QCLcB/s1600/TERAPIA%2BFAMILIAR%2BCON%2BNI%25C3%2591OS%2BY%2BADOLESCENTES.png",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
       {
         name: "Consejos para mejorar la gestión del tiempo",
@@ -464,12 +531,18 @@ document.addEventListener('DOMContentLoaded', function () {
           hour: 'numeric',
           minute: 'numeric'
         }),
-        imageUrl: "https://i.pinimg.com/736x/f9/3d/dd/f93dddbd2af131136f93ec0772851c3e.jpg"
+        imageUrl: "https://i.pinimg.com/736x/f9/3d/dd/f93dddbd2af131136f93ec0772851c3e.jpg",
+        user: "Equipo de Serotonina",
+        reactions: 0,
+        comments: []
       },
     ];
 
-    // Asignar los elementos predeterminados al array 'items'
-    items = defaultItems;
+      // Verificar si existen elementos del usuario actual en el almacenamiento local
+  const userItems = JSON.parse(localStorage.getItem('UserItems')) || [];
+
+  // Combinar elementos predeterminados con elementos del usuario actual
+  items = [...defaultItems, ...userItems];
     renderItems();
   }
 

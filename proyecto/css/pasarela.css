@@ -32,7 +32,7 @@
 }
 
 .buttonCheckout-mobile {
-    position: fixed;
+    position: sticky;
 }
 
 @media (min-width: 640px) {

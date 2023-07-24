@@ -16,4 +16,15 @@ document.addEventListener('DOMContentLoaded', function () {
     nameElement.textContent += name;
     emailElement.textContent += email;
     numElement.textContent += num;
+
+    // Obtener las citas almacenadas en el Local Storage
+    const citasGuardadas = JSON.parse(localStorage.getItem('citas')) || [];
+
+    // Mostrar las citas en la sección "Citas"
+    const citasList = document.querySelector('#citas-list');
+    citasGuardadas.forEach((cita) => {
+        const citaItem = document.createElement('li');
+        citaItem.textContent = `${cita.fecha} - ${cita.hora}, Terapeuta: ${cita.terapeuta}, Estado: ${cita.estado}`;
+        citasList.appendChild(citaItem);
+    });
 });
