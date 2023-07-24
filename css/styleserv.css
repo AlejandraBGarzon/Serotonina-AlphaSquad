@@ -1,87 +1,185 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
 
-:root {
-    --1er-color: #05161a;
-    --2do-color: #072e33;
-    --3er-color: #0c7075;
-    --4to-color: #0f989c;
-    --5to-color: #6da5c0;
-    --6to-color: #294d61;
-    --font: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell;
+* {
+    font-family: var(--font);
+    list-style: none;
+    text-decoration: none !important; 
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    background-color: #aaf4ff;
-
+    background-color: #fbfbfb61;
 }
 
-* {
-    font-family: var(--font);
+img{
+    margin-top: -1.9vh;
 }
 
 .containerservice {
-    display: flex;
+    display: row;
     flex-direction: column;
+    width: 100%;
 }
 
+.font-weight{
+    width: -9%;
+    font-weight: bold;
+    text-align: left;
+    font-family:"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell
+    var(--1er-color);
+    margin-left: 12vh;
+
+}
+
+.tp{ /*Terapia de pareja (Título)*/
+    margin-left: 10vh;
+}
+
+.ti{
+    margin-left: -90vh;
+}
 .subtitlecard {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 300px;
-    margin-right: 300px;
-    border-radius: 103px 103px 10px 10px;
-    padding: 0px 50px 0px 50px;
-    background-color: rgba(128, 128, 128, 0.5);
+    margin-left: 3vh;
+    border-radius: 13px 103px 10px 10px;
+    padding: 30px 90px 0px 50px;
+    font-weight: lighter;
+    width: 54%;
 }
 
-/**** Banner ***/
+.parejas{
+    width: 45%;
+    margin-left: 92vh;
+    margin-top: -90vh;
+}
+
+/**** Imagen de fondo primera página ***/
 .bannerservices {
-    background-image: url(../img/servicios/banner.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    padding: 0;
+    margin: 0;
+    background-image: url(https://i.ibb.co/tKChtjP/Servicios.png);
+    background-size: cover;
+    background-color: #055f5e51;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    height: 600px;
-    background-color: rgba(170, 244, 255, 0.5);
+    height: 800px;
     background-blend-mode: multiply;
     background-size: cover;
 }
-
-.bannerservices h1 {
-    text-align: center;
-    background-color: rgba(128, 128, 128, 0.5);
-    border-radius: 0px 94px 0px 93px;
-    width: 350px;
+/* Botón*/
+.boton {
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(241, 236, 236);
+    background-color: #f563bbc0;
+    border: none;
+    padding: 0.8em 1em;
+    line-height: 1;
+    font-size: 1.3em;
+    border-radius: 42px;
+    font-weight: 800;
+    position: relative;
+    transition: all 0.40 ease;
+    width: 9em;
+    display: flex;
+    z-index: 2;
+    margin-left: 24vh;
+    margin-top: -60vh;
+    margin-bottom: 5vh;
 }
 
+.boton:hover {
+    background: rgba(255, 98, 174, 0.948);
+    border: 3px solid;
+    transform: translate(18px);
+}
+
+.boton::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(240, 194, 222, 0.903), rgb(232, 108, 147));
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+
+}
+@keyframes glowing {
+    0%{ background-position: 0 0;}
+    50%{ background-position: 400% 0;}
+    100%{ background-position: 0 0;}
+}
+.bannerservices h1 {
+    text-align: left;
+    color: rgb(255, 255, 255);
+    width: 550px;
+    margin-left: 25vh;
+    margin-top: -28vh;
+}
+p{
+    display: block;
+    color: aliceblue;
+    text-align: center;
+}
+
+.icons {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    padding: 0 5%;
+    transform: translateY(-60%);
+}
+
+.icons i {
+    display: block;
+    margin: 16px 0;
+    margin-top: 3vh;
+    font-size: 28px;
+    color: white;
+    transition: all 0.50s ease;
+}
+
+.icons i:hover {
+    color: rgb(12, 186, 189);
+    transform: translateY(-7px);
+}
+.icontepi{
+    width: 50%;
+}
 /********/
 
-/*button tipos terapia*/
+/*Botón agenda tu cita*/
 .buttonservices {
     font-weight: bolder;
     font-size: 14px;
-    color: black;
-    background-color: #5e97ba;
-    padding: 10px 30px;
-    border: 2px solid #0066cc;
+    color: rgb(255, 255, 255);
+    padding: 20px 30px;
+    border: 2px solid #1ffae8;
+    background-color: #08978e;
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
     border-radius: 50px;
     transition: 1000ms;
-    transform: translateY(0);
+    transform: translateY(30);
     cursor: pointer;
-    margin: 5px 0px 20px 0px;
+    margin: 9vh 80vh 10vh 12vh;
 }
 
 .buttonservices:hover {
     transition: 800ms;
-    padding: 10px 50px;
+    padding: 15px 50px;
     transform: translateY(-0px);
-    background-color: #0f989c;
+    background-color: #ff709b;
     color: white;
-    border: solid 2px #0066cc;
+    border: solid 2px #f9c5dd;
     font-weight: bolder;
 
 }
@@ -92,99 +190,159 @@ body {
 .containerevalpsi {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    margin: auto;
-    margin-top: 40px;
+    justify-content: left;
+    font-size: 3.2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 90%;
+    margin-top: 30vh;
+    margin-bottom: 2vh;
+    margin-left: 13vh;
 }
 
 .containertexteval {
     display: flex;
     flex-direction: row;
-    font-weight: 600;
-    width: 100%;
+    font-weight: 700;
+    width: 89%;
+}
+/*Botón Haz una prueba*/
+.prueba{
+        color: rgb(3, 70, 72);
+        background-color: #63ebf5c0;
+        box-shadow: rgb(5, 142, 152) 0px 0px 0px 0px;
+        cursor: pointer;
+        padding: 1em .9em;
+        font-size: 1em;
+        border-radius: 42px;
+        font-weight: 600;
+        transition: all 0.40 ease;
+        width: 10em;
+        flex-direction: row;
+        margin-left: 130vh;
+        margin-top: -7vh;
+        margin-bottom: 7vh;
+}
+.prueba:hover {
+    background: rgba(4, 186, 161, 0.948);
+    border: 3px solid;
+    transform: translate(18px);
 }
 
-.titleevalpsi {
+.prueba::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
     width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(194, 240, 238, 0.903), rgb(108, 232, 228));
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+
+}
+@keyframes glowing {
+    0%{ background-position: 0 0;}
+    50%{ background-position: 400% 0;}
+    100%{ background-position: 0 0;}
+}
+.titleevalpsi { /*Evaluacón psicológica*/
+    width: 89%;
+    margin-top: 40vh;
+    margin-left: -13vh;
+    text-align: right;
+    margin-bottom: 1px;
     font-weight: bolder;
+    font-size: 6vh;
+    color: #072e33;
+    padding: 10px;
 }
 
 .imgevalpsi {
-    width: 28%;
-    text-align: center;
-    border-radius: 30px 0px 0px 30px;
+    width: 14vh;
+    text-align: left;
+    border-radius: 10px 0px 0px 7px;
 }
 
 .imgevalpsi img {
-    width: 400px;
-    padding-right: 6px;
+    width: 500px;
+    padding: 4px;
+    margin-top: -19vh;
 }
 
-.textevalpsi {
-    width: 30%;
+.textevalpsi { /*Texto bajo evaluación pscológica*/
+    width: 90%;
     display: flex;
-    align-items: center;
-    background-color: #4287a1;
-    padding: 0px 50px 0px 50px;
-    text-align: justify;
-    font-size: 18px;
-    border-radius: 30px 0px 0px 30px;
+    align-items: flex-start;
+    padding: 30px 0px 0px 100px;
+    text-align: left;
+    font-size: 24px;
+    border-radius: 10px 0px 0px 30px;
+    margin-left: 57vh;
+    font-weight: lighter;
 }
 
-.textevalpsi:hover {
-    transform: scaleX(1.05);
-    transform-origin: center;
-}
-
-.caractevalpsi {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    background-color: #5e97ba;
-    text-align: justify;
-    padding: 10px 40px 0px 40px;
-    border-radius: 0px 30px 30px 0px;
-    font-size: 18.5px;
-}
-
-.caractevalpsi:hover {
-    transform: scaleX(1.05);
-}
-
-/*****************/
 /*Terapia Individual*/
 .containerind {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 2vh;
     margin-top: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 10vh;
+    font-size: 4vh;
+    font-weight:bold;
+    color: #072e33;
+    width: 89%;
+    position: relative;
 }
 
+.img2{
+    flex-direction: row;
+    position: absolute;
+    left: 90vh;
+    margin-top: -50vh;
+    width: 653px;
+}
+
+.sueltas{
+    color: #0c2839;
+    font-size: 9vh;
+    margin-left: -55vh;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+}
+.enfoques{
+    color: #0e4757;
+    width: 95%;
+    font-size: smaller;
+    font-weight: lighter;
+    margin-top: -20vh;
+    margin-bottom: 9vh;
+}
 .cardtepi {
-    display: flex;
+    display:flex;
     margin-bottom: 20px;
     margin-top: 10px;
-    width: calc(100% / 5);
+    text-align: center;
+    justify-content: center;
+    margin-left: 9vh;
+    width: calc(80% / 4);
 }
 
 .onecardtepi {
     width: auto;
-    height: 450px;
-    background-color: var(--5to-color);
+    height: 400px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
     border-radius: 20px;
     text-align: justify;
 }
 
 .onecardtepi:hover {
     transform: scale(1.05);
-    background-color: #5e97ba;
+    background-color: #17b5bb00;
     letter-spacing: 0px;
 }
 
@@ -192,7 +350,9 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     align-items: center;
-    font-size: 18px;
+    font-size: 13px;
+    color: rgba(4, 60, 75, 0.832);
+    font-weight: lighter;
 }
 
 .onecardtepi h5 {
@@ -200,19 +360,19 @@ body {
     font-weight: bold;
 }
 
-/*************/
-
 /*Terapia Pareja*/
 .containertepa {
-    margin-left: 250px;
-    margin-right: 250px;
-    margin-top: 100px;
+    width: 90%;
+    margin-left: 40px;
+    margin-top: 7vh;
+    font-weight: bolder;
+    font-size: 4vh;
+    color: #072e33;
 }
 
 .onecardtepa {
     width: auto;
-    height: 360px;
-    background-color: var(--5to-color);
+    height: 350px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -223,15 +383,14 @@ body {
 
 .onecardtepa:hover {
     transform: scale(1.03);
-    background-color: #5e97ba;
-    letter-spacing: 0px;
+    background-color: #0c2839;
 }
 
 .onecardtepa p {
     margin-left: 40px;
     margin-right: 40px;
     align-items: center;
-    font-size: 18px;
+    font-size: 13px;
 }
 
 .onecardtepa h5 {
@@ -241,36 +400,95 @@ body {
 
 .cardtepa {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: 10px;
-    width: calc(100% / 3);
+    width: calc(99% / 3);
+    justify-content: center;
+    margin-left: 6vh;
 }
 
 /*************/
 
 /*Terapia Infantil*/
 .containerteinf {
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 100px;
+    margin-left: 2vh;
+    margin-top: -9vh;
+    font-size: 4vh;
+    color: #012d2dfc;
+    text-align: left;
+    justify-content: left;
 }
 
+.ti{
+    margin-left: 20vh;
+    margin-top: 5vh;
+    font-size: 10vh;
+}
+
+.titleteinf{
+    background: url(https://i.ibb.co/SR1b5YW/Naranja-Negocios-Servicios-Sitio-Web-1.png) no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 10vh;
+    font-weight: bolder;
+
+}
+.top{
+    color: #05161a;
+    margin-top: 0vh;
+}
+
+.parra{
+    width: 70%;
+    font-weight: lighter;
+    text-align: center;
+    margin-left: 37vh;
+}
+
+.button{
+    font-weight: bolder;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    padding: 20px 30px;
+    border: 2px solid #1ffae8;
+    background-color: #08978e;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition: 1000ms;
+    transform: translateY(30);
+    cursor: pointer;
+    margin: 10vh -5vh 14vh 12vh;
+}
+
+.button:hover {
+    transition: 800ms;
+    padding: 15px 50px;
+    transform: translateY(-0px);
+    background-color: #ff709b;
+    color: white;
+    border: solid 2px #f9c5dd;
+    font-weight: bolder;
+}
 .onecardteinf {
-    width: auto;
-    height: 380px;
-    background-color: var(--5to-color);
+    width: 100%;
+    height: 290px;
+    color: #072e33;
+    background-color: transparent;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border-radius: 20px;
-    text-align: justify;
-    border-color: 2px solid #072e33;
+    border-radius: 10px;
+    text-align: center;
+    border-color: 2px solid #db8d5100;
+    margin-top: 16vh;
+    margin-bottom: 10vh;
+    margin-left: 10vh;
 }
 
 .onecardteinf:hover {
     transform: scale(1.03);
-    background-color: #5e97ba;
+    background-color: #5e97ba00;
     letter-spacing: 0px;
 }
 
@@ -291,122 +509,29 @@ body {
     flex-direction: column;
     margin-bottom: 20px;
     margin-top: 10px;
-    width: calc(100% / 3);
+    width: calc(90% / 3);
     justify-content: center;
 }
 
 /*************/
+.footer{
+	background-color: #fafafa;
+	font-family: 'Bowlby One', cursive;
+	width: 100%;
+	text-align: center;
+	margin: 10px 0px;
+	padding: 2px;
+    color: #1ffae8;
+	
+  }
+  .footer-row{
 
-/*Terapia Grupal*/
-.containergrup {
-    margin-left: 240px;
-    margin-right: 240px;
-    margin-top: 100px;
-}
+	width: 100%;
+	font-size: 30px;
+  }
+.title-footer{
 
-.cardtegru {
-    display: flex;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    width: calc(100% / 3);
-}
-
-.onecardtegru {
-    width: auto;
-    height: 450px;
-    background-color: var(--5to-color);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 20px;
-    text-align: justify;
-}
-
-.onecardtegru:hover {
-    transform: scale(1.03);
-    background-color: #5e97ba;
-    letter-spacing: 0px;
-}
-
-.onecardtegru p {
-    margin-left: 20px;
-    margin-right: 20px;
-    align-items: center;
-    font-size: 18px;
-}
-
-.onecardtegru h5 {
-    text-align: center;
-    font-weight: bold;
-}
-
-/*************/
-
-
-/*** Asesoramiento vocacional ***/
-.containerasevoc {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
-    margin-top: 50px;
-    width: 70%;
-    
-}
-
-.containerasevoc h5 {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    
-    
-}
-
-.asevoccontent {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    justify-content: center;
-    
-
-
-}
-
-.textasevoc {
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-    padding: 50px;
-    justify-content: center;
-    font-weight: 500;
-    background-color: var(--5to-color);
-
-}
-
-.textasevoc ul li {
-    text-align: left;
-    line-height: 35px;
-    font-weight: 600;
-
-}
-
-
-.image1asevoc {
-    max-width: 30%;
-    display: flex;
-    
-}
-.img1asevo{
-    border-radius: 30px 0px 0px 30px;
-}
-
-.image2asevoc {
-    display: flex;
-    width: 30%;
-}
-.img2asevo{
-    border-radius: 0px 30px 30px 0px;
-}
+	width: 100%;
+	font-size: 50px;
+    font-weight: bolder;
+  }
