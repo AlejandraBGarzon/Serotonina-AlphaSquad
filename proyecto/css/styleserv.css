@@ -4,7 +4,7 @@
 * {
     font-family: var(--font);
     list-style: none;
-    text-decoration: none !important; 
+    text-decoration: none !important;
     padding: 0;
     margin: 0;
 }
@@ -13,7 +13,73 @@ body {
     background-color: #fbfbfb61;
 }
 
-img{
+.navbar {
+    position: absolute;
+    margin: 1.4em;
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 93%;
+    box-sizing: border-box;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar a {
+    color: whitesmoke;
+    font-size: medium;
+    font-weight: bold;
+    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar a:hover {
+    /*Efecto de raya bajo y sombreado por encima*/
+    border-bottom: 2px solid white;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.1em;
+    margin-left: 2em;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+    margin-top: 1em;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 1.2em;
+}
+
+.nav-links ul li .carro {
+    width: auto !important;
+    height: auto !important;
+    margin: 1 35px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar .nav-links ul li .active a {
+    color: #05161A;
+    font-weight: 600;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+menuIcon {
+    display: none;
+}
+
+img {
     margin-top: -1.9vh;
 }
 
@@ -23,23 +89,24 @@ img{
     width: 100%;
 }
 
-.font-weight{
+.font-weight {
     width: -9%;
     font-weight: bold;
     text-align: left;
-    font-family:"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell
-    var(--1er-color);
+    font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell var(--1er-color);
     margin-left: 12vh;
 
 }
 
-.tp{ /*Terapia de pareja (Título)*/
+.tp {
+    /*Terapia de pareja (Título)*/
     margin-left: 10vh;
 }
 
-.ti{
+.ti {
     margin-left: -90vh;
 }
+
 .subtitlecard {
     display: flex;
     flex-direction: column;
@@ -51,7 +118,7 @@ img{
     width: 54%;
 }
 
-.parejas{
+.parejas {
     width: 45%;
     margin-left: 92vh;
     margin-top: -90vh;
@@ -71,6 +138,7 @@ img{
     background-blend-mode: multiply;
     background-size: cover;
 }
+
 /* Botón*/
 .boton {
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -113,11 +181,21 @@ img{
     animation: glowing 20s linear infinite;
 
 }
+
 @keyframes glowing {
-    0%{ background-position: 0 0;}
-    50%{ background-position: 400% 0;}
-    100%{ background-position: 0 0;}
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
+
 .bannerservices h1 {
     text-align: left;
     color: rgb(255, 255, 255);
@@ -125,7 +203,8 @@ img{
     margin-left: 25vh;
     margin-top: -28vh;
 }
-p{
+
+p {
     display: block;
     color: aliceblue;
     text-align: center;
@@ -152,9 +231,11 @@ p{
     color: rgb(12, 186, 189);
     transform: translateY(-7px);
 }
-.icontepi{
+
+.icontepi {
     width: 50%;
 }
+
 /********/
 
 /*Botón agenda tu cita*/
@@ -205,23 +286,25 @@ p{
     font-weight: 700;
     width: 89%;
 }
+
 /*Botón Haz una prueba*/
-.prueba{
-        color: rgb(3, 70, 72);
-        background-color: #63ebf5c0;
-        box-shadow: rgb(5, 142, 152) 0px 0px 0px 0px;
-        cursor: pointer;
-        padding: 1em .9em;
-        font-size: 1em;
-        border-radius: 42px;
-        font-weight: 600;
-        transition: all 0.40 ease;
-        width: 10em;
-        flex-direction: row;
-        margin-left: 130vh;
-        margin-top: -7vh;
-        margin-bottom: 7vh;
+.prueba {
+    color: rgb(3, 70, 72);
+    background-color: #63ebf5c0;
+    box-shadow: rgb(5, 142, 152) 0px 0px 0px 0px;
+    cursor: pointer;
+    padding: 1em .9em;
+    font-size: 1em;
+    border-radius: 42px;
+    font-weight: 600;
+    transition: all 0.40 ease;
+    width: 10em;
+    flex-direction: row;
+    margin-left: 130vh;
+    margin-top: -7vh;
+    margin-bottom: 7vh;
 }
+
 .prueba:hover {
     background: rgba(4, 186, 161, 0.948);
     border: 3px solid;
@@ -243,12 +326,23 @@ p{
     animation: glowing 20s linear infinite;
 
 }
+
 @keyframes glowing {
-    0%{ background-position: 0 0;}
-    50%{ background-position: 400% 0;}
-    100%{ background-position: 0 0;}
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
-.titleevalpsi { /*Evaluacón psicológica*/
+
+.titleevalpsi {
+    /*Evaluacón psicológica*/
     width: 89%;
     margin-top: 40vh;
     margin-left: -13vh;
@@ -272,7 +366,8 @@ p{
     margin-top: -19vh;
 }
 
-.textevalpsi { /*Texto bajo evaluación pscológica*/
+.textevalpsi {
+    /*Texto bajo evaluación pscológica*/
     width: 90%;
     display: flex;
     align-items: flex-start;
@@ -290,13 +385,13 @@ p{
     margin-top: 100px;
     margin-bottom: 10vh;
     font-size: 4vh;
-    font-weight:bold;
+    font-weight: bold;
     color: #072e33;
     width: 89%;
     position: relative;
 }
 
-.img2{
+.img2 {
     flex-direction: row;
     position: absolute;
     left: 90vh;
@@ -304,14 +399,15 @@ p{
     width: 653px;
 }
 
-.sueltas{
+.sueltas {
     color: #0c2839;
     font-size: 9vh;
     margin-left: -55vh;
     margin-top: 5vh;
     margin-bottom: 20vh;
 }
-.enfoques{
+
+.enfoques {
     color: #0e4757;
     width: 95%;
     font-size: smaller;
@@ -319,8 +415,9 @@ p{
     margin-top: -20vh;
     margin-bottom: 9vh;
 }
+
 .cardtepi {
-    display:flex;
+    display: flex;
     margin-bottom: 20px;
     margin-top: 10px;
     text-align: center;
@@ -419,13 +516,13 @@ p{
     justify-content: left;
 }
 
-.ti{
+.ti {
     margin-left: 20vh;
     margin-top: 5vh;
     font-size: 10vh;
 }
 
-.titleteinf{
+.titleteinf {
     background: url(https://i.ibb.co/SR1b5YW/Naranja-Negocios-Servicios-Sitio-Web-1.png) no-repeat;
     background-size: cover;
     color: white;
@@ -433,19 +530,20 @@ p{
     font-weight: bolder;
 
 }
-.top{
+
+.top {
     color: #05161a;
     margin-top: 0vh;
 }
 
-.parra{
+.parra {
     width: 70%;
     font-weight: lighter;
     text-align: center;
     margin-left: 37vh;
 }
 
-.button{
+.button {
     font-weight: bolder;
     font-size: 14px;
     color: rgb(255, 255, 255);
@@ -469,6 +567,7 @@ p{
     border: solid 2px #f9c5dd;
     font-weight: bolder;
 }
+
 .onecardteinf {
     width: 100%;
     height: 290px;
@@ -514,24 +613,81 @@ p{
 }
 
 /*************/
-.footer{
-	background-color: #fafafa;
-	font-family: 'Bowlby One', cursive;
-	width: 100%;
-	text-align: center;
-	margin: 10px 0px;
-	padding: 2px;
+.footer {
+    background-color: #fafafa;
+    font-family: 'Bowlby One', cursive;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 2px;
     color: #1ffae8;
-	
-  }
-  .footer-row{
 
-	width: 100%;
-	font-size: 30px;
-  }
-.title-footer{
+}
 
-	width: 100%;
-	font-size: 50px;
+.footer-row {
+
+    width: 100%;
+    font-size: 30px;
+}
+
+.title-footer {
+
+    width: 100%;
+    font-size: 50px;
     font-weight: bolder;
-  }
+}
+
+@media screen and (max-width:750px) {
+    .navbar {
+        padding-right: 0;
+        margin: 0;
+    }
+
+    .navbar .logo {
+        position: fixed;
+        left: 1em;
+        margin-top: 50px;
+		margin-left: 21px;
+    }
+
+    .navbar .menu-hamburger {
+        margin-top: 60vh;
+        display: block;
+        z-index: 12;
+    }
+
+    .nav-links {
+        top: 0;
+        z-index: 10;
+        position: absolute;
+        background-color: rgba(36, 50, 50, 0.472);
+        backdrop-filter: blur(10px);
+        width: 40%;
+        height: 100vh;
+        display: flexbox;
+        justify-content: center;
+        align-items: center;
+        margin-left: 67%;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links.mobile-menu {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25px 30px;
+		margin-top: 9vh;
+        font-size: 1.2em;
+    }
+}
+  
+  
