@@ -115,7 +115,16 @@ h1 {
 	position: relative;
 }
 
-.hero a {
+.boton-container {
+    /* Estilos del contenedor del botón */
+    display: flex;
+    justify-content:flex-start;
+    align-items:baseline;
+    margin-top: 60px;
+    height: 10vh;
+  }
+
+.boton {
     /*botón*/
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb(241, 236, 236);
@@ -131,7 +140,7 @@ h1 {
     width: 7em;
     display: inline-block;
 	margin-left: -8vh;
-	margin-top: 66vh;
+	margin-top: 1vh;
 }
 	
 
