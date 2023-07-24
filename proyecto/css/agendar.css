@@ -12,7 +12,7 @@
 body {
     font-family: var(--font);
     font-weight: 600;
-    background-image: url(https://daffy.ghost.io/content/images/2023/03/17.png);
+    background-image: url(https://i.ibb.co/fH2kDYs/Naranja-Negocios-Servicios-Sitio-Web-4.png);
 }
 
 header {
@@ -20,6 +20,14 @@ header {
     justify-content: space-between;
 }
 
+h1{
+    color: #0f3c4c;
+    margin-left: 2vh;
+}
+h2{
+    color: #0f3c4c;
+    margin-left: 3vh;
+}
 .card {
     background-color: rgba(0, 221, 255, 0.458);
     border-radius: 5px;
@@ -37,7 +45,7 @@ header {
 
 .card a {
     text-decoration: none;
-    color: var(--color-1);
+    color: white;
 }
 
 .card h3 {
