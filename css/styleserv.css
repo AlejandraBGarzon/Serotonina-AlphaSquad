@@ -638,6 +638,59 @@ p {
 }
 
 @media screen and (max-width:750px) {
+    .bannerservices h1 {
+        text-align:center;
+        font-size: 2px;
+        color: rgb(255, 255, 255);
+        width: 250px;
+       height: auto;
+       
+    }
+    /* Botón responsive*/
+.boton {
+    
+    color: rgb(241, 236, 236);
+    background-color: #f563bbc0;
+    border: none;
+    padding: 0.8em 1em;
+    line-height: 1;
+    font-size: 1.3em;
+    border-radius: 42px;
+    font-weight: 800;
+    position:absolute;
+    transition: all 0.40 ease;
+    width: 10em;
+    display:flex;
+    z-index: 2;
+    margin-left: 28vh;
+    margin-top: -45vh;
+    margin-bottom: 5vh;4
+}
+
+.boton:hover {
+    background: rgba(255, 98, 174, 0.948);
+    border: 3px solid;
+    transform: translate(18px);
+    position: relative;
+}
+
+.boton::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(240, 194, 222, 0.903), rgb(232, 108, 147));
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+
+}
+
+
     .navbar {
         padding-right: 0;
         margin: 0;
@@ -650,10 +703,12 @@ p {
 		margin-left: 21px;
     }
 
+
     .navbar .menu-hamburger {
         margin-top: 60vh;
         display: block;
         z-index: 12;
+        
     }
 
     .nav-links {
@@ -664,7 +719,7 @@ p {
         backdrop-filter: blur(10px);
         width: 40%;
         height: 100vh;
-        display: flexbox;
+        display:flex;
         justify-content: center;
         align-items: center;
         margin-left: 67%;
@@ -687,6 +742,29 @@ p {
         margin: 25px 30px;
 		margin-top: 9vh;
         font-size: 1.2em;
+    }
+    /*Evaluacón psicológica Responsive*/
+    .titleevalpsi {
+        
+        width: -3%;
+        margin-top: 1px;
+        margin-left:8px;
+        text-align: center;
+        margin-bottom: 1px;
+        font-weight: bolder;
+        font-size: 10vh;
+        color: #072e33;
+        padding: 1px;
+    }
+    
+    .imgevalpsi{
+        display: none;
+    }
+    .textevalpsi{
+    display: flex;
+    justify-content: center;
+    margin-left: 3vh;
+   
     }
 }
   
