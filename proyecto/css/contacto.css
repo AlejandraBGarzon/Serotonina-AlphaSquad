@@ -1,0 +1,113 @@
+/* ---------------------- Colores y Fuentes -------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+:root {
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+  --color-0: #049baed9;
+  /*0%*/
+  --color-1: #1e7898;
+  /*20%*/
+  --color-2: #165a72;
+  /*40%*/
+  --color-3: #0f3c4c;
+  /*60%*/
+  --color-4: #d3eaf2;
+  /*80%*/
+  --color-5: #ffffff;
+  /*100%*/
+}
+
+/* ------------------------ Estilos del formulario -------------------------- */
+html,
+body {
+  background-image: url('https://files.123freevectors.com/wp-content/original/119206-abstract-blue-background-graphic-design.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--font);
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el formulario */
+main {
+  color: var(--color-3);
+  font-family: var(--font), sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+
+/* Estilos personalizados para el contenedor izquierdo dentro de contactMain */
+#leftContainer {
+  background-image: url('img/contacto/Contac.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items:center;
+  position: relative; /* Agrega posición relativa para poder superponer el texto */
+}
+
+.text-container {
+  /* Si deseas ajustar el ancho del contenedor de texto */
+  max-width: 100%;
+  margin-left: 15px;
+  margin-bottom: 50px;
+}
+
+/* Estilos para el texto en el contenedor izquierdo */
+#leftContainer h1,
+#leftContainer h5,
+#leftContainer h6 {
+  color: #fff; /* Cambia el color del texto para que sea visible en el fondo */
+}
+
+/* Estilos para el fondo semitransparente del contenedor del formulario */
+#rightContainer {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el formulario */
+#contactForm {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para el botón Enviar */
+#submitButton {
+  background-color: #f563bbc0; /* Color del botón */
+  color: #fff; /* Color del texto del botón */
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+#submitButton:hover {
+  background-color: #f563bb; /* Color del botón al pasar el cursor */
+}
+
+/* Estilos para el fondo semitransparente del contenedor del formulario */
+.bg-semi-transparent {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contáctanos</title>
+
+  <link rel="icon" href="navbar/NewLogo.png" type="image/gif">
+  <link rel="stylesheet" href="css/hdft-contac.css">
+  <link rel="stylesheet" href="css/contacto.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- ---------------- Contenedor navegación ------------------ -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">SEROTONINA</a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="index.html">INICIO</a></li>
+        <li><a href="servicios.html">SERVICIOS</a></li>
+        <li><a href="nosotros.html">NOSOTROS</a></li>
+        <li><a href="contacto.html">CONTÁCTANOS</a></li>
+        <li><a href="carrito.html" class="carro">
+            <img src="navbar/CC.png"></a></li>
+      </ul>
+    </div>
+    <img src="navbar/588a64e0d06f6719692a2d10.png" alt="" class="menu-hamburger">
+  </nav>
+
+  <!-- ------------------------ Contenedor izquierda ------------------------- -->
+  <main id="contactMain">
+    <div class="container border mt-3 bg-light">
+      <div class="row">
+        <div id="leftContainer" class="col-md-6 p-5"
+          style="background-color: white; background-image: url('img/contacto/Contac.png'); background-size: cover; background-position: center; opacity: 0.8;">
+          <div class="text-container">
+          <h1>Contáctanos</h1>
+          <br>
+          <h5>
+            ¿Tienes alguna pregunta?
+            <br><br>
+            Por favor no dudes en contactarnos directamente.
+            <br>
+            Nuestro equipo se comunicará contigo en cuestión de minutos para ayudarte.
+          </h5>
+          <h6>Nota: Tus datos serán guardados</h6>
+        </div>
+      </div>
+
+        <!-- ----------------------------------------------------------------------- -->
+
+
+        <!-- ----------------------------- Formulario ------------------------------ -->
+
+        <div id="rightContainer" class="col-md-6 py-3 bg-semi-transparent">
+          <h2>Formulario de Contacto</h2>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Ingresa nombre y apellidos" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Ingresa tu número" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <div class="button-container">
+            <button type="submit" id="submitButton" class="btn btn-primary">Enviar</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- ----------------------------------------------------------------------- -->
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="footer-left">
+      <p class="about">
+        <strong>Envíanos un mensaje</strong>
+      </p>
+      <p class="aboutUs"> Este sitio fue diseñado y construido con amor para hacer la salud mental accesible y
+        asequible, ofreciendo apoyo psicológico con profesionales
+        capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30 días,
+        promoviendo tu bienestar sin compromiso financiero</p>
+
+      <div class="footer-center">
+        <p class="cont">Bogota, Colombia</p>
+        <p class="cont">(+57) 312 339 6937</p>
+        <p class="cont"><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
+      </div>
+      <div class="icons">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="menu">
+        <a href="index.html">Inicio</a> |
+        <a href="servicios.html">Servicios</a> |
+        <a href="nosotros.html">Nosotros</a> |
+        <a href="contacto.html">Contacto</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- ------------------------------- scripts ------------------------------- -->
+
+  <script src="js/contacto.js"></script>
+
+  <!-- Sweet alert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- Se incluye la biblioteca EmailJS para el envío de correos -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Se inicializa la biblioteca EmailJS con la clave de usuario -->
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("IITLzx8BATFKyE0km");
+    })();
+  </script>
+
+  <!-- Se inicializa función para menú desplegable -->
+  <script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+    const navLinks = document.querySelector(".nav-links")
+
+    menuHamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('mobile-menu')
+    })
+  </script>
+
+</body>
+
+</html>
