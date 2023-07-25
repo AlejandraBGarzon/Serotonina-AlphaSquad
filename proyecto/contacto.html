@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/6064d08d69.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -42,7 +43,8 @@
     <div class="container border mt-3 bg-light">
       <div class="row">
         <div id="leftContainer" class="col-md-6 p-5"
-          style="background-image: url('img/contacto/Contac.png'); background-size: cover; background-position: center; opacity: 0.8;">
+          style="background-color: white; background-image: url('img/contacto/Contac.png'); background-size: cover; background-position: center; opacity: 0.8;">
+          <div class="text-container">
           <h1>Contáctanos</h1>
           <br>
           <h5>
@@ -54,13 +56,14 @@
           </h5>
           <h6>Nota: Tus datos serán guardados</h6>
         </div>
+      </div>
 
         <!-- ----------------------------------------------------------------------- -->
 
 
         <!-- ----------------------------- Formulario ------------------------------ -->
 
-        <div id="rightContainer" class="col-md-6 py-3">
+        <div id="rightContainer" class="col-md-6 py-3 bg-semi-transparent">
           <h2>Formulario de Contacto</h2>
           <form id="contactForm">
             <div class="form-group">
@@ -79,7 +82,9 @@
               <label for="message">Mensaje</label>
               <textarea class="form-control" id="message" rows="3" required></textarea>
             </div>
+            <div class="button-container">
             <button type="submit" id="submitButton" class="btn btn-primary">Enviar</button>
+          </div>
           </form>
         </div>
       </div>
@@ -87,43 +92,29 @@
   </main>
   <!-- ----------------------------------------------------------------------- -->
 
-
-  <!-- ---------------------------- pie de página ---------------------------- -->
-
+  <!-- Pie de página -->
   <footer class="footer">
     <div class="footer-left">
       <p class="about">
-        <strong>Acerca</strong> Nuestra plataforma de psicología ofrece apoyo emocional y mental con profesionales
-        capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30 días,
-        promoviendo tu bienestar sin compromiso financiero.
+        <strong>Envíanos un mensaje</strong>
       </p>
+      <p class="aboutUs"> Este sitio fue diseñado y construido con amor para hacer la salud mental accesible y
+        asequible, ofreciendo apoyo psicológico con profesionales
+        capacitados. Accede a terapia en línea y experimenta los beneficios durante una prueba gratuita de 30 días,
+        promoviendo tu bienestar sin compromiso financiero</p>
+
+      <div class="footer-center">
+        <p class="cont">Bogota, Colombia</p>
+        <p class="cont">(+57) 312 339 6937</p>
+        <p class="cont"><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
+      </div>
       <div class="icons">
         <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
         <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
         <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
       </div>
     </div>
-    <div class="footer-center">
-      <div>
-        <i class="fa fa-map-marker"></i>
-        <p>Bogota, Colombia</p>
-      </div>
-      <div>
-        <i class="fa fa-phone"></i>
-        <p>(+57) 0000 000 000</p>
-      </div>
-      <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="mailto:contacto@serotonina.com">contacto@serotonina.com</a></p>
-      </div>
-    </div>
     <div class="footer-right">
-      <h2>
-        <span class="logo-text">Serotonina</span>
-        <a class="logo-img" id="logoimgfoo" href="index.html">
-          <img src="navbar/NewLogo" alt="logofooter" width="90px" height="70px">
-        </a>
-      </h2>
       <p class="menu">
         <a href="index.html">Inicio</a> |
         <a href="servicios.html">Servicios</a> |
@@ -132,7 +123,6 @@
       </p>
     </div>
   </footer>
-  <!-- ----------------------------------------------------------------------- -->
 
 
   <!-- ------------------------------- scripts ------------------------------- -->
